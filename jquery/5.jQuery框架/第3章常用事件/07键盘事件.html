@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//键盘事件主要用于输入时
+				//1.keydown按键按下
+//				$("input").keydown(function(){
+//					$("input").css("background","#ccc");
+//				});
+				
+				//2.keyup按键弹起
+//				$("input").keyup(function(){
+//					$("input").css("background","#fff");
+//				});
+				
+				//3.事件监听,绑定不同事件,执行不同的方法
+				$("input").on({
+					keydown:function(){
+						$("input").css("background","#ccc");
+					},
+					keyup:function(){
+						$("input").css("background","#fff");
+					}					
+				})
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		姓名： <input type="text"  value="" />
+	</body>
+</html>

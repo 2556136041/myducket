@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>外边距踩坑</title>
+		<style type="text/css">
+			img{border: none; vertical-align:top}
+			.lou1{
+				width: 150px;height: 100px;background: blue;
+				margin-top: 50px;
+				margin-bottom: 50px;
+				margin-left: 50px;
+				margin-right: 50px;
+			}
+			.lou2{
+				width: 150px;height: 100px;background: green;
+			}
+		</style>
+	</head>
+	<body>
+		<!--外边距踩坑-->
+			<!--1.元素上下排列时，上下外边距会合并（上下外边距取最大值）-->
+			<!--2.元素左右排列时，左右外边距会叠加（左右外边距会相加)-->
+			<!--3.行级元素只有左右外边距，没有上下外边距-->
+			<!--4.块级和行内块级元素的外边距4个方向都有效-->
+		
+		<div style="background: red;height: 50px;"></div>
+		<!--<span class="lou1">我要自学网1</span><b class="lou2">我要自学网2</b>-->
+		<img src="img/zxw.jpg" class="lou1"/><img src="img/zxw.jpg" class="lou2"/>
+		<div style="background: black;height: 50px;clear: left;"></div>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+
+//			var ren={name:"小明",sex:"男",age:12,height:1.8};
+			var ren={
+				name:"小明",
+				sex:"男",
+				age:12,
+				height:1.8
+			};
+			
+//			修改对象属性:
+//			ren.age=13;
+//			ren["height"]=1.85;
+//			alert(ren.height);
+			
+//			删除对象属性:
+//			delete 关键词从对象中删除属性：会同时删除属性的值和属性本身
+
+			delete ren.height;
+			
+			delete ren["age"];
+			
+			
+			alert(ren.age);
+			alert(ren.height);
+			
+			console.log(ren);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

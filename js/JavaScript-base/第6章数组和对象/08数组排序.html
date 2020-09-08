@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			数组中值从小到大依次排列
+			var zxw=[21,35,93,86,72,64,21,35];
+//			var zxw=[21,35,86,72,64,21,35,93];
+//					21,35,86,72,64,21,35,93
+			
+			function paixu(arr){   //冒泡排序
+				for (var b=0;b<arr.length-1;b++) {
+					for (var i=0;i<arr.length-1;i++) {
+						if(arr[i]>arr[i+1]){
+							var a=arr[i];
+							arr[i]=arr[i+1];
+							arr[i+1]=a;					
+						};				
+					};
+				};	
+				return arr;				
+			};
+			
+			
+			alert(paixu(zxw));
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,82 @@
+@charset("UTF-8");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 去掉全屏时显示的自带控制条 */
+video::-webkit-media-controls{
+    display:none !important;
+}
+.wrap h3{
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+}
+.player{
+    width: 720px;
+    height: 400px;
+    margin: 0 auto;
+    position: relative;
+
+}
+.player video{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    background: black;
+}
+.player .control{
+    position: absolute;
+    background: rgba(0,0,0,1);
+    width: 713px;
+    height: 60px;
+/*    border-radius: 5px;*/
+    left: 50%;
+    bottom: -60px;
+    transform: translateX(-50%);
+    
+}
+.player .control div{
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 18px;
+    color: #fff;
+/*    background: red;*/
+/*    font-family: "Microsoft YaHei";*/
+    text-align: center;
+    vertical-align: middle;
+    line-height: 60px;
+
+}
+
+/*.play_pause{
+    position: absolute;
+    left:336px;
+    top:-251px;
+    z-index: 100px;
+}*/
+.player .control .play_pause,.player .control .expand{
+    color: rgba(255,255,255);
+    font-size:30px;
+}
+.player .control div:nth-child(2){
+    width: 400px;
+    height: 10px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.player .control .progress{
+    display: block;
+    width: 10%;
+    height: 10px;
+    background: #fff;
+}
+.player .control .timer{
+    font-size: 18px;
+    font-family: "Microsoft YaHei";
+
+}
+

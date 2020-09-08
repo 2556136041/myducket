@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			h1{margin: 0 auto;text-align: center;}
+			#zxw{
+				width: 500px;margin: 50px auto;
+			}
+			input{
+				width: 400px;height: 40px;
+			}
+			#box{
+				width: 500px;margin: 50px auto;display: none;
+			}
+			#box span{
+				color: red;font-weight: 700;
+			}
+			
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//给按钮加单击事件
+				$("#sbt").click(function(){
+					//$.ajax();接收一个对象
+					$.ajax({
+						type:"POST",     //ajax请求使用POST方法
+						url :"http://127.0.0.1/03.php",  //请求的服务器地址
+						data:{			//发送到服务器的数据,JSON 数据类型
+							"uname":$("#uname").val(),
+							"password":$("#password").val(),
+						},
+						dataType:"json",  //指定从服务器返回 JSON 数据类型
+						success:function(m){
+							//请求成功要执行的代码
+							//参数:从服务器返回的数据
+							console.log(m);
+							$("#box").show().siblings("#zxw").hide();
+							$("#box span:eq(0)").text(m.uname)
+							.siblings("span").text(m.money);
+							
+							
+						},
+						error:function(){
+							//请求失败要执行的代码
+							alert("请求失败");
+						}						
+					});
+			
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<h1>登陆</h1>
+		<div id="zxw">
+			姓名：<input type="text" name="uname" id="uname" value="" />
+			<br /><br />
+			密码：<input type="password" name="password" id="password" value="" />
+			<br /><br />
+			<input type="submit" id="sbt" value="提交"/>			
+		</div>
+		
+		<div id="box">
+			欢迎：<span></span>同学，<br />
+			您有:<span></span>金币
+		</div>
+		
+	</body>
+</html>

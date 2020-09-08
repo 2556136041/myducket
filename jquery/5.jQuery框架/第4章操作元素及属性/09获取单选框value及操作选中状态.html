@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				display: block;width: 200px;line-height: 30px;text-align: center;
+				margin-top:20px ;background: #ccc;
+			}
+			button{
+				width: 200px;height: 50px;margin-top:50px ;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//1.获取单选框的value值
+//					var sex = $("input:radio:checked").val();
+//					console.log(sex);
+					
+					
+					//2.设置单选框选中状态
+					//原理:先选择要选中的单选框,添加"checked"属性,再删除所有的兄弟元素的选中状态
+					$("input:radio[value='10']").attr("checked","checked").siblings().removeAttr("checked");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<!--单选框开始-->
+		<input type="radio" name="sex"  value="1" checked="checked"/>男
+		<input type="radio" name="sex"  value="0" />女
+		<input type="radio" name="sex"  value="10"/>人妖
+		<!--单选框结束-->
+		<br /><br />
+		
+		
+		<br /><br />
+		<button>按钮</button>
+	</body>
+</html>

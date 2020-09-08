@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background: bisque;
+				margin: 50px auto;overflow: hidden;
+				/*转成弹性盒子*/
+				display: -webkit-flex;
+				display: flex;
+				
+				/*换行,默认交叉轴正向换行*/
+				flex-wrap: wrap;
+				/*两端对齐，项目之间的间隔都相等*/
+				justify-content: space-between;				
+				/*两端对齐，项目之间的间隔都相等*/
+				align-content: space-between;
+			}
+			.zxw{
+				width: 120px;line-height: 50px; background: red;
+				text-align: center;color: #fff;
+				/*margin-top: 10px;*/
+				height: 50px;
+			}
+			#n1{
+				order: 2;
+			}
+			#n2{
+				order: 1;
+			}
+			#n7{
+				order: 3;
+			}
+		</style>
+	</head>
+	<body>
+		<!--设置弹性元素的顺序-->
+		<!--order: ;默认值0-->
+		<!--元素按照 order 属性的值的增序进行布局。-->
+		<!--值越小排列越靠前，拥有相同 order 属性值的元素按照它们在源代码中出现的顺序进行布局。-->
+		<ul class="box">
+			<li id="n1" class="zxw">zxw1</li>
+			<li id="n2" class="zxw">zxw2</li>
+			<li class="zxw">zxw3</li>
+			<li class="zxw">zxw4</li>
+			<li class="zxw">zxw5</li>
+			<li class="zxw">zxw6</li> 
+			<li id="n7" class="zxw">zxw7</li>
+			<li class="zxw">zxw8</li>
+			<li class="zxw">zxw9</li>
+		</ul>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>8</title>
+  <base href="./images/" target="_blank">
+  <style>
+      :root{
+         --main-bg-color:white;
+
+
+      }
+      div#div1{
+          width:calc( 100% - 100px );
+          height: 100%;
+          margin:0 auto;
+          background: var(--main-bg-color);
+      }
+
+         
+	</style>
+
+
+</head>
+<body>
+
+<div id="div1">
+   <canvas id="can1" width="400px" height="400px" style="background: white;border:1px solid black;">
+
+   </canvas>
+
+</div>
+
+
+<script>
+
+var c = document.getElementById('can1');
+var ctx=c.getContext("2d");
+// ctx.fillStyle="blue";
+// ctx.fillRect(50,50,100,100);
+// ctx.moveTo(0,0);
+// ctx.lineTo(200,200);
+// ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+
+ctx.font="50px Arial";
+ctx.fillText("Hello World",10,150);
+
+// 创建渐变
+var grd=ctx.createLinearGradient(0,0,400,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"white");
+ 
+// 填充渐变
+ctx.fillStyle=grd;
+ctx.fillRect(10,10,150,80);
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>13</title>
+
+  <style>
+     /* 去掉全屏时显示的自带控制条 */
+	 
+     .progress{
+        display: block;
+        width: 10%;
+        height: 10px;
+        background: green;
+     }
+  
+         
+	</style>
+<body>
+<div style="width:720px;background: gray;">
+    <video controls src="../videos/fyxhm1.mp4" width="60%" poster="1122.jpg"  style="display:block;margin:0px auto;">
+    </video>
+    <button class="fa fa-play play_pause" style="width:100px;height: 100px;background: blue;border-radius:50%;border:0px;font-size:18px;padding:10px;padding:10px;">play/pause</button>
+     <div>
+        <span class="progress"></span>
+     </div>
+     <div class="timer">
+          <span class="progress_timer">00:00:00</span>&nbsp;&nbsp;
+          <span class="duration_timer">00:00:00</span>
+     </div>
+     <div id="div1"></div>
+</div>
+
+<script>
+var videoObj = document.querySelector('video');
+var playBtn = document.querySelector('.play_pause');
+playBtn.addEventListener("click",function(){
+    if(videoObj.paused){
+        // 如果视频处于播放状态
+        videoObj.play();
+        this.innerHTML="play";
+        this.style.background="red";
+    }else{
+        videoObj.pause();
+        this.innerHTML="pause";
+        this.style.background="green";
+    }
+})
+
+var progressTimer = document.querySelector('.progress_timer');
+var durationTimer = document.querySelector('.duration_timer');
+// 0.实现时间
+// 1.获取所需的元素
+// 2.时间格式为：hh:mm:ss
+// 3.获取总时间，并格式化
+// 4.获取当前视频时间，并格式化
+// 5.渲染到页面
+//let {totalT,presentT} = {totalT:0,presentT:0}
+
+var totalT=0;
+var presentT=0;
+
+videoObj.addEventListener('timeupdate',function(){
+    presentT = this.currentTime;
+    var videoCurrent = formatTime(presentT);
+    progressTimer.innerHTML = "已播放："+videoCurrent;
+	
+	//更新progress、播放的时长
+	var percent = presentT/totalT*100;
+    //document.querySelector("#div1").innerHTML=presentT;
+    progress.style.width = percent+'%';
+
+})
+
+videoObj.addEventListener('canplay',function(){
+    totalT = this.duration;
+    var videoDuration = formatTime(totalT);
+    durationTimer.innerHTML = videoDuration;
+})
+
+function formatTime(t){
+    var h = parseInt(t/3600)
+    h = h<10?'0'+h:h 
+    var m = parseInt(t%3600/60)
+    m = m<10?'0'+m:m
+    var s = parseInt(t%60)
+    s = s<10?'0'+s:s
+    return h+':'+m+':'+s
+}
+
+
+
+var progress = document.querySelector('.progress');
+//0.实现进度条 
+//1.获取所需元素
+//2.根据时间来实现百分比
+
+
+
+
+
+</script>
+</body>
+</html>

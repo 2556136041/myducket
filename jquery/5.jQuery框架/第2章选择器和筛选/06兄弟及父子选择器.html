@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.一般兄弟选择器,选择指定元素之后的所有匹配的兄弟元素,之前选不中
+				//$("#zxw2~div").css("color","red");
+				//$("#zxw2~p").css("color","red");
+				
+				//2.相邻兄弟选择器,选择指定元素之后的所有匹配的兄弟元素,之前选不中
+				//$("#zxw2+div").css("color","red");
+				//$("#zxw2+p").css("color","red"); //找不到
+				//$(".zxw+div").css("color","red");
+				
+				//3.父子选择器,一定是父子关系，不是后代关系
+				//$("#box .zxw").css("color","red");
+				$("#box>.zxw").css("color","red");
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="zxw1">我要自学网1</div>
+			<p id="zxw2">我要自学网2</p>
+			<p class="zxw">我要自学网2</p>
+			<div id="zxw3">我要自学网3</div>
+			<p id="zxw4">我要自学网4</p>
+			<p class="zxw">我要自学网2</p>
+			<div id="zxw5">我要自学网5</div>
+			<p>
+				<span class="zxw">我要自学网6</span>
+			</p>
+		</div>
+	</body>
+</html>

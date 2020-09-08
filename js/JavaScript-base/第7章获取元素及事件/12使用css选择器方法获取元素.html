@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<body>
+		<p  class="zxw">我要自学网2</p>
+		<div id="zxw1" class="zxw" name="wyzxw">
+			<p id="zxw5" class="zxw3">我要自学网2</p>
+			<div  class="zxw" name="wyzxw">我要自学网3</div>
+			<p  class="zxw3">我要自学网4</p>
+			<div  class="zxw" name="wyzxw">我要自学网5</div>
+		</div>
+
+
+		<script type="text/javascript">
+//			1.返回文档中匹配指定css选择器的所有元素
+//				语法:querySelectorAll("css选择器");
+//			var zxw=document.querySelectorAll("#zxw1 p");
+//			var zxw=document.querySelectorAll("#zxw1 .zxw");
+//			console.log(zxw);
+//			for (var i=0;i<zxw.length;i++) {
+//				zxw[i].style.color="red";
+//			}
+			
+//			2.返回文档中匹配指定css选择器的第一个元素
+//				语法:querySelector("css选择器");
+			var zxw=document.querySelector("#zxw1 p");
+			var zxw=document.querySelector("#zxw1 .zxw");			
+			
+			zxw.style.color="red";
+			
+//			console.log(zxw);
+		</script>		
+	</body>
+</html>

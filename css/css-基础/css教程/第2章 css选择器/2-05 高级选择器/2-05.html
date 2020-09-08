@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>后代选择器</title>
+		<style type="text/css">
+			#rnj ul .ww{
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--后代选择器：-->
+			<!--1.描述是一种祖先结构关系，并不一定是父子关系
+			2.祖先和后代之间要有一个空格隔开
+			3.标签选择器，ID选择器，class选择器都可以使用
+			-->
+		
+		<div id="ynj">
+			<ul class="yb">
+				<li class="zs">张三</li>
+				<li class="ls">李四</li>
+				<li class="ww">王五</li>
+				<li class="zl">赵六</li>
+			</ul>
+		</div>
+		<div id="rnj">
+			<ul>
+				<li class="zs">张三</li>
+				<li class="ls">李四</li>
+				<li class="ww">王五</li>
+				<li class="zl">赵六</li>
+			</ul>
+		</div>		
+	</body>
+</html>

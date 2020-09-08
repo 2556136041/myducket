@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 310px;height: 310px;margin: 100px auto;
+				border: 5px solid black;
+			}
+			.box:hover{
+				/*元素透明度设置*/
+				opacity:0.3;
+				/*整个元素及元素内的后代元素,都会随之改变透明度*/
+				/*不能使用百分比*/
+				/*从 0.0 （完全透明）到 1.0（完全不透明）*/
+				
+			}
+			img{
+				width: 300px;height: 235px;
+			}
+			img:hover{
+				/*图像透明度设置,只对图像有效*/
+				/*filter:opacity(90%);*/
+			}
+			p{
+				height: 65px;line-height: 65px;font-size: 30px;
+				font-weight: 700;color: red;
+				background: blue;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<img src="../../img/html01.jpg"/>
+			<p>我要自学网</p>
+		</div>
+		
+	</body>
+</html>

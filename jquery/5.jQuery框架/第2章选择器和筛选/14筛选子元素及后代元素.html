@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//children()方法筛选出匹配表达式的子元素
+				//只考虑子元素而不考虑其它后代元素
+				//$("#box").children().css("color","red");
+				//$("#box").children("#zxw1").css("color","red");
+				//$("#box").children(".wyzxw1").css("color","red");
+				
+				//$("#box").children("[id]").css("color","red");
+				//$("#box").children("[class]").css("color","red");
+				//$("#box").children("[title]").css("color","red");
+				
+				//$("#box").children("[id='zxw1']").css("color","red");
+				//$("#box").children("[class='wyzxw2']").css("color","red");
+				//$("#box").children("[title='51zxw1']").css("color","red");
+				
+				//$("#box").children("span").css("color","red");
+				//$("#box").children("p").css("color","red");
+				
+				//find()筛选出匹配表达式的后代元素
+				//$("#box").find("#zxw2").css("color","red");
+				$("#box").find("span").css("color","red");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="zxw1">我要自学网1</div>
+			<span class="wyzxw1">我要自学网2</span>
+			<p title="51zxw1">我要自学网3</p>
+			<div>
+				<p>
+					<span id="zxw2">我要自学网5</span>
+				</p>
+			</div>
+			
+			<p class="wyzxw2">我要自学网6</p>
+			<div title="51zxw2">我要自学网7</div>
+			<div>我要自学网8</div>
+		</div>
+	</body>
+</html>

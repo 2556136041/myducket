@@ -1,0 +1,38 @@
+@charset="UTF-8";
+
+body{
+	height: 200px;
+	background:gray;
+}
+
+h1{
+	text-decoration:underline;
+	font-style: oblique;
+	/*visibility:hidden;*/
+	display:none;
+
+}
+
+li{
+	list-style-type: upper-roman;
+
+}
+
+p{
+	border-style:solid solid dotted dotted;
+	border-width: 1px 2px 3px 4px;
+	border-color: red green blue yellow;
+}
+
+h2{
+	border:5px solid red;
+	outline:20px dotted blue;
+}
+
+div{
+/*	position:fixed;
+	top:100px;
+	left:100px;*/
+	overflow:visible;
+	margin:20px auto;
+}

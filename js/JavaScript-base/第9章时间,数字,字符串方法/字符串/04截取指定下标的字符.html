@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var zxw = "www.51zxw.net";
+			
+			//1.substring()截取指定下标范围的字符串
+				//substring()不接受负值
+			
+			//只有一个参数时，从指定位置截取到字符串结尾
+			var a = zxw.substring(4); //51zxw.net
+			
+			//有两个参数时，截取指定下标范围的内容，包头不包尾
+			var b = zxw.substring(4,8); //51zx
+			var c = zxw.substring(4,9); //51zxw
+			
+			var d = zxw.substring(-4,-2); //错误
+			
+			alert(d);
+		</script>
+	</body>
+</html>

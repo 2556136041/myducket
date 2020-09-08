@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//		要求:
+//			1.奇数行的奇数列输出红色"您"字,偶数列输出蓝色"好"字
+//			2.偶数行的奇数列输出蓝色"您"字,偶数列输出红色"好"字	
+//			for (var i=1;i<=10;i++) {
+//				for (var a=1;a<=5;a++) {
+//					document.write("您好");
+//				};
+//				document.write("<br>");
+//			}
+
+
+//			for (var i=1;i<=10;i++) {
+//				for (var a=1;a<=10;a++) {
+//					if (a%2==1) {
+//						document.write('<span style="color: red;">您</span>');
+//					} else{
+//						document.write('<span style="color: blue;">好</span>');
+//					};	
+//				};
+//				document.write("<br>");
+//			}
+			var rows=prompt("输入行数");
+			var cols=prompt("输入列数");
+			for (var i=1;i<=rows;i++) {
+				if (i%2==1) {
+					for (var a=1;a<=cols;a++) {
+						if (a%2==1) {
+							document.write('<span style="color: red;">您</span>');
+						} else{
+							document.write('<span style="color: blue;">好</span>');
+						};	
+					};
+				} else{
+					for (var a=1;a<=cols;a++) {
+						if (a%2==1) {
+							document.write('<span style="color: blue;">您</span>');
+						} else{
+							document.write('<span style="color: red;">好</span>');
+						};	
+					};
+				};
+				document.write("<br>");
+			}
+		</script>
+		
+	</head>
+	<body>
+		<!--<span style="color: red;">您</span>
+		<span style="color: blue;">好</span>-->
+	</body>
+</html>

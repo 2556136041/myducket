@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<body>
+		<!--<div id="zxw1" class="zxw" name="wyzxw">我要自学网1</div>
+		<p id="zxw1" class="zxw">我要自学网2</p>
+		<div id="zxw3" class="zxw" name="wyzxw">我要自学网3</div>
+		<p id="zxw4" class="zxw">我要自学网4</p>
+		<div id="zxw5" class="zxw" name="wyzxw">我要自学网5</div>-->
+
+
+		<p  class="zxw">我要自学网2</p>
+		<div id="zxw1" class="zxw" name="wyzxw">
+			<p  class="zxw">我要自学网2</p>
+			<div  class="zxw" name="wyzxw">我要自学网3</div>
+			<p  class="zxw">我要自学网4</p>
+			<div  class="zxw" name="wyzxw">我要自学网5</div>
+		</div>
+
+
+		<script type="text/javascript">
+//			1.ID选择器
+//			输入dg工具会自动生成
+//			返回文档中一个指定ID的元素，用于精确获取
+//			出现多个id名的情况，CSS样式对所有该id名的元素都生效，但js脚本仅对第一个出现该id名的元素生效。
+//			getElementById()该方法接收一个参数：要取得元素的id，若找到则返回该元素，若不存在则返回null
+
+//			var zxw1= document.getElementById("zxw1");
+//			console.log(zxw1);
+			
+//			2.类名选择器
+//			返回文档中所有指定类名的一组元素，而不是一个元素。
+//			可以把它当作数组进行处理
+//			var zxw= document.getElementsByClassName("zxw");
+//			console.log(zxw);
+
+//			给第1个元素设置行内样式
+//			zxw[0].style.color="red";
+			
+//			给所有类名为zxw的元素设置行内样式
+//			for (var i=0;i<zxw.length;i++) {
+//				zxw[i].style.color="red";
+//			}
+
+
+//			3.标签名选择器
+//			返回文档中所有指定标签名的一组元素，而不是一个元素。
+//			可以把它当作数组进行处理
+//			var zxw= document.getElementsByTagName("p");
+//			console.log(zxw);
+
+//			给第1个元素设置行内样式
+//			zxw[0].style.color="red";
+			
+//			给所有类名为zxw的元素设置行内样式
+//			for (var i=0;i<zxw.length;i++) {
+//				zxw[i].style.color="red";
+//			}
+			
+//			4.name属性选择器
+//			返回文档中所有指定标签名的一组元素，而不是一个元素。
+//			可以把它当作数组进行处理
+			var zxw= document.getElementsByName("wyzxw");
+//			console.log(zxw);
+
+//			给第1个元素设置行内样式
+			zxw[1].style.color="red";
+			
+//			给所有类名为zxw的元素设置行内样式
+//			for (var i=0;i<zxw.length;i++) {
+//				zxw[i].style.color="red";
+//			}			
+			
+		</script>		
+	</body>
+</html>

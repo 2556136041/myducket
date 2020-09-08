@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#zxwgg{
+				width: 200px;height: 220px;margin: 100px auto;color: #fff;
+				background: rgba(0,0,0,0.5);border-radius:10px ;
+			}
+			h2{
+				height: 60px;line-height: 60px;text-align: center;
+			}
+
+			#box{
+				width: 200px;height: 160px;position: relative;overflow: hidden;
+			}
+			#box ul{
+				width: 200px;position: absolute;left: 0;bottom: -40px;
+			}
+			#box ul li{
+				width: 200px;height: 40px;line-height: 40px;text-align: center;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				function abc(){
+					//第1个元素高度变成0
+					//var first=$("#box ul li").first().height(0);
+					
+					//把第1个元素追加到父元素中
+					//$("#box ul").append(first);
+					
+					//最后1个元素高度慢慢变成40px
+					//$("#box ul li").last().animate({height:"40px"},1000);
+					
+		//简化写法			
+		$("#box ul").append($("#box ul li").first().height(0).animate({height:"40px"},1000));
+					
+				}
+				
+				//定时器,每2秒执行一次
+				var time = setInterval(abc,2000);
+				
+				//鼠标移入#box元素中,停止定时器
+				$("#box").mouseenter(function(){
+					clearInterval(time);
+				});
+				
+				//鼠标移出#box元素后,开始定时器
+				$("#box").mouseleave(function(){
+					time = setInterval(abc,2000);
+				});
+				
+			})
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="zxwgg">
+			<h2>网站公告</h2>
+			<div id="box">
+				<ul>
+					<li>我要自学网0</li>
+					<li>我要自学网1</li>
+					<li>我要自学网2</li>
+					<li>我要自学网3</li>
+					<li>我要自学网4</li>
+					<li>我要自学网5</li>
+				</ul>
+			</div>
+		</div>
+		
+	</body>
+</html>

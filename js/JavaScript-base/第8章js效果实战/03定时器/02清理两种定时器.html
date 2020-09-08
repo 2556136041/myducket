@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<script type="text/javascript">
+			//1.setTimeout(要执行的动作,时间:毫秒);多少时间后执行,只执行一次
+				var timer2 = setTimeout(function(){
+					console.log("我要自学网<br>");
+				},3000);
+			
+			//2.setInterval(要执行的动作,时间:毫秒);多少时间就执行,重复执行多次
+//				var timer1 = setInterval(function(){
+//					console.log("我要自学网<br>");
+//				},1000);				
+			
+			
+			//清理定时器
+//				1.clearInterval(要清理的定时器名称);
+//				2.clearTimeout(要清理的定时器名称);
+				var btn = document.getElementById("btn");
+				btn.onclick=function(){
+					//clearInterval(timer1);
+					clearTimeout(timer2);
+				};
+		</script>
+		
+	</body>
+</html>

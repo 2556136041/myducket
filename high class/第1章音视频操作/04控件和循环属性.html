@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="img/a.mp4"  controls></video>	
+		</div>
+		<div class="zxw">
+			<button id="btn1">控件</button>
+			<button id="btn2">循环</button>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				//获取视频对象
+				var vid = document.getElementById("vd");
+				
+				//获取按钮
+				var btn1= document.getElementById("btn1");
+				var btn2= document.getElementById("btn2");
+				
+				//1.设置或返回音频/视频是否显示控件（比如播放/暂停等）
+//				controls=true|false   true:显示控件|false:不显示控件				
+				btn1.onclick=function(){
+					var cts = vid.controls;
+//					alert(cts);
+					if (cts==false) {
+						vid.controls=true;
+					} else{
+						vid.controls=false;
+					}
+				};
+				
+				
+//				2.设置或返回音频/视频是否应在结束时重新播放
+//				loop=true|false   true:循环|false:不循环	
+				btn2.onclick=function(){
+					var loop = vid.loop;
+//					alert(loop);
+					if (loop==false) {
+						vid.loop=true;
+					} else{
+						vid.loop=false;
+					}
+				};
+
+			}
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<!--模板存放区域，修改type类型，以免被解析成js-->
+			<script type="text/x-dot-temolate" id="zxw">
+				
+			</script>
+			
+			<!--姓名：<span id="name"></span><br />
+			年龄：<span id="age"></span><br />
+			爱好：<span id="ah"></span>-->
+		</div>
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="doT.min.js" ></script>
+		<script type="text/javascript">
+			//从服务器返回的数据,一般是用ajax从服务器获取
+			var data={name:'张三',age:18,ah:"打篮球"};
+			
+			//生成模板方法
+			var tpt = doT.template(document.getElementById("zxw").innerHTML);
+			
+			//把数据渲染到指定元素中
+			document.getElementById("box").innerHTML=tpt(data);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//set数据类型:ES6提供了新的数据结构Set。
+			//它类似于数组，但是成员的值都是唯一的，没有重复的值。
+			
+			var arr1 = [1,1,2,2,3,3];
+			
+			
+			//1.数组转set
+			var set = new Set(arr1); //[1,2,3]
+			
+			//console.log(arr1);
+			//console.log(set1);
+			
+			
+			//2.set转数组
+			var arr2 = Array.from(set);//[1,2,3]
+			var arr3 = [...set]; //[1,2,3]
+			//console.log(arr2);
+			//console.log(arr3);
+			
+			
+			//3.has()判断一个值是否在set中
+			//返回布尔值，在为true，不在为false
+			 console.log(set.has(2));  //true
+			 console.log(set.has(5));  //false
+			
+		</script>
+	</body>
+</html>

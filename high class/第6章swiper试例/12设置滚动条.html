@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+		<style type="text/css">
+			#box1{
+				width: 600px;height: 300px;margin: 50px auto;
+			}
+			#box1 .sd1,#box1 .sd2,#box1 .sd3{
+				line-height: 300px;text-align: center;font-size: 50px;color: #fff;
+			}
+			#box1 .sd1{background-color: red;}
+			#box1 .sd2{background-color: green;}
+			#box1 .sd3{background-color: blue;}
+			
+			.swiper-scrollbar-drag{
+				background-color: #ffffff;/*改变滚动条样式*/
+			  }
+						
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<!--swiper页面结构-->
+		<div class="swiper-container" id="box1">
+		    <div class="swiper-wrapper">		    	
+		        <div class="swiper-slide sd1">Slide 1</div>
+		        <div class="swiper-slide sd2">Slide 2</div>
+		        <div class="swiper-slide sd3">Slide 3</div>		       
+		    </div>
+		    
+		    <!--添加滚动条-->
+			<div class="swiper-scrollbar"></div>
+		
+		
+		</div>
+		
+		
+		<script src="swiper.min.js"></script>
+		<script> 
+			
+			//初始化一个Swiper实例    new Swiper(swiper容器, 个性化配置)
+		  var mySwiper = new Swiper ('#box1', {
+				loop:true,  //开启环路，会在项目前后复制各一个,让Swiper看起来是循环的,默认为false
+				 scrollbar: { //滚动条配置项
+				    el: '.swiper-scrollbar',
+				    //hide:true,//让滚动条自动隐藏，默认：false,不会自动隐藏
+				    draggable:true,//是否允许拖动滚动条，默认：false,不允许
+				    dragSize:120,  //设置滚动条尺寸，默认'auto',数值进行设置(PX)
+				 },
+		  })        
+		</script>
+	</body>
+</html>

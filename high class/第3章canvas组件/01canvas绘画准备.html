@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<!--什么是canvas:
+			1.canvas:标签是用来绘制图像
+			2.canvas:本身没有绘画的能力，仅仅是图形的容器，相当于一块画板
+			3.必须要使用脚本完成绘制，JS-->
+		
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

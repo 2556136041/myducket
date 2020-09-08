@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.zxw{
+				width: 300px;height: 200px;border: 1px solid black;
+				margin: 0 auto;
+			}
+			#btn{
+				width: 100px;height: 30px;margin: 50px auto;display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zxw1" class="zxw">我要自学网1</div>
+		<button id="btn">按钮</button>
+		<div id="zxw2" class="zxw">我要自学网2</div>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			var zxw1 = document.getElementById("zxw1");
+			var zxw2 = document.getElementById("zxw2");
+			var abc = 1;
+			btn.onclick = function(){
+				if (abc == 1) {
+					var p = zxw2.innerHTML;
+					//复制元素内容
+					zxw2.innerHTML=zxw1.innerHTML;
+					//删除zxw1中的元素内容
+					zxw1.innerHTML=p;
+					abc = 2;
+				} else{
+					var p = zxw1.innerHTML;
+					//复制元素内容
+					zxw1.innerHTML=zxw2.innerHTML;
+					//删除zxw1中的元素内容
+					zxw2.innerHTML=p;
+					abc = 1;					
+				}
+
+			}
+		</script>
+	</body>
+</html>

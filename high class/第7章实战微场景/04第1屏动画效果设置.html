@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/zxw.css"/>
+	</head>
+	<body>
+		<div class="swiper-container" >
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide">
+		        	<div class="box">
+		        		<img class="bg ani" swiper-animate-effect="pulse" src="img/bg.png"/>
+		        		<img class="tree ani" swiper-animate-effect="fadeInLeft" src="img/tree.png"/>		        		
+		        		<img class="cloud ani" swiper-animate-effect="fadeInRight" src="img/cloud.png"/>
+		        		<img class="postmark ani" swiper-animate-effect="fadeInRight" src="img/postmark.png"/>
+		        		<img class="book ani" swiper-animate-effect="zoomIn"  swiper-animate-duration="1s" swiper-animate-delay="0.5s"src="img/book.png"/>
+		        		<img class="bike ani" swiper-animate-effect="rollIn" src="img/bike.png"/>
+		        		<img class="hill ani" swiper-animate-effect="fadeInRight" src="img/hill.png"/>
+		        		<img class="pic1 ani" swiper-animate-effect="zoomIn" src="img/1-1.png"/>
+		        		<img class="pic2 ani" swiper-animate-effect="zoomIn" src="img/1-2.png"/>
+		        	</div>		        	
+		        </div>
+		    </div>	
+		</div>
+		
+		
+		
+		
+		<script src="js/swiper.min.js" ></script>
+		<script src="js/swiper.animate1.0.3.min.js" ></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper ('.swiper-container', {
+				loop:true,
+				direction:'vertical',
+				 on:{
+			      init: function(){
+			        swiperAnimateCache(this); //隐藏动画元素 
+			        swiperAnimate(this); //初始化完成开始动画
+			      }, 
+			      slideChangeTransitionEnd: function(){ 
+			        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+			        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 
+			      } 
+			   },
+		  	})  		
+		</script>
+		
+	</body>
+</html>

@@ -1,0 +1,6 @@
+SyntaxError: illegal character  标记符号用错了
+ReferenceError: XXX is not defined  名称叫xxx的不存在
+
+变量命名不规范
+SyntaxError: missing variable name
+SyntaxError: identifier starts immediately after numeric literal

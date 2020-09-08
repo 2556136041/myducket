@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}			
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="img/a.mp4" controls autoplay></video>
+			<!--<audio src="img/music.mp3" controls autoplay></audio>-->			
+		</div>
+		<div class="zxw">
+			<button id="btn1">播放</button>
+		</div>
+
+
+		<!--新版浏览器关闭了autoplay属性-->
+		<!--用户没有click、dbclick、touch等主动交互行为，使用js直接调用.play() 方法会报错-->
+		
+		<script type="text/javascript">
+			var vid = document.getElementById("vd");
+			
+			
+//			vid.onloadstart=function(){
+//				vid.play();
+//			};
+			
+			
+//			vid.oncanplay=function(){
+//				vid.play();
+//			};
+
+//			window.onload=function(){
+//				vid.play();
+//			};
+
+			
+//			setTimeout(function(){
+//				vid.play();				
+//			},1000)
+
+			document.getElementById("btn1").onclick=function(){
+				vid.play();
+			};
+
+			
+		</script>
+		
+	</body>
+</html>

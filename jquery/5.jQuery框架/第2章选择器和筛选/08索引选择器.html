@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//索引选择器,索引从0开始
+				
+				//选择匹配的索引值为奇数的元素
+				//$("#box div:nth-child(2n+1)").css("color","red");
+				//$("#box div:odd").css("color","red");
+				
+				//选择匹配的索引值为偶数的元素
+				//$("#box div:even").css("color","red");
+				
+				//选择给定索引值的元素
+				//$("#box div:eq(3)").css("color","red");
+				
+				//选择所有大于给定索引值的元素,不包括给定索引值
+				//$("#box div:gt(4)").css("color","red");
+				
+				
+				//选择所有小于给定索引值的元素,不包括给定索引值
+				$("#box div:lt(4)").css("color","red");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>我要自学网0</div>
+			<div>我要自学网1</div>
+			<div>我要自学网2</div>
+			<div>我要自学网3</div>
+			<div>我要自学网4</div>
+			<div>我要自学网5</div>
+			<div>我要自学网6</div>
+			<div>我要自学网7</div>
+			<div>我要自学网8</div>
+			<div>我要自学网9</div>
+			<div>我要自学网10</div>
+		</div>
+	</body>
+</html>

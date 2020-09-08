@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{font-size: 30px;}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">			
+			$(function(){
+
+				//$("#box").style.color="blue";  //错误
+				//document.getElementById("zxw").css("color","red");//错误
+				//---------------------------------------------
+				
+				//DOM对象:用原生javascript方法获得的对象。
+				//document.getElementById("zxw");
+				
+				//jquery对象:用jquery方法获得的对象。
+				//$("#box");
+				
+				//两种对象的方法或属性不能混用
+				
+				
+				//---------------------------------------
+				var a = $(".box");    //jquery对象
+				var b = document.getElementsByClassName("zxw");  //DOM对象
+				
+				//1.DOM对象转成jQuery对象:用$()把DOM对象包起来
+				$(b).css("color","red");
+				
+				
+				//2.jQuery对象转成DOM对象:用.get(index)方法
+//				var domA = a.get();
+//				for (var i=0;i<domA.length;i++) {
+//					domA[i].style.color = "blue";
+//				}
+				
+				a.get(1).style.color = "blue";
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="box">我要自学网1</div>
+		<div class="box">我要自学网2</div>
+		<div class="box">我要自学网3</div>
+		<br /><br />
+		<div class="zxw">我要自学网4</div>
+		<div class="zxw">我要自学网5</div>
+		<div class="zxw">我要自学网6</div>
+	</body>
+</html>

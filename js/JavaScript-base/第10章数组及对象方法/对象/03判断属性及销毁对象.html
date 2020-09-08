@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {a:1,b:2,c:3,d:4};
+			
+			//1.判断对象中是否包含某个属性  :  in操作符
+			
+			//var a = "b" in obj;   //true  表示有这个属性
+			//var b = "f" in obj;   //false 表示没有这个属性
+						
+			//alert(b);
+			
+			
+			//2.销毁对象            对象=null;
+			console.log(obj);   //{ a: 1, b: 2, c: 3, d: 4 }
+			console.log(obj.b); //2
+			
+			//销毁obj这个对象
+			obj=null;
+			
+			console.log(obj);   //null
+			console.log(obj.b); //报错： obj is null
+			
+		</script>
+	</body>
+</html>

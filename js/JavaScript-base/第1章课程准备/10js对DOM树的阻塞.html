@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				var abc=document.getElementById("zxw");
+				abc.style.color="red";
+			}	
+		</script>
+
+	</head>
+	<body>
+		<!--js对DOM树的阻塞-->
+		<!--1.DOM: js操作网页的接口，全称为“文档对象模型”(Document Object Model)。可以简单理解成页面中的元素。-->
+		<!--2.DOM树:元素和元素之间的关系,可以简单理解成页面的结构。-->
+		<!--3.js的执行会阻塞页面结构的加载,此时 DOM树是不完整的，这样在调用一些 js代码时就可能报错。-->
+		<!--4.防止阻塞的两种方法:-->
+			<!--a.把所有js代码放在body区域的最后-->
+			<!--b.添加window.onload事件,表示网页加载完毕后(包括图片、css文件等等)执行的操作-->
+		<div id="zxw">我要自学网</div>
+		
+		
+		<!--<script type="text/javascript">
+			var abc=document.getElementById("zxw");
+			abc.style.color="red";
+		</script>-->
+	</body>
+</html>

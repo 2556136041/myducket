@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#zxw{
+				width: 300px;height: 200px;border: 1px solid black;
+				margin: 0 auto;
+			}
+			#btn{
+				width: 100px;height: 30px;margin: 50px auto;display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zxw">我要自学网</div>
+		<button id="btn">点击删除</button>
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			var zxw = document.getElementById("zxw");
+			btn.onclick = function(){
+				//删除元素内容
+				zxw.innerHTML="";
+			}
+		</script>
+	</body>
+</html>

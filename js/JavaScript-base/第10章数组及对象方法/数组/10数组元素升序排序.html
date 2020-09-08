@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//sort():用于对数组的元素进行排序
+			//默认:按升序排列数组项,即最小的值位于最前面，最大的值排在最后面。
+			//会直接修改原数组
+			//sort()会转成字符串再比较,并从第1个字符进行比较
+			
+			var arr1 = [3,9,7,6,4,2];
+			var arr2 = ["e","a","f","b","c","m"];
+			var arr3 = [33,99,17,6,24,2];
+			var arr4 = ["ea","aj","ff","mb","zc","hm"];
+			var arr5 = ["aa","aj","ff","mb","zc","hm"];
+			
+			
+			
+			arr1.sort();   //[ 2, 3, 4, 6, 7, 9 ]
+			arr2.sort();	//[ "a", "b", "c", "e", "f", "m" ]
+			arr3.sort();   //[2,6,17,24,33,99][ 17, 2, 24, 33, 6, 99 ]
+			arr4.sort();   // [ "aj", "ea", "ff", "hm", "mb", "zc" ]
+			arr5.sort();   //[ "aa", "aj", "ff", "hm", "mb", "zc" ]
+			
+			console.log(arr1);
+			console.log(arr2);
+			console.log(arr3);
+			console.log(arr4);
+			console.log(arr5);
+		</script>
+	</body>
+</html>

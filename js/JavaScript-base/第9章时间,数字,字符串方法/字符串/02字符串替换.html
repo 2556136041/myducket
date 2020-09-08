@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//字符串替换
+			//语法:replace("要替换的字符","用什么字符替换");
+			
+			var zxw1 = "www.51zxw.net";
+			var zxw2 = "www.51zxw.net www.51zxw.net";
+			
+			
+			var a = zxw1.replace("www","aaa");  //aaa.51zxw.net
+			var b = zxw2.replace("www","aaa");  //aaa.51zxw.net www.51zxw.net
+			
+			//全局匹配
+			var c = zxw2.replace(/www/g,"aaa"); //aaa.51zxw.net aaa.51zxw.net
+			
+			
+			//忽略大小写
+			var d = zxw2.replace(/WWW/i,"aaa"); //aaa.51zxw.net www.51zxw.net
+			
+			//全局匹配,忽略大小写
+			var e = zxw2.replace(/WWW/gi,"aaa"); //aaa.51zxw.net aaa.51zxw.net
+			
+			alert(e);
+			
+			
+		</script>
+	</body>
+</html>

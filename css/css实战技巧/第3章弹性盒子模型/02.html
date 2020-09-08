@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background: bisque;
+				margin: 50px auto;overflow: hidden;
+				/*转成弹性盒子*/
+				display: -webkit-flex;
+				display: flex;
+				/*默认值,表示主轴是水平正向*/
+				/*flex-direction: row;*/
+				/*表示主轴是水平反向*/
+				/*flex-direction: row-reverse;*/
+				
+				/*表示主轴是垂直正向*/
+				/*flex-direction: column;*/
+				/*表示主轴是垂直反向*/
+				flex-direction: column-reverse;
+			}
+			.zxw{
+				width: 100px;height: 50px;line-height: 50px; background: red;
+				text-align: center;color: #fff;margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--主轴，交叉轴方向：定义弹性元素排列方向及顺序-->
+		<ul class="box">
+			<li class="zxw">zxw1</li>
+			<li class="zxw">zxw2</li>
+			<li class="zxw">zxw3</li>
+		</ul>
+		
+		
+	</body>
+</html>

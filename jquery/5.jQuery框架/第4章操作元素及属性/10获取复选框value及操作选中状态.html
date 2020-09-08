@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				display: block;width: 200px;line-height: 30px;text-align: center;
+				margin-top:20px ;background: #ccc;
+			}
+			button{
+				width: 200px;height: 50px;margin-top:50px ;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//1.获取复选框的value值
+//					var sg=[];
+//					$("input:checkbox:checked").each(function(){
+//						sg.push($(this).val());	
+//					});
+//					console.log(sg);
+					
+					
+					//2.设置复选框选中状态
+					//原理:先删除所有的复选框的选中状态,再选择要选中的复选框,添加"checked"属性
+					$("input:checkbox").removeAttr("checked").filter("[value='pg'],[value='pt']").attr("checked","checked");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<!--复选框开始-->
+		<input type="checkbox" name="sg[]"  value="pg" />苹果
+		<input type="checkbox" name="sg[]"  value="xj" checked="checked"/>香蕉
+		<input type="checkbox" name="sg[]"  value="pt" />葡萄
+		<!--复选框结束-->
+		
+		
+		<br /><br />
+		<button>按钮</button>
+	</body>
+</html>

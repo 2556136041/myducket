@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>swiper</title>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+		<style type="text/css">
+			#box1{
+				width: 800px;
+				height: 500px;
+				margin: 50px auto 0px;
+			}
+			#box1 .sd1,#box1 .sd2,#box1 .sd3{
+				line-height: 500px;
+				text-align: center;
+				font-size: 50px;
+				color: #fff;
+			}
+			#box1 .sd1{background-color: red;}
+			#box1 .sd2{background-color: green;}
+			#box1 .sd3{background-color: blue;}
+
+			
+
+			#page{				
+				/*background:rgba(0,0,0,1);*/
+				width:800px;
+				height:60px;
+				line-height:60px;
+				margin:0px auto;
+				position: relative;
+			}
+
+			#page .swiper-pagination{	
+				position: absolute;
+				left:50%;
+				transform: translateX(-50%);
+				/*background: blue;*/
+
+
+			}
+     
+            /*  分页切换图标 */
+			#page .swiper-pagination .swiper-pagination-bullet{
+				background-color:white;
+				border:1px solid black;
+				width: 20px;
+				height: 20px;
+				margin-right:20px;
+				border-radius:0px;
+				transform: rotate(45deg);
+				opacity:1;
+			}
+            /* 切中的分页图标  */
+			#page .swiper-pagination .swiper-pagination-bullet-active{
+				background-color:red;
+				border:1px solid red;
+			}
+
+			/*.swiper-container{ /* 分页放在容器里面 */
+			    /*--swiper-theme-color: black;
+			    /*--swiper-pagination-color:white;*/
+			    
+			/*  }
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<!--swiper页面结构-->
+		<div class="swiper-container" id="box1">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide sd1">Slide 1</div>
+		        <div class="swiper-slide sd2">Slide 2</div>
+		        <div class="swiper-slide sd3">Slide 3</div>
+		    </div>
+		    
+		
+		</div>
+		<div id="page">
+             <div class="swiper-pagination" style=""></div>
+		</div>	
+		
+		<script src="../js/swiper.min.js"></script>
+		<script> 
+			
+			//初始化一个Swiper实例    new Swiper(swiper容器, 个性化配置)
+		  var mySwiper = new Swiper ('.swiper-container', {
+		  	   loop:true,
+		  	   autoplay:{
+		  	   	   delay:1000,
+		  	   	   reverseDirection:false
+		  	   },
+		  	   speed:2000,
+		  	   initialSlide:1,
+		  	   direction:"horizontal",  //horizontal(横) vertical(竖)
+		  	   grabCursor:true,
+		  	   effect:"slide",  //slide 默认位移 ,fade 淡入谈出  cube 立方体 coverflow 3D流形式 flip 3D翻牌形式
+		  	   pagination:{
+		  	   	   el:".swiper-pagination",  //css选择器
+		  	   }
+		  })        
+		</script>
+	</body>
+</html>

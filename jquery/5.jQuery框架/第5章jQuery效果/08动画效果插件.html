@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#btn{width: 200px;height: 40px;}
+			#box{height: 200px;position: relative;}
+			img{width: 200px;height: 80px;position: absolute;left: 0;}
+			#car1{top: 0;}
+			#car2{top: 120px;}
+			#box p{
+				width: 20px;height: 200px;background: #000;
+				position: absolute;top: 0; left: 800px;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="动画效果插件/jquery.easing.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					//animate()自定义动画
+						//1.一组动画最终样式的属性
+						//2.速度 (动画完成的时间): 毫秒数 
+						//3.动画效果:  默认  变速"swing"，匀速"linear"
+						//4.动画完成时执行的函数
+				
+					$("#car1").animate({left:"600px"},2000);
+					$("#car2").animate({left:"600px"},2000,"easeInElastic");
+					
+					
+					
+					
+					
+					
+					
+				});				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<br /><br />
+		<div id="box">
+			<img src="img/car.gif" id="car1"/>
+			<img src="img/car.gif" id="car2"/>
+			<p></p>
+		</div>
+	</body>
+</html>

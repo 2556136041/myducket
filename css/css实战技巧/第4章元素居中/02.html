@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>行级，行内块级垂直居中</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			#box{
+				width: 600px;
+				height: 300px;
+				/*height: 50%;*/
+				margin: 0 auto;
+				background: bisque;
+				font-size: 20px;
+				
+				/*行级,行内块级元素水平居中*/
+				text-align: center;
+				
+				
+				/*行级和行内块级元素垂直居中(适用于单行,有父元素有固定高度)*/
+				line-height: 300px;
+				
+				
+			}
+			.zxw{
+				background: red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<span class="zxw">我要自学网</span>
+			<!--<img class="zxw" src="../img/html01.jpg"/>-->
+			<!--<input type="text" name="" id="" value="请输入" />-->
+		</div>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div>
+			姓名：<span id="name"></span><br />
+			年龄：<span id="age"></span><br />
+			爱好：<span id="ah"></span>
+		</div>
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			//从服务器返回的数据
+			var data={name:'张三',age:18,ah:"打篮球"};
+			
+//			document.getElementById("name").innerHTML=data.name;
+//			document.getElementById("age").innerHTML=data.age;
+//			document.getElementById("ah").innerHTML=data.ah;
+
+//			$("#name").html(data.name);
+//			$("#age").html(data.age);
+//			$("#ah").html(data.ah);
+
+
+			//doT.js模板引擎,它的大小只有4KB，渲染性能很好，而且直接支持原生的写法，不用依赖别的库。
+			
+			//1.直接赋值法{{=}},如传入一个HTML片段或js片段，会直接解析
+			
+			//2.编码插入法{{!}},如传入一个HTML片段或js片段，它会以字符串的形式渲染
+			
+			//3.循环数组法{{~it:value:index}};
+			
+			//4.条件判断法{{?}}{{??}}，相当于原生的if else if
+			
+			//5.模块定义{{##def.模板名    #}}，{{#def.模板名}}引用模块
+			
+		</script>
+	</body>
+</html>

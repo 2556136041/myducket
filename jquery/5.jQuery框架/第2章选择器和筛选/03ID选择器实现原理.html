@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+				//$("#zxw1").css("color","red");
+				function $(str){
+					//获取从指定的下标开始到结束的字符
+					var b = str.substring(1);
+					var e = document.getElementById(b);
+					
+					e.css=function(k,v){
+						this.style[k]=v;
+					}
+					
+					
+					return e;
+				}
+				
+				//console.log($("#zxw1"));
+				
+				//$("#zxw1").style.color="red";
+				
+				$("#zxw1").css("fontSize","30px");
+				
+			}
+		</script>
+
+	</head>
+	<body>
+		<div id="zxw1">我要自学网1</div>
+		<div class="wyzxw">我要自学网2</div>
+		<div class="wyzxw">我要自学网3</div>
+		<div class="wyzxw">我要自学网4</div>
+		<div>我要自学网5</div>
+		<div id="zxw2">我要自学网6</div>
+	</body>
+</html>

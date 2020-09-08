@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#btn{width: 200px;height: 40px;}
+			img{
+				/*display: none;*/
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				
+				$("#btn").click(function(){
+					//animate()自定义动画
+						//1.一组动画最终样式的属性
+						//2.速度 (动画完成的时间): 毫秒数 
+						//3.动画效果:  默认  变速"swing"，匀速"linear"
+						//4.动画完成时执行的函数
+						//字符串值无法创建动画（比如 "background-color:red"）
+					
+					//$("#sun").animate({width:"300px",height:"150px"});
+//					$("#sun").animate({
+//						width:"300px",
+//						height:"150px",
+//						opacity:"0.5"
+//					});
+//					
+					
+//					$("#sun").animate({
+//						width:"300px",
+//						height:"150px",
+//						opacity:"0.5"
+//					},2000);
+					
+					
+					$("#sun").animate({
+						width:"300px",
+						height:"150px",
+						opacity:"0.5"
+					},2000,function(){
+						alert("我是自定义动画");
+					});
+					
+					
+					
+					
+					
+					
+					
+				});				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<br /><br />
+		<img src="img/sun.jpg" width="500" id="sun"/>
+	</body>
+</html>

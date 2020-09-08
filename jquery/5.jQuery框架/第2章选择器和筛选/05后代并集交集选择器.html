@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.后代选择器,不仅是子元素				
+				//$("#zxw1 p").css("color","red");
+				//$("#zxw2 .wyzxw").css("color","red");
+				
+				//2.并集选择器				
+				//$("#zxw1 p,#zxw2 div").css("color","red");
+				//$("#zxw1 .wyzxw,#zxw2 p").css("color","red");
+				
+				//3.交集选择器				
+				$("#zxw1 p.wyzxw").css("color","red");				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="zxw1">
+			<div class="wyzxw">我要自学网1</div>
+			<div class="wyzxw">我要自学网2</div>
+			<div class="wyzxw">我要自学网3</div>
+			<p class="wyzxw">我要自学网4</p>
+			<p>我要自学网5</p>
+		</div>
+		<div id="zxw2">
+			<div class="wyzxw">我要自学网6</div>
+			<div class="wyzxw">我要自学网7</div>
+			<div class="wyzxw">我要自学网8</div>
+			<p>我要自学网9</p>
+			<p>我要自学网10</p>
+		</div>		
+	</body>
+</html>

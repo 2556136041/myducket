@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			8号:食品8折
+//			18号:服装8折
+//			28号:电器8折
+
+//			switch判断:主要用于精确值的判断
+
+			var a = prompt("请输入日期")*1;
+			switch (a){   //()中是要判断的对象
+				case 8:   //case是要判断的对象的值
+					document.write("食品8折");
+					break;   //条件成立时结束后面的判断
+				case 18:
+					document.write("服装8折");
+					break;
+				case 28:
+					document.write("电器8折");
+					break;
+				default:    //条件都不成立时	
+					document.write("不打折");
+					break;
+			}
+			
+			
+			
+			
+		</script>
+	
+	</head>
+	<body>
+	</body>
+</html>

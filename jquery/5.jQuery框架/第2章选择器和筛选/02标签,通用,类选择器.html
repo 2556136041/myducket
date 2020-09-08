@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload=function(){
+//				var wyzxw = document.getElementsByClassName("wyzxw");
+//				console.log(wyzxw);
+//				for (var i=0;i<wyzxw.length;i++) {
+//					wyzxw[i].style.color="red";
+//				};			
+			}
+		</script>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//在css中使用的选择器,在jQuery中同样可以使用,不用做循环
+				
+				
+				//class选择器
+				//console.log($(".wyzxw"));
+				//$(".wyzxw").css("color","red");
+				
+				//标签选择器
+				//console.log($(".wyzxw"));
+				//$("div").css("color","red");
+				
+				//通用选择器
+				//console.log($(".wyzxw"));
+				$("*").css("color","red");
+				
+			})
+
+		</script>
+	</head>
+	<body>
+		<div id="zxw1">我要自学网1</div>
+		<div class="wyzxw">我要自学网2</div>
+		<div class="wyzxw">我要自学网3</div>
+		<div class="wyzxw">我要自学网4</div>
+		<div>我要自学网5</div>
+		<div id="zxw2">我要自学网6</div>
+		<p>我要自学网7</p>
+		<p>我要自学网8</p>
+	</body>
+</html>

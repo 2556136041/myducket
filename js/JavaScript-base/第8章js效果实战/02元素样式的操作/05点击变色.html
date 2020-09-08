@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 800px;height: 600px;margin: 0 auto;
+			}
+			.zxw{
+				width: 100px;height: 100px;float: left;margin: 10px;
+				text-align: center;line-height: 100px;color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<!--div.zxw[style="background:green"]*20-->
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>			
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			<div class="zxw" style="background:green"></div>
+			
+		</div>
+		
+		<script type="text/javascript">
+			//获取所有zxw的元素
+			var zxw = document.getElementsByClassName("zxw");
+			var abc = 1;
+			//给所有zxw的元素加事件
+			for (var i=0;i<zxw.length;i++) {
+				zxw[i].onclick=function(){
+					if (abc==1) {
+						//在事件中this指向了:当前正在操作的元素
+						this.style.background="red";
+						abc=2;
+					} else{
+						//在事件中this指向了:当前正在操作的元素
+						this.style.background="blue";
+						abc=1;						
+					};
+				
+					this.innerHTML="我变色了";
+				};
+			};
+			
+		</script>
+		
+	</body>
+</html>

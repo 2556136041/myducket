@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5</title>
+	<style>
+/*         #div1{
+         	 transform:translate(200px,200px);
+         	 transform:rotate(45deg);
+         	 transform:scale(2,3);
+         	 transform:skew(20deg,33deg);
+         }
+*/
+         #div2{
+         	 width:400px;
+         	 height:400px;
+         	 background:green;
+         	 transition:width 1s;
+     
+         }
+
+         #div2:hover{
+         	 width:500px;
+         }
+
+         #div1{
+         	width:300px;
+         	height:300px;
+         	background: red;
+         	position:absolute;
+         	animation:myfirst 5s;
+         }
+
+         @keyframes myfirst{
+         	0%   {background:red; left:0px; top:0px;}
+   			25%  {background:yellow; left:200px; top:0px;}
+   			50%  {background:blue; left:200px; top:200px;}
+   			75%  {background:green; left:0px; top:200px;}
+   			100% {background:red; left:0px; top:0px;}
+         }
+
+         
+	</style>
+</head>
+<body>
+
+   <div id="div1">div1</div> 
+
+   <div id="div2">div2</div>
+
+
+
+	
+</body>
+</html>

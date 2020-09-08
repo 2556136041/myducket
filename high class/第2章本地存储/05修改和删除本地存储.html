@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<!--本地存储提供了两个在客户端存储数据的对象：-->
+			<!--localStorage: 永久存储：存储没有截止日期的数据
+			sessionStorage: 临时存储：当关闭浏览器标签页时数据会丢失-->
+			
+			<button id="btn1">修改</button>
+			<button id="btn2">删除数据</button>
+			<button id="btn3">删除本地存储</button>
+			<button id="btn4">删除所有本地存储</button>
+			
+		<script type="text/javascript">
+//			1.创建临时本地存储
+				sessionStorage.xm="18岁";
+				sessionStorage.xh="16岁";
+				
+//			2.修改本地存储的数据	
+				document.getElementById("btn1").onclick=function(){
+					sessionStorage.xh="10岁";
+				};
+
+//			3.删除本地存储的数据	,存储的名称会保留
+				document.getElementById("btn2").onclick=function(){
+					sessionStorage.xh=null;
+				};
+
+//			4.删除本地存储	,存储的名称不会保留
+				document.getElementById("btn3").onclick=function(){
+					sessionStorage.removeItem("xh");
+				};
+				
+//			5.删除所有本地存储,存储的名称不会保留
+				document.getElementById("btn4").onclick=function(){
+					sessionStorage.clear();
+				};				
+				
+		</script>
+		
+		
+		
+	</body>
+</html>

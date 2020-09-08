@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//sort():用于对数组的元素进行排序
+			//默认:按升序排列数组项,即最小的值位于最前面，最大的值排在最后面。
+			//会直接修改原数组
+			//sort()会转成字符串再比较,并从第1个字符进行比较
+			//sort()参数为规定排序顺序，必须是函数
+			//语法:sort(比较函数);
+			//比较函数函数要比较两个值，然后返回一个用于说明这两个值的相对顺序的数字。
+			//比较函数应该具有两个参数 a 和 b，其返回值如下：
+				//若 a 小于 b，在排序后的数组中 a 应该出现在 b 之前，则返回一个小于 0 的值。
+				//若 a 等于 b，则返回 0。
+				//若 a 大于 b，则返回一个大于 0 的值。
+			//1.升序排列	
+			function asc(a,b){
+				if (a<b) {
+					return -1;
+				} else if (a>b){
+					return 1;
+				} else {
+					return 0;
+				};
+			};
+				
+			//1.降序排列	
+			function desc(a,b){
+				if (a<b) {
+					return 1;
+				} else if (a>b){
+					return -1;
+				} else {
+					return 0;
+				};
+			};				
+				
+//			var arr1 = [3,9,7,6,4,2];
+//			var arr2 = ["e","a","f","b","c","m"];
+			var arr3 = [33,99,17,6,24,2];
+			var arr4 = ["ea","aj","ff","mb","zc","hm"];
+//			var arr5 = ["aa","aj","ff","mb","zc","hm"];
+			
+			
+			
+//			arr1.sort(asc);   //[ 2, 3, 4, 6, 7, 9 ]
+//			arr2.sort();	//[ "a", "b", "c", "e", "f", "m" ]
+//			arr3.sort(asc);   //[2,6,17,24,33,99]
+			arr3.sort(desc);  //[ 99, 33, 24, 17, 6, 2 ]
+			
+			
+//			arr4.sort(asc);   // [ "aj", "ea", "ff", "hm", "mb", "zc" ]
+			arr4.sort(desc);  //[ "zc", "mb", "hm", "ff", "ea", "aj" ]
+			
+			
+//			arr5.sort();   //[ "aa", "aj", "ff", "hm", "mb", "zc" ]
+			
+//			console.log(arr1);
+//			console.log(arr2);
+			console.log(arr3);
+			console.log(arr4);
+//			console.log(arr5);
+		</script>
+	</body>
+</html>

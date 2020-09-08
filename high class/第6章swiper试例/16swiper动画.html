@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+		<link rel="stylesheet" type="text/css" href="animate.min.css"/>
+		<style type="text/css">
+			#box1{
+				width: 600px;height: 300px;margin: 50px auto;
+			}
+			#box1 .sd1,#box1 .sd2,#box1 .sd3{
+				line-height: 300px;text-align: center;font-size: 50px;color: #fff;
+			}
+			#box1 .sd1{background-color: red;}
+			#box1 .sd2{background-color: green;}
+			#box1 .sd3{background-color: blue;}
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<!--swiper页面结构-->
+		<div class="swiper-container" id="box1">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide sd1">
+		        	<p class="ani" swiper-animate-effect='rotateIn' swiper-animate-duration='5s' swiper-animate-delay='3s'>Slide 1</p>
+		        </div>
+		        <div class="swiper-slide sd2">
+		        	<p class="ani" swiper-animate-effect='fadeInLeft'>Slide 2</p>
+		        </div>
+		        <div class="swiper-slide sd3">
+		        	<span style="display: inline-block;" class="ani" swiper-animate-effect='fadeInLeft'>Slide 3</span>
+		        </div>
+		    </div>
+		
+		</div>
+		
+		
+		<script src="swiper.min.js"></script>
+		<script src="swiper.animate1.0.3.min.js" ></script>
+		<script> 
+			//使用swiper动画的方法
+			//注意:对行级元素无效,需转成块级或行内块级元素
+			//1. 使用Swiper Animate需要先加载swiper.animate.min.js和animate.min.css。
+			
+			
+			//2. 初始化时隐藏元素并在需要的时刻开始动画。
+		  var mySwiper = new Swiper ('.swiper-container', {
+			on:{
+		      init: function(){
+		        swiperAnimateCache(this); //隐藏动画元素 
+		        swiperAnimate(this); //初始化完成开始动画
+		      }, 
+		      slideChangeTransitionEnd: function(){ 
+		        swiperAnimate(this); //每个slide切换结束时也运行当前slide动画
+		        //this.slides.eq(this.activeIndex).find('.ani').removeClass('ani'); 动画只展现一次，去除ani类名
+		      } 
+		    }
+		  }) 
+		  
+//		  3. 在需要运动的元素上面增加类名  ani   ，和其他的类似插件相同，Swiper Animate需要指定几个参数：
+//			swiper-animate-effect：切换效果，例如 fadeInUp 
+//			swiper-animate-duration：可选，动画持续时间（单位秒），例如 0.5s
+//			swiper-animate-delay：可选，动画延迟时间（单位秒），例如 0.3s
+		  
+		  
+		</script>
+	</body>
+</html>

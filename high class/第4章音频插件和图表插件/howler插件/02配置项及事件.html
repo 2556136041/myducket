@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--howler.js 是一个js音频库,最初是为一个 H5 游戏引擎所开发，但也可用于其他的 Web 项目
+		官网：https://howlerjs.com/
+		支持主流浏览器，支持多种音频格式，支持3D游戏，自动缓存，支持淡入淡出效果，轻量，纯JS，无第三方依赖-->
+		
+		<script src="howler.min.js" ></script>
+		<script type="text/javascript">
+			//实例化音频
+			var sound = new Howl({
+				//初始化配置
+				src:"qb.mp3",  //资源路径
+				//src:["qb.mp3","a.wav","b.ogg"],//让浏览器自动识别可以播放的音频文件
+				
+				//自动播放,true表示自动播放，false表示不自动播放
+				autoplay:true,
+				
+				//循环播放,true表示循环，false表示不循环
+				//loop:true,
+				
+				//音量, 从0-1 ，默认1
+				volume:1,
+				
+				
+				//事件:
+				onload:function(){
+					console.log("音频就绪");
+				},
+				
+				onplay:function(){
+					console.log("开始播放");
+				},
+				
+				onend:function(){
+					console.log("播放结束");
+				},
+				
+				onpause:function(){
+					console.log("暂停播放");
+				},
+				
+				onstop:function(){
+					console.log("停止播放");
+				},					
+				
+				
+			});
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

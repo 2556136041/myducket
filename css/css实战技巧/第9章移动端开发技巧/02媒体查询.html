@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#zxw{
+				width: 100px;height: 100px;margin: 50px auto;
+				background: green;
+			}
+			
+			/*800及800以上是元素的样式*/
+			/*@media only screen and (min-width: 800px) {
+				#zxw{
+					background:green;
+				}
+			}*/
+			
+			/*800及800以下是元素的样式*/
+			/*@media only screen and (max-width: 800px) {
+				#zxw{
+					background:green;
+				}
+			}*/
+			
+			/*600及600以上到900及900以下是元素的样式*/
+			/*@media only screen and (min-width: 600px) and (max-width: 900px){
+				#zxw{
+					background:green;
+				}
+			}*/
+			
+			@media only screen and (min-width: 400px){
+				#zxw{
+					background:blue;
+				}
+			}
+			@media only screen and (min-width: 600px){
+				#zxw{
+					background:orange;
+				}
+			}
+			@media only screen and (min-width: 800px){
+				#zxw{
+					background:red;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!--媒体查询@media：可以针对不同的媒体类型定义不同的样式。-->
+		<!--only  指定某种特定的媒体类型，可以用来排除不支持媒体查询的浏览器-->
+		<!--screen	用于电脑屏幕，平板电脑，智能手机等-->
+		<!--and前后一定要有空格-->
+		<div id="zxw"></div>
+	</body>
+</html>

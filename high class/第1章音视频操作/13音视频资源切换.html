@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="img/a.mp4"  controls></video>			
+		</div>
+		<div class="zxw">
+			<button id="btn1">上一个</button>
+			<button id="btn2">下一个</button>
+		</div>
+		
+		
+		<script type="text/javascript">
+//				获取视频对象
+			var vid = document.getElementById("vd");
+
+
+			
+//			1.音频/视频循环播放列表
+			var vlist = ["a.mp4","b.mp4","c.mp4","d.mp4"]; //资源地址
+
+			var i=0;//初始播放的视频索引
+			
+			//1.点击切换下一个资源
+			document.getElementById("btn2").onclick=function(){
+				i++;   
+				if(i==vlist.length){
+					i=0;
+				}
+				vid.src="img/"+vlist[i];
+				vid.play();
+			}				
+
+			//1.点击切换上一个资源
+			document.getElementById("btn1").onclick=function(){
+				i--;   
+				if(i<0){
+					i=vlist.length-1;
+				}
+				vid.src="img/"+vlist[i];
+				vid.play();
+			}	
+
+		</script>
+		
+		
+	</body>
+</html>

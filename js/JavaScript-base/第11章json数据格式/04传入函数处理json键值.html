@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//这是一个JSON字符串
+			var xm = '{"name":"小明","age":18,"sex":"男","height":"1.8米"}'; 
+			//2.JSON字符串转JS对象:使用 JSON.parse()方法
+			//JSON.parse()方法可以有2个参数
+			//参数1:要转换JSON字符串
+			//参数2(可选):在 parse 函数返回之前处理结果的函数,处理每个成员的键和值	
+				
+			
+			//var xm_obj = JSON.parse(xm);
+			//{ name: "小明", age: 18, sex: "男", height: "1.8米" }
+			
+			
+			var xm_obj = JSON.parse(xm,sex);
+			//{ name: "小明", age: 18, sex: "女", height: "1.8米" }
+			
+			var xm_obj = JSON.parse(xm,nm);
+			//{ name: "小明你好", age: 18, sex: "男", height: "1.8米" }
+			
+			
+			function sex(key,value){
+				if (value == "男") {
+					return "女";
+				};
+				return value;
+			}
+			
+			
+			function nm(key,value){
+				if (key == "name") {
+					return value+"你好";
+				};
+				return value;
+			}
+			
+			
+			
+			console.log(xm_obj);
+
+			document.write(xm_obj.name+"<br>");
+			document.write(xm_obj.age+"<br>");
+			document.write(xm_obj.sex+"<br>");
+			document.write(xm_obj.height+"<br>");
+			
+		</script>
+	</body>
+</html>

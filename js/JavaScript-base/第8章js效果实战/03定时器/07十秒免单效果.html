@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 200px;height: 50px;line-height: 50px;margin: 20px auto;
+				font-size: 50px;color: red;position: relative;
+			}
+			.dian{
+				width: 100%;height: 100%;text-align: center;
+			}
+			#clock{
+				width: 100%;height: 100%;text-align: right;
+				position: absolute;top: 0;left: 0;letter-spacing: 16px;
+			}
+			#btn{
+				width: 100px;height: 40px;display: block;margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="dian">.</div>
+			<div id="clock">00</div>
+		</div>
+		
+		<button type="button" id="btn">点击开始</button>
+		
+		<script type="text/javascript">
+			var btn = document.getElementById("btn");
+			var clock = document.getElementById("clock");
+			
+			var t = 0;
+			function time(){
+				t++;
+				if (t>1200) {
+					clearInterval(inter);
+				} else{
+					clock.innerHTML = t;
+				}
+			};
+			
+			btn.onmousedown = function(){
+				inter = setInterval(time,10);
+			};
+			btn.onmouseup = function(){
+				clearInterval(inter);
+				//生成1-9的随机数
+				var p = Math.floor(Math.random()*10);
+				if(t==1000&&p==9){
+					alert("挑战10秒成功");
+				}else if(t==1000&&p!=9){
+					clock.innerHTML = 1002;
+					alert("挑战10秒失败");
+				}else{
+					alert("挑战10秒失败");
+				};
+				
+			};
+			
+		</script>
+		
+	</body>
+</html>

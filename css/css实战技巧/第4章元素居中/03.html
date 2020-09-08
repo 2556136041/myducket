@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>适用于父元素，子元素都有具体尺寸的居中</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			#box{
+				width: 600px;
+				height: 300px;
+				/*height: 50%;*/
+				margin: 0 auto;
+				background: bisque;
+				font-size: 20px;
+				/*方法一:内边距法，设置给父元素:*/
+				/*水平居中:设置左内边距=(父元素宽度-子元素宽度)/2*/
+				/*padding-left: 150px;*/
+				/*垂直居中:设置上内边距=(父元素高度-子元素高度)/2*/
+				padding-top: 100px;
+				
+				
+				/*overflow: hidden;*/
+			}
+			.zxw{
+				background: red;
+				width: 300px;
+				height: 100px;
+				/*方法二:外边距法，设置给子元素，注意外边距击穿:*/
+				/*水平居中:设置左外边距=(父元素宽度-子元素宽度)/2*/
+				margin-left: 150px;
+				/*垂直居中:设置上外边距=(父元素高度-子元素高度)/2*/
+				/*margin-top: 100px;*/
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<div class="zxw"></div>
+		</div>
+	</body>
+</html>

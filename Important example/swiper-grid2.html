@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css">
+		<style type="text/css">
+			#box1{
+				width: 600px;height: 300px;margin: 50px auto;
+				border: 1px solid black;
+			}
+			.swiper-slide{
+				height: 140px;
+			}
+		
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<!--swiper页面结构-->
+		<div class="swiper-container" id="box1">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide" style="background-color: aqua;">Slide 1</div>
+		        <div class="swiper-slide" style="background-color: blue;">Slide 2</div>
+		        <div class="swiper-slide" style="background-color: cadetblue;">Slide 3</div>		  
+		        <div class="swiper-slide" style="background-color: darkcyan;">Slide 4</div>
+		        <div class="swiper-slide" style="background-color: #ACCE22;">Slide 5</div>
+		        <div class="swiper-slide" style="background-color: forestgreen;">Slide 6</div>
+		        <div class="swiper-slide" style="background-color: navajowhite;">Slide 7</div>
+		        <div class="swiper-slide" style="background-color: lightblue;">Slide 8</div>
+		        <div class="swiper-slide" style="background-color: royalblue;">Slide 9</div>
+		        <div class="swiper-slide" style="background-color: violet;">Slide 10</div>
+		    </div>
+		
+		</div>
+		
+		
+		<script src="../js/swiper.min.js"></script>
+		<script> 
+			
+			//初始化一个Swiper实例    new Swiper(swiper容器, 个性化配置)
+		  var mySwiper = new Swiper ('.swiper-container', {
+		  	//loop:true,
+			
+			//slidesPerGroup:2, //切换一次的slide数量
+			spaceBetween:20,  //设置slide之间的间隔,默认为px,也可以设置成百分比(字符串)
+			//spaceBetween:'10%', //百分比时按container的百分比
+			
+			
+			//多行多列布局时，container和slide应设置高度
+			//不能使用loop模式
+			slidesPerView:3,  //一行同时显示的slide数量,一行可以显示3个
+			slidesPerColumn:2,  //一列同时显示的slide数量,一列可以显示2个
+			slidesPerColumnFill:'row',  //设置slide排列方式，row:横向，column:纵向
+		  })        
+		</script>
+	</body>
+</html>

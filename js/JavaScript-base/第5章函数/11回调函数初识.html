@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			回调函数:
+//			回家是主函数;
+//			发信息是回调函数
+			
+		
+			function hj(a){
+				a();
+			};
+			function fxx(){
+				alert("亲，我已到家，爱你哦");
+			};
+			
+//			你把“发条信息函数”当成参数传给“回家的函数”，然后你女朋友必须先回到家以后，主函数执行完了，再执行传进去的“发条信息函数”，然后你就收到一条信息了。
+			hj(fxx);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

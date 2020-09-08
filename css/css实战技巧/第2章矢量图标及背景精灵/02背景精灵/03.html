@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			.zxw{
+				width: 50px;background: bisque;
+				margin: 100px auto;
+			}
+			.zxw a{
+				display: block;width: 50px;height: 80px;
+				text-align: center;padding-top: 50px;
+				background: url(img/zxwbj2.png) no-repeat;
+			}
+			.zxw #a1{
+				background-position: 0 0;
+			}
+			.zxw #a2{
+				background-position:-50px 0;
+			}
+			.zxw #a3{
+				background-position:-100px 0;
+			}
+			.zxw #a4{
+				background-position:-150px 0;
+			}
+		</style>
+	</head>
+	<body>
+		
+<!--制作背景大图：适用于背景图片，没有专门的盒子存放
+	1.图标和文字上下排列，要做单行背景图,每个图标所占的宽度，等于元素的宽度
+	2.图标和文字左右排列，要做单列背景图,每个图标所占的高度，等于元素的高度
+	3.找到需要使用的图标，可以到阿里矢量图标库中，把矢量图标转成png图片
+	-->
+		<div class="zxw">
+			<a id="a1" href="">
+				<span>首页</span>
+			</a>
+			<a id="a2" href="">
+				<span>搜索</span>
+			</a>
+			<a id="a3" href="">
+				<span>QQ</span>
+			</a>
+			<a id="a4" href="">
+				<span>手机</span>
+			</a>
+		</div>
+		
+	</body>
+</html>

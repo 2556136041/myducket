@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动元素动特点</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style type="text/css">
+			ul{width: 300px;margin: 50px auto;background: #ccc;color: white;font-size: 30px;}
+			li{
+				width: 100px;height: 100px;
+				/*float: right;*/
+			}
+			.a{background: red; 
+				/*float: left;*/
+			}
+			.b{background: green;
+				/*float: left;*/
+			}
+			.c{
+				background: blue;
+				/*float: left;*/
+			}
+		</style>
+	</head>
+	<body>
+		<!--浮动：让块级元素能在一行-->
+		<!--语法：float: 方向;-->
+		
+		
+		<!--浮动特点：-->
+			<!--浮的特点：-->
+			<!--1.浮动元素就像浮云一样浮起来了。浮动元素后面的正常元素会自动补位-->
+			<!--2.浮动元素会脱离正常的文档流，并没有完全脱离文档流-->
+			<!--3.浮动元素会被父元素宽度所约束，所以浮动元素并没有完全脱离文档流-->
+			<!--4.浮动元素会对它下面正常元素中的文字产生影响-->
+		
+			<!--动的特点：-->
+			<!--1.当浮动元素上一行是正常元素，这个浮动元素只能待在当前行，不能跑到上一行-->
+			<!--2.左浮动：元素会向左跑，会从上一行最右边出来继续往左跑，直到遇到有浮动属性的元素，才会停止。-->
+			<!--3.右浮动：元素会向右跑，会从上一行最左边出来继续往右跑，直到遇到有浮动属性的元素，才会停止。-->
+		
+		<ul>
+			<li class="a">1</li>
+			<li class="b">2</li>
+			<li class="c">3</li>
+		</ul>
+	</body>
+</html>

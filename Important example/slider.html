@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 100%;height: 350px;margin-top:100px ;
+			}
+			.bg1{background-color:#073992;}
+			.bg0{background-color:#3c5e81;}
+			.bg2{background-color:#21234c;}
+			.bg3{background-color:#ff9000;}
+			#slide{
+				width: 800px;height: 350px;margin: 0 auto;position: relative;
+				overflow: hidden;
+			}
+			#zxw{
+				width: 4000px;height: 350px;position: absolute;top: 0;left: 0px;
+			}
+			#zxw li{float: left;}
+			#zxw li a{
+				display: block;width: 800px;height: 350px;position: relative;
+			}
+			#zxw li a img{
+				width: 100%;height: 100%;
+			}
+			/*---------------------------*/
+			#zxw li a span{
+				font-size: 150px;color: red;position: absolute; top: 100px;left: 350px;
+			}
+			/*-----------------------------*/
+			
+			#nav{
+				width: 160px;height: 20px;position: absolute;bottom: 10px;left: 50%;
+				margin-left: -80px;
+			}
+			#nav li{
+				width: 20px;height: 20px;border-radius:50% ;background: #ccc;float: left;
+				margin: 0 10px;cursor: pointer;
+			}
+			#nav .active{background: red;}
+			
+			#prev,#next{
+				width: 25px;height: 50px;background: #FFF;position: absolute;top: 150px;
+				cursor: pointer;
+			}
+			#prev{
+				left: 10px;
+			}	
+			#next{
+				right: 10px;
+			}
+			#prev img,#nextimg{
+				width: 100%;height: 100%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box" class="bg0">
+			<div id="slide">
+				<ul id="zxw">
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200225/202002250506403603.jpg"/>
+		<span>0</span>
+					</a></li>
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200222/202002220335205565.jpg"/>
+		<span>1</span>
+					</a></li>
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200219/202002190938244645.jpg"/>
+		<span>2</span>
+					</a></li>
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20191114/201911140354175841.jpg"/>
+		<span>3</span>
+					</a></li>					
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200225/202002250506403603.jpg"/>
+		<span>4</span>
+					</a></li>										
+				</ul>
+				
+				<!--下方小圆点-->
+				<ul id="nav">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				
+				<!--左右耳朵-->
+				<div id="prev"><img src="../images/prev.png"/></div>
+				<div id="next"><img src="../images/next.png"/></div>
+			</div>
+			
+			
+			
+		</div>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//全局变量
+		var c = 0;
+		var zxw = $("#zxw li");
+		var nav = $("#nav li");
+		
+		//1.定义自动切换效果
+		function abc(){
+			c++;    //1  5
+			if(c==zxw.length){
+				$("#zxw").css({left:0});
+				c = 1;
+			};
+			
+			$("#zxw").animate({left:c*-800+"px"},500);
+			
+			if(c==nav.length){
+				nav.eq(0).addClass("active").siblings("li").removeClass("active");
+				$("#box").attr("class","bg0");
+				
+			}else{
+				nav.eq(c).addClass("active").siblings("li").removeClass("active");
+				$("#box").attr("class","bg"+c);
+			};
+		};
+		
+		
+		//鼠标单击小圆点切换效果
+		function bcd(e){
+			c = e.index();
+			nav.eq(c).addClass("active").siblings("li").removeClass("active");
+			$("#zxw").animate({left:c*-800+"px"},500);
+			$("#box").attr("class","bg"+c);
+		};
+		
+		
+		//左耳朵单击切换
+		function prev(){
+			c--;
+			if(c<0){
+				c = nav.length-1;
+			}
+			nav.eq(c).addClass("active").siblings("li").removeClass("active");
+			$("#zxw").animate({left:c*-800+"px"},500);
+			$("#box").attr("class","bg"+c);			
+		};
+		
+		//右耳朵单击切换
+		function next(){
+			c++;
+			if(c>nav.length-1){
+				c = 0;
+			}
+			nav.eq(c).addClass("active").siblings("li").removeClass("active");
+			$("#zxw").animate({left:c*-800+"px"},500);
+			$("#box").attr("class","bg"+c);				
+			
+		};
+		
+		//定时器,每2秒执行一次
+		var time = setInterval(abc,2000);
+		
+		//鼠标移入#slide元素中,停止定时器
+		$("#slide").mouseenter(function(){
+			clearInterval(time);
+		});
+		
+		//鼠标移出#slide元素后,开始定时器
+		$("#slide").mouseleave(function(){
+			time = setInterval(abc,2000);
+		});			
+		
+		
+		//鼠标单击小圆点事件
+		$("#nav li").click(function(){
+			bcd($(this));
+		});
+		
+		//左耳朵单击事件
+		$("#prev").click(function(){
+			prev();
+		});
+		
+		//右耳朵单击事件
+		$("#next").click(function(){
+			next();
+		});		
+		
+	})
+</script>
+
+
+	</body>
+</html>

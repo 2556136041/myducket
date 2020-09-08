@@ -1,0 +1,39 @@
+load	页面或图像被完成加载
+click	鼠标点击某个对象
+mousedown	鼠标按键被按下
+mouseup	鼠标按键被松开
+mouseout	鼠标从某元素移开
+mouseover	鼠标被移到某元素之上
+abort	图像加载被中断
+blur	元素失去焦点
+change	用户改变域的内容
+dblclick	鼠标双击某个对象
+error	当加载文档或图像时发生某个错误
+focus	元素获得焦点
+keydown	键盘的键被按下
+keypress	键盘的键被按下或按住
+keyup	键盘的键被松开
+mousemove	鼠标被移动
+reset	重置按钮被点击	
+resize	窗口或框架被调整尺寸
+select	文本被选定
+scroll  元素滚动条在滚动时触发。
+submit	提交按钮被点击
+unload	用户退出页面
+
+
+touchstart : 触摸开始（手指放在触摸屏上）
+touchmove : 拖动（手指在触摸屏上移动）
+touchend : 触摸结束（手指从触摸屏上移开）
+touchenter ：移动的手指进入一个dom元素。
+touchleave ：移动的手指离开一个dom元素。
+touchcancel：是在拖动中断时候触发
+tap: 手指碰一下屏幕会触发
+longTap: 手指长按屏幕会触发
+singleTap: 手指碰一下屏幕会触发
+doubleTap: 手指双击屏幕会触发
+swipe：手指在屏幕上滑动时会触发
+swipeLeft：手指在屏幕上向左滑动时会触发
+swipeRight：手指在屏幕上向右滑动时会触发
+swipeUp：手指在屏幕上向上滑动时会触发
+swipeDown：手指在屏幕上向下滑动时会触发

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>适用于所有元素类型的父,子元素都没有具体尺寸</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			#box{
+				width: 70%;
+				height: 65%;
+				margin: 0 auto;
+				background: bisque;
+				font-size: 20px;
+				position: relative;
+				
+			}	
+			.zxw{
+				background: red;
+				/*width:40%;
+				height: 55%;*/
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				
+				/*水平位移自己宽度的一半*/
+				/*transform: translateX(-50%);*/
+				/*垂直位移自己高度的一半*/
+				/*transform: translateY(-50%);*/
+				
+				transform: translate(-50%,-50%);
+			}
+		</style>
+	</head>
+	<body>
+		<!--定位加位移居中法
+			1.父元素设置相对定位
+				position: relative;
+			2.子元素设置绝对定位
+				position：absolute；
+				left: 50%;
+            	top: 50%;				
+			3.子元素位移自身尺寸的一半 
+				transform: translate(-50%,-50%);-->
+		<div id="box">
+			<!--<div class="zxw"></div>-->
+			<span class="zxw">我要自学网我要自学网我要自学网</span>
+		</div>
+	</body>
+</html>

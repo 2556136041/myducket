@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#left{
+				width: 500px;height: 400px;background: url(img/fj500.jpg) no-repeat;
+				float: left;margin-left: 20px;position: relative;
+				cursor: crosshair;
+			}
+			#box{
+				width: 250px;height: 200px;background: #999;opacity: 0.8;
+				position: absolute;top: 0;left: 0;display: none;
+			}
+			.cover{
+				width: 500px;height: 400px;background: rgba(0,0,0,0);
+				position: absolute;top: 0;left: 0;
+			}
+			#right{
+				width: 500px;height: 400px;float: left;margin-left: 20px;
+				position: relative;overflow: hidden;display: none;
+			}
+			#pic{
+				position: absolute;top: 0;left: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left">
+			<div id="box"></div>
+			<div class="cover"></div>
+		</div>
+		<div id="right">
+			<img src="img/fj1000.jpg" id="pic"/>	
+		</div>		
+		
+		<script type="text/javascript">
+			var left = document.getElementById("left");
+			var box = document.getElementById("box");
+			var right = document.getElementById("right");
+			//给left元素绑定鼠标移动事件
+			left.onmousemove = function(event){
+				//获取事件对象
+				var ev = window.event || event;
+				//获取鼠标与元素的位置,相对于被触发的元素左上角位置
+				var m_left = ev.layerX ||ev.offsetX;
+				var m_top = ev.layerY ||ev.offsetY;
+//				document.title = (m_left+"|"+m_top);
+				
+				//计算box的位置
+				var box_left = m_left-125;
+				var box_top = m_top-100;
+				document.title = (box_left+"|"+box_top);
+				
+				//设置条件
+				box_left = box_left<0?0:box_left;
+				box_top = box_top<0?0:box_top;
+				box_left = box_left>250?250:box_left;
+				box_top = box_top>200?200:box_top;
+				
+				
+				
+				//让box动起来
+				box.style.left = box_left+"px";
+				box.style.top = box_top+"px";
+				
+				//让右侧图片动起来
+				pic.style.left = "-"+box_left*2+"px";
+				pic.style.top = "-"+box_top*2+"px";
+				
+			
+			};
+			//鼠标移入事件
+			left.onmouseover = function(){
+				box.style.display = "block";
+				right.style.display = "block";
+			};
+			
+			//鼠标移出事件
+			left.onmouseout = function(){
+				box.style.display = "none";
+				right.style.display = "none";
+			};	
+		</script>
+		
+	</body>
+</html>

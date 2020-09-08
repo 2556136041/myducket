@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>7</title>
+  <base href="./images/" target="_blank">
+  <style>
+      :root{
+         --main-bg-color:red;
+
+
+      }
+      div#div1{
+          width:calc( 100% - 100px );
+          height: 100%;
+          margin:0 auto;
+          background: var(--main-bg-color);
+      }
+
+      a:after{
+          content: "("attr(href)")";
+      }
+
+         
+	</style>
+
+
+</head>
+<body>
+
+<div id="div1">
+   <img src="1122.jpg" width="300" alt="">
+   <a id="a1" data-attr-id="a11" href="http://www.baidu.com">link</a>
+</div>
+<div id="div2"></div>
+<script>
+//var dataval=document.getElementById('a1').dataset["attrId"];
+var dataval=document.getElementById('a1').getAttribute("data-attr-id");
+document.getElementById("div2").innerHTML=dataval;
+</script>
+	
+</body>
+</html>

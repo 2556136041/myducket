@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 450px;height: 450px;margin: 100px auto;
+				border-radius:50% ;overflow: hidden;position: relative;
+			}
+			img{
+				width: 100%;height: 100%;position: absolute;
+				top: 0;left: 0;
+			}
+			.zp{
+				animation: zpzd 1s linear infinite;
+			}
+			.paused{
+				animation-play-state: paused;
+			}
+			
+			@keyframes zpzd{
+				0%{transform: rotate(0deg);}
+				100%{transform: rotate(360deg);}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/zp.png" id="zp"/>
+			<img src="img/zz.png" id="zz"/>
+		</div>
+		
+		
+		<script type="text/javascript">
+			var zp = document.getElementById("zp");
+			var zz = document.getElementById("zz");
+			var abc = 1;
+			//获取旋转角度函数开始			
+			function trans(r){
+			    var values = r.split('(')[1].split(')')[0].split(',');
+			    var a = values[0];
+			    var b = values[1];
+			    var scale = Math.sqrt(a * a + b * b);
+			    var sin = b / scale;
+			    var rota = Math.round(Math.atan2(b, a) * (180 / Math.PI));
+				var rotate = rota>=0?rota:rota+360;
+				return rotate;
+			};
+			//获取旋转角度函数结束			
+			zz.onclick = function(){
+				if (abc==1) {
+					//设置属性，让转盘转动
+					zp.setAttribute("class","zp");
+					abc = 2;
+				} else{
+					var rot = getComputedStyle(zp,null).transform;
+					var rotate = trans(rot);
+					//console.log(rotate);
+					
+					//设置条件
+					if (rotate>=54&&rotate<=90) {
+						//设置随机值
+						var num = Math.floor(Math.random()*(100-92+1)+92);						
+						//设置角度
+						zp.style.transform = "rotate("+num+"deg)";
+						
+						//console.log(num);
+						
+					} else{
+						zp.style.transform = "rotate("+rotate+"deg)";
+					};
+					
+					
+					//设置属性，让转盘停止
+					zp.setAttribute("class","paused");
+					abc = 1;					
+				};
+
+			};	
+		</script>
+	</body>
+</html>

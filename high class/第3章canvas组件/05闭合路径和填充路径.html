@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--什么是canvas:
+			1.canvas:标签是用来绘制图像
+			2.canvas:本身没有绘画的能力，仅仅是图形的容器，相当于一块画板
+			3.必须要使用脚本完成绘制，JS-->
+		
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			
+			//3.开启一条路径(或重置当前路径),表示我要开始画了
+			cv.beginPath();
+			
+			//4.指定路径起点:画布.moveTo(X坐标,Y坐标);
+			cv.moveTo(50,50);
+			
+			//5.指定路径到达位置:画布.lineTo(X坐标,Y坐标);
+			cv.lineTo(50,150);
+			cv.lineTo(150,150);
+			
+			//不能指定路径到达起点来关闭路径,不是正常的关闭路径
+			//cv.lineTo(50,50);
+
+//			6.创建闭合路径:从当前点到开始点的路径
+			cv.closePath();
+
+			
+			//6.定义画笔宽度（数值类型）,像素单位
+			cv.lineWidth = 4;
+			
+			//7.定义画笔（路径)颜色:
+			cv.strokeStyle = "#ff0000";
+			
+			//8.定义填充颜色:
+			cv.fillStyle = "#0000ff";
+			
+			
+			
+			//绘制当前路径,默认为黑色
+			cv.stroke();
+			
+			//填充当前路径,默认为黑色
+			cv.fill();
+			
+		</script>
+		
+		
+	</body>
+</html>

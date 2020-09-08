@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 800px;height: 100px;margin: 0 auto;
+				background: #ccc;position: relative;
+			}
+			.zxw-l{
+				width: 200px;height: 80px;background: red;
+				position: absolute;top: 10px;left: 0;
+			}
+			.zxw-c{
+				width: 260px;height: 40px;background: green;
+				position: absolute;top: 30px;left: 50%;transform: translateX(-50%);
+			}
+			.zxw-r{
+				width: 100px;height: 40px;background: blue;
+				position: absolute;top: 30px;right: 0;
+			}
+			.zxw-s{
+				width: 50px;height: 30px;background: black;display: none;
+				position: absolute;top: 25px;right: 70px;
+			}
+			@media only screen and (max-width: 800px) {
+				.box{
+					width: 100%;height: 80px;
+				}
+				.zxw-l{
+				    width: 120px;height: 60px;
+				}
+				.zxw-c{
+					display: none;
+				}
+				.zxw-r{
+					width: 60px;height: 30px;
+					top: 25px;
+				}
+				.zxw-s{
+					display: block;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<header>
+			<div class="box">
+				<div class="zxw-l"></div>
+				<div class="zxw-c"></div>
+				<div class="zxw-r"></div>
+				<div class="zxw-s"></div>
+			</div>
+
+		</header>
+		
+	</body>
+</html>

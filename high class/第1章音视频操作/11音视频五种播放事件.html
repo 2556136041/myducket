@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;position: relative;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}
+			#gg{
+				width: 300px;height: 200px;
+				position: absolute;left: 100px;top: 20px;
+			}
+			#gg img{
+				width: 100%;height: 100%;
+			}
+			#gg span{
+				position: absolute; left: 50%;transform: translateX(-50%);top: 164px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="https://media.w3.org/2010/05/sintel/trailer.mp4"  controls></video>
+			<div id="gg">
+				<img src="img/pic.jpg"/>
+				<span id="text"></span>
+			</div>
+			
+			
+		</div>
+		
+		<script type="text/javascript">
+//				获取视频对象
+			var vid = document.getElementById("vd");
+
+			//1.音频/视频开始播放或不再暂停时，会发生 play 事件
+			vid.onplay=function(){
+				document.getElementById("gg").style.display="none";
+//				document.getElementById("text").innerText="开始加载";	
+			}
+			
+//			2.音频/视频已暂停时，会发生 pause 事件
+			vid.onpause=function(){
+				document.getElementById("gg").style.display="block";
+				document.getElementById("text").innerText="暂停播放";	
+			}			
+			
+//			3.音频/视频因缓冲而停止时，会发生 waiting 事件
+			vid.onwaiting=function(){
+				document.getElementById("gg").style.display="block";
+				document.getElementById("text").innerText="正在缓冲";	
+			}				
+			
+//			4.音频/视频因缓冲就绪时，会发生 playing 事件
+			vid.onplaying=function(){
+				document.getElementById("gg").style.display="none";
+			}
+			
+//			5.音频/视频播放列表已结束时，会发生 ended 事件
+			vid.onended=function(){
+				document.getElementById("gg").style.display="block";
+				document.getElementById("text").innerText="播放结束";	
+			}				
+			
+		</script>
+		
+		
+	</body>
+</html>

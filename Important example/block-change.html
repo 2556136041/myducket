@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>区块点击切换</title> 
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../font_icon/iconfont.js"/>
+
+<style>
+    *{
+    	padding:0px;
+    	margin: 0px;
+    }
+    #box{
+        width: 800px;
+        height: 340px;
+        margin: 100px auto;
+        position: relative;                
+    }
+    .zxw{
+        width: 800px;
+        height: 300px;
+        line-height: 300px;
+        text-align: center;
+        font-size: 100px;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    img{
+        width:800px;
+        height: 300px;
+    }
+    #zxw1{background: red;
+        z-index: 2;
+    }
+    #zxw2{
+        background: green;
+    }
+    #zxw3{
+        background: blue;
+    }
+    #zxw4{
+        background: yellow;
+    }
+    
+    #nav{
+        width: 200px;
+        height: 30px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        /*margin-left: -100px;*/
+        /*border:1px solid black;*/
+    }
+    #nav p{
+        width: 20px;
+        height: 20px;
+        border-radius:50%;
+        background: #ccc;
+        margin: 0 10px;
+        float: left;
+        cursor: pointer;
+    }
+    #nav .active{
+        /*width: 40px;
+        background: blue;*/
+        /*width:30px;
+        height: 30px;*/
+        /*border-radius:50%;*/
+        background: black;
+    }
+
+</style>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script>
+    $(function(){  
+       var c=0;
+       var zxw = $("#box .zxw");
+
+       function abc(){
+           c++;
+           if(c == zxw.length){
+               c=0;
+           }
+
+           zxw.eq(c).show().siblings(".zxw").hide();
+           $("#nav p").eq(c).css({backgroundColor:"black"}).siblings("p").css({backgroundColor:"gray"});
+
+       }   
+
+       function bcd(e){
+           c=e.index();
+           zxw.eq(c).show().siblings(".zxw").hide();
+           $("#nav p").eq(c).css({backgroundColor:"black"}).siblings("p").css({backgroundColor:"gray"});
+
+       } 
+
+       //定时器,每2秒执行一次
+        var time = setInterval(abc,2000);
+        
+        //鼠标移入#box元素中,停止定时器
+        $("#box").mouseenter(function(){
+            clearInterval(time);
+        });
+        
+        //鼠标移出#box元素后,开始定时器
+        $("#box").mouseleave(function(){
+            time = setInterval(abc,2000);
+        }); 
+        
+        //定义单击小圆点事件
+        $("#nav p").click(function(){
+             bcd($(this));
+        })
+
+
+        
+    })
+
+</script>
+
+</head>
+
+<body>
+    <div id="box">
+            <div class="zxw" id="zxw1"><img src="../images/202005091112416329.jpg" alt=""></div>
+            <div class="zxw" id="zxw2"><img src="../images/202005160206030346.jpg" alt=""></div>   
+            <div class="zxw" id="zxw3"><img src="../images/202005160236386836.jpg" alt=""></div>
+            <div class="zxw" id="zxw4"><img src="../images/202005160928368165.jpg" alt=""></div>         
+            <!--            -->
+            <div id="nav">
+                <p class="active"></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </div>
+            
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#sz{
+				width: 600px;height: 600px;border-radius: 50%;
+				margin: 50px auto;position: relative;
+				background: url(img/sz/szbj.png) no-repeat 0 0/100% 100%;
+			}
+			#sz img{
+				width: 600px;height: 600px;
+				position: absolute;top: 0;left: 0;
+			}
+			#szmz{
+				animation: sz 60s linear infinite;
+			}
+			#szfz{
+				animation: sz 3600s linear infinite;
+			}
+			#szsz{
+				animation: sz 43200s linear infinite;
+			}
+			@keyframes sz{
+				0%{transform: rotateZ(0deg);}
+				100%{transform: rotateZ(360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="sz">
+			<img id="szsz" src="img/sz/szsz.png"/>
+			<img id="szfz" src="img/sz/szfz.png"/>
+			<img id="szmz" src="img/sz/szmz.png"/>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/51zxw.css"/>
+	</head>
+	<body>
+	
+	<!--最新课程开始-->
+	<div class="zxkc content-box">
+		<h3 class="m-title">最新课程</h3>
+		<div class="m-list zx-box clearfix" id="abc">
+
+			<script type="text/x-dot-temolate" id="zxw">
+				{{~it:value:index}} 
+					<a href="#">
+						<img src="{{=value.img}}"/>
+						<p>{{=value.title}}</p>
+					</a>
+				{{~}}
+			</script>
+		</div>
+		
+	</div>
+	<!--最新课程结束-->
+	
+	
+	<script src="doT.min.js" ></script>
+	<script type="text/javascript">
+		//从服务器返回的数据,一般是用ajax从服务器获取
+		var data=[
+			{img:"https://www.51zxw.net/m/img/kcbm/829.jpg",title:"Excel VBA编程宝典1--初战篇" },
+			{img:"https://www.51zxw.net/m/img/kcbm/837.jpg",title:"HTML基础视频教程" },
+			{img:"https://www.51zxw.net/m/img/kcbm/836.jpg",title:"CREO 6.0视频教程" },
+			{img:"https://www.51zxw.net/m/img/kcbm/834.jpg",title:"UG NX12有限元分析视频教程" },
+			{img:"https://www.51zxw.net/m/img/kcbm/833.jpg",title:"出纳实训教程2019" },
+			{img:"https://www.51zxw.net/m/img/kcbm/821.jpg",title:"Hypermesh2017视频教程" },
+			{img:"https://www.51zxw.net/m/img/kcbm/827.jpg",title:"圆方软件教程--定制衣柜篇" },
+			{img:"https://www.51zxw.net/m/img/kcbm/826.jpg",title:"UE4蓝图交互教程--室内篇" },			
+		];
+		
+		//生成模板方法
+		var tpt = doT.template(document.getElementById("zxw").innerHTML);
+		
+		//把数据渲染到指定元素中
+		document.getElementById("abc").innerHTML=tpt(data);
+	</script>	
+	
+	
+	
+	</body>
+</html>

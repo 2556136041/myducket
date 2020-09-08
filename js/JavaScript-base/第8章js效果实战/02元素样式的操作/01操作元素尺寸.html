@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#btn{
+				width: 100px;height: 30px;display: block;margin: 0 auto;
+			}
+			#zxw{
+				margin: 50px auto;background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<div id="zxw" style="width: 200px;height: 200px;"></div>
+		
+		<script type="text/javascript">
+			var btn=document.getElementById("btn");
+			var zxw=document.getElementById("zxw");
+			
+			btn.onclick = function(){
+//				获取元素尺寸并转成数值类型
+				var o_w=parseInt(zxw.style.width);
+				var o_h=parseInt(zxw.style.height);
+//				alert(typeof o_h);
+				
+//				计算新的尺寸
+				var n_w=o_w+20+"px";
+				var n_h=o_h+20+"px";
+				
+				if (n_h>="300px") {
+					zxw.style.height="300px";
+				} else{
+					zxw.style.height=n_h;
+				}
+				
+//				元素尺寸重新赋值
+				zxw.style.width=n_w;
+				
+			}
+		</script>
+	</body>
+</html>

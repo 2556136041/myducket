@@ -1,0 +1,16 @@
+#zxw {
+  width: 400px;
+}
+#zxw .left {
+  background: red;
+}
+#zxw .left .logo {
+  width: 100px;
+}
+#zxw .left .logo a {
+  height: 100px;
+}
+#zxw .left .logo a img {
+  width: 100px;
+  height: 100px;
+}

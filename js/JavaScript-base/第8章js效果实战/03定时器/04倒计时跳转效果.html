@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			.box{
+				width: 400px;
+				height: 50px;
+				margin: 0 auto;
+				text-align: center;
+				font-size: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			跳转剩余时间：<span id="clock">10</span>秒
+			
+		</div>
+		
+		
+		<script type="text/javascript">
+			var clock= document.getElementById("clock");
+			var t = clock.innerHTML;
+			
+			function func(){
+				t--;
+				clock.innerHTML=t;
+				if (t<=0) {
+					clearInterval(timer);
+					location.href = "https://www.51zxw.net";
+				};
+			}
+			
+			
+			var timer = setInterval(func,1000);
+		</script>
+		
+	</body>
+</html>

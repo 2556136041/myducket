@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//筛选出匹配表达式的父元素
+				//只考虑父元素而不考虑祖先元素
+				//$("div.bbb").parent().find("span").css("color","red");
+				
+				//var e = $("span").parent();
+				//var e = $("span").parent("p");
+				//var e = $("span").parent(".zxw2");
+				//console.log(e);
+				
+				//筛选出匹配表达式的祖先元素
+				//var e = $("span").parents();
+				//var e = $("span").parents("p");
+				var e = $("span").parents(".zxw2");
+				console.log(e);				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="zxw1">
+				<p>我要自学网1</p>
+				<span class="aaa">我要自学网2</span>
+				<p>
+					<span class="bbb">我要自学网3</span>
+				</p>
+			</div>
+			
+			<div class="zxw2">
+				<p>我要自学网4</p>
+				<span class="aaa">我要自学网5</span>
+				<div class="bbb">我要自学网6</div>
+				
+			</div>			
+		</div>
+	</body>
+</html>

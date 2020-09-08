@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 100%;height: 350px;margin-top:100px ;
+			}
+			.bg0{background: #3c5e81;}
+			.bg1{background: #3c5e81;}
+			.bg2{background: #3c5e81;}
+			.bg3{background: #3c5e81;}
+			#slide{
+				width: 800px;height: 350px;margin: 0 auto;position: relative;
+				/*overflow: hidden;*/
+			}
+			#zxw{
+				width: 4000px;height: 350px;position: absolute;top: 0;left: 0px;
+			}
+			#zxw li{float: left;}
+			#zxw li a{
+				display: block;width: 800px;height: 350px;position: relative;
+			}
+			#zxw li a img{
+				width: 100%;height: 100%;
+			}
+			/*---------------------------*/
+			#zxw li a span{
+				font-size: 150px;color: #fff;position: absolute; top: 100px;left: 350px;
+			}
+			/*-----------------------------*/
+			
+			#nav{
+				width: 160px;height: 20px;position: absolute;bottom: 10px;left: 50%;
+				margin-left: -80px;
+			}
+			#nav li{
+				width: 20px;height: 20px;border-radius:50% ;background: #ccc;float: left;
+				margin: 0 10px;cursor: pointer;
+			}
+			#nav .active{background: red;}
+			
+			#prev,#next{
+				width: 25px;height: 50px;background: #FFF;position: absolute;top: 150px;
+				cursor: pointer;
+			}
+			#prev{
+				left: 10px;
+			}	
+			#next{
+				right: 10px;
+			}
+			#prev img,#nextimg{
+				width: 100%;height: 100%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="box" class="bg0">
+			<div id="slide">
+				<ul id="zxw">
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200225/202002250506403603.jpg"/>
+		<span>0</span>
+					</a></li>
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200222/202002220335205565.jpg"/>
+		<span>1</span>
+					</a></li>
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200219/202002190938244645.jpg"/>
+		<span>2</span>
+					</a></li>
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20191114/201911140354175841.jpg"/>
+		<span>3</span>
+					</a></li>					
+					<li><a href="">
+		<img src="https://www.51zxw.net/NewAn/UploadFiles/20200225/202002250506403603.jpg"/>
+		<span>4</span>
+					</a></li>										
+				</ul>
+				
+				<!--下方小圆点-->
+				<ul id="nav">
+					<li class="active"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				
+				
+				<!--左右耳朵-->
+				<div id="prev"><img src="img/prev.png"/></div>
+				<div id="next"><img src="img/next.png"/></div>
+			</div>
+			
+			
+			
+		</div>
+		
+	</body>
+</html>

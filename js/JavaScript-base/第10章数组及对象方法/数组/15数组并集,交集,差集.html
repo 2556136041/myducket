@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr1=[1,2,3];
+			var arr2=[2,3,4];
+			var a = new Set(arr1);
+			var b = new Set(arr2);
+			
+			//1.并集:a+b再把重复去掉  [1,2,3,4]
+			var un = new Set([...a,...b]);  //[1,2,3,4]
+			console.log(un);
+			
+			//2.交集:a和b共同的部分[2,3]
+			var is = new Set([...a].filter(x=> b.has(x)));//[2,3]
+			console.log(is);
+//			function(x){
+//				return b.has(x);
+//			}
+			
+			//3.差集:a-b [1]
+			var df = new Set([...a].filter(x=> !b.has(x)));//[1]
+			console.log(df);
+		</script>
+	</body>
+</html>

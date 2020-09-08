@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 100px;height: 100px;background: red;
+				margin: 100px auto;
+				/*animation: zxw 10s;*/
+				/*animation: zxw 10s linear;*/
+				animation: zxw 10s linear 3s;
+				/*语法:*/
+					/*animation:要绑定的动画名称   动画完成的时间   速度曲线   延迟开始时间*/
+					/*1.要绑定的动画名称:必须要有*/
+					/*2.动画完成的时间:必须要有 s,ms*/
+					/*3.速度曲线 默认ease变速*/
+						/*ease	变速，规定慢速开始，然后变快，然后慢速结束的过渡效果*/
+						/*linear	匀速，规定以相同速度开始至结束的过渡效果。*/
+						/*ease-in	规定以慢速开始的过渡效果*/
+						/*ease-out	规定以慢速结束的过渡效果*/
+						/*ease-in-out	规定以慢速开始和结束的过渡效果*/
+						/*cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。*/
+					/*4.延迟开始时间:	s,ms*/
+			}
+			
+			/*@keyframes用于创建一个动画,动画名称自己设置*/
+			@keyframes zxw{
+				/*动画开始*/
+				/*from{width: 100px;height: 100px;background: red;}*/
+				/*动画结束*/
+				/*to{width: 500px;height: 500px;background: blue;}*/
+				
+				/*百分比创建动画 推荐使用*/
+				/*百分比指的是动画完成时间的百分比*/
+				0%{width: 100px;height: 100px;background: red;}
+				30%{width: 200px;height: 300px;background: green;}
+				50%{width: 200px;height: 300px;background: green;}
+				80%{width: 200px;height: 300px;background: yellow;}
+				100%{width: 500px;height: 500px;background: blue;}
+			}
+			
+		</style>
+	</head>
+	<body>
+		<!--动画：通过改变元素的样式给元素添加动画效果-->
+		<div id="box"></div>
+	</body>
+</html>

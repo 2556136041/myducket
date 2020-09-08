@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>localstorage</title>
+</head>
+<body>
+    <!-- IE8以上支持 -->
+	
+	<script type="text/javascript">
+         if(typeof(Storage)!=="undefined"){
+              // sessionStorage.person=JSON.stringify({uname:"wxl",age:"45",sex:"man"});
+         	  // sessionStorage.setItem("uname","wxl007");
+         	  // if(sessionStorage.getItem("person")!=null){
+         	  // 	  var p=JSON.parse(sessionStorage.person);
+         	  // 	  alert(p.uname);
+         	  // }
+         	  // 
+         	  // sessionStorage.person=null;
+         	  sessionStorage.clear();
+         	  
+         }else{
+         	   alert("不支持本地storage");
+         }
+
+        
+	</script>
+</body>
+</html>

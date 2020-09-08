@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 600px;height: 500px;border: 1px solid #000000;margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<!--给图表准备一个容器-->
+		<div id="box" ></div>
+		
+		<script src="echarts.min.js" ></script>
+		<script type="text/javascript">
+			//给容器初始化图表实例
+			var myChart=echarts.init(document.getElementById("box"));
+			
+			//指定图表配置项和数据
+			var option={
+				title:{text:'汽车销量'},
+				tooltip:{},
+				legend:{},
+				series:[{
+					type:'pie',//表示图表类型为饼状图
+					radius:'60%',//设置饼状图大小
+					data:[ //数据
+						{name:'周一',value:'10'},
+						{name:'周二',value:'20'},
+						{name:'周三',value:'15'},
+						{name:'周四',value:'17'},
+						{name:'周五',value:'12'},
+						{name:'周六',value:'23'},
+						{name:'周日',value:'14'},
+					]  
+				}]
+			};
+			
+			//把配置项和数据显示出来
+			myChart.setOption(option);
+		</script>
+		
+		
+	</body>
+</html>

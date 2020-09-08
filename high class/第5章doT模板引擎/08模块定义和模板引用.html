@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<!--模板存放区域，修改type类型，以免被解析成js-->
+			<!--5.模块定义{{##def.模板名:    #}}，{{#def.模板名}}引用模块-->
+			<script type="text/x-dot-temolate" id="zxw">
+				<!--定义模板1-->
+				{{##def.tp1:
+					<div>姓名：{{=value.name}}  年龄：年龄不祥  爱好：{{=value.ah}}</div>
+				#}}
+				
+				<!--定义模板2-->
+				{{##def.tp2:
+					<div>姓名：{{=value.name}}  年龄：{{=value.age}}  爱好：爱好没写</div>
+				#}}
+				
+				<!--定义模板3-->
+				{{##def.tp3:
+					<div>姓名：{{=value.name}}  年龄：{{=value.age}}  爱好：{{=value.ah}}</div>
+				#}}
+				<!---------------------------------------------------------------------->
+				
+				{{~it:value:index}}   <!--相当于for(){-->
+					{{? !value.age}}
+						{{#def.tp1}}   <!--引用模板1-->
+					{{?? !value.ah}}
+						{{#def.tp2}}   <!--引用模板2-->
+					{{??}}
+						{{#def.tp3}}   <!--引用模板3-->
+					{{?}}
+				{{~}}	  <!--相当于   }  -->
+			</script>
+
+		</div>
+		
+
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="doT.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//从服务器返回的数据,一般是用ajax从服务器获取
+				var data=[
+				{name:'小明',age:"18岁",ah:"打篮球"},
+				{name:'小红',age:"16岁"},
+				{name:'小张',ah:"看电视"},
+				]
+				
+				//生成模板方法
+				var tpt = doT.template($("#zxw").html());
+				
+				//把数据渲染到指定元素中			
+				$("#box").html(tpt(data));
+			})
+		</script>
+
+		
+	</body>
+</html>

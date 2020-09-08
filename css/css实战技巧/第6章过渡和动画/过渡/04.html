@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 100px;height: 100px;background: red;
+				margin: 100px auto;
+				/*要控制的css属性名*/
+				transition-property: width,background,height;
+				/*完成过渡需要的时间*/
+				transition-duration: 2s,3s,5s;
+				/*过渡的速度曲线*/
+				/*transition-timing-function: linear;*/
+				/*transition-timing-function: ease;*/
+				/*transition-timing-function: ease-in;*/
+				/*transition-timing-function: ease-out;*/
+				transition-timing-function: linear,linear,ease;
+				
+				/*过渡延迟时间,s,ms*/
+				/*transition-delay:500ms;*/
+				transition-delay:500ms,3s,5s ;
+			}
+			#box:hover{
+				background: blue;
+				width: 500px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--过渡四大要素：-->
+		<!--1.要控制的css属性名,默认值:all,不是必需-->
+		<!--2.完成过渡需要的时间,s,ms.   1000ms=1s  必须要有-->
+		<!--3.过渡的速度曲线，不是必需,ease默认值-->
+			<!--ease	变速，规定慢速开始，然后变快，然后慢速结束的过渡效果-->
+			<!--linear	匀速，规定以相同速度开始至结束的过渡效果。-->
+			<!--ease-in	规定以慢速开始的过渡效果-->
+			<!--ease-out	规定以慢速结束的过渡效果-->
+			<!--ease-in-out	规定以慢速开始和结束的过渡效果-->
+			<!--cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。-->
+		<!--4.过渡延迟时间,s,ms-->	
+			
+		<div id="box"></div>
+	</body>
+</html>

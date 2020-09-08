@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+			
+//			1.函数外部声明的变量为全局变量,在整个js文档中都可调用;
+//			var a="我要自学网";
+//			function zxw(){
+//				document.write(a);
+//			};			
+//			zxw();
+			
+//			2.函数内部用var声明的变量是局部变量,只能在函数内部调用;
+//				局部变量，函数执行完就从内存中删除
+//				能用局部变量声明的,就不要用全局变量,能提高效率;
+//			function zxw(){
+//				var a="我要自学网";
+//			};	
+//			zxw();
+//			document.write(a);		
+			
+			
+//			3.函数内部不用var声明,直接赋值方式声明的变量是全局变量;
+			function zxw(){
+				a="我要自学网";
+			};	
+			zxw();
+			document.write(a);				
+		</script>
+		
+	</head>
+	<body>
+	</body>
+</html>

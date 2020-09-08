@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<body>
+		<p  class="zxw">我要自学网2</p>
+		<div id="zxw1" class="zxw" name="wyzxw">
+			<p id="zxw5" class="zxw3">我要自学网2</p>
+			<div  class="zxw" name="wyzxw">我要自学网3</div>
+			<p  class="zxw3">我要自学网4</p>
+			<div  class="zxw" name="wyzxw">我要自学网5</div>
+		</div>
+
+
+		<script type="text/javascript">
+//			正确方法：
+//			var zxw=document.getElementById("zxw1").getElementsByTagName("p");
+//			var zxw=document.getElementById("zxw1").getElementsByClassName("zxw");
+			
+//			错误方法:
+//			var zxw=document.getElementById("zxw1").getElementsByName("wyzxw");
+//			var zxw=document.getElementById("zxw1").getElementById("zxw5");
+//			var zxw=document.getElementsByClassName("zxw").getElementById("zxw5");
+//			var zxw=document.getElementsByClassName("zxw").getElementsByTagName("p");
+//			var zxw=document.getElementsByTagName("div").getElementsByClassName("zxw3");
+			
+//			console.log(zxw);
+			for (var i=0;i<zxw.length;i++) {
+				zxw[i].style.color="red";
+			}
+		</script>		
+	</body>
+</html>

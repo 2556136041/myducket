@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 300px;height: 300px;background: #000;
+				margin: 100px auto;
+				/*视距属于transform的前置属性,写在父级中*/
+				perspective: 500px;
+			}
+			#zxw{
+				width: 300px;height: 300px;background: red;
+			}
+			#zxw:hover{
+				/*倾斜转换:元素倾斜*/
+				/*值:角度 deg,可以是负值，正负值方向相反*/
+				/*默认的基点在元素中心点*/
+				
+				/*X轴(水平方向)倾斜,倾斜后与Y轴夹角是30度,元素高度不变*/
+				/*正值逆时针倾斜，负值顺时针倾斜*/
+				/*transform: skewX(30deg);*/
+				/*transform: skewX(-30deg);*/
+				
+				
+				/*X轴(水平方向)倾斜,倾斜后与X轴夹角是30度,元素宽度不变*/
+				/*正值顺时针倾斜，负值逆时针倾斜*/
+				/*transform: skewY(30deg);*/
+				/*transform: skewY(-30deg);*/
+				
+				/*目前skew无Z轴的倾斜，说不定以后会有该属性*/
+				
+				/*X轴Y轴同时设置倾斜，值1是X轴，值2是Y轴*/
+				/*transform: skew(30deg,45deg);*/
+				
+				
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="zxw">
+				我要自学网
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

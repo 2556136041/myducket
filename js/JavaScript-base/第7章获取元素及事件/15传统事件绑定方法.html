@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#zxw{
+				width: 500px;height: 300px;background: red;margin: 0 auto;
+				color: white; font-size: 30px;
+			}
+		</style>
+		<script type="text/javascript">
+//			传统事件绑定方法:
+//			1.行内绑定,在开始标签中绑定,把事件名当作元素属性
+//			语法: 事件名="执行的函数()"
+//			结构+样式+行为都绑定在同一个标签中，不利于后期维护
+			
+//			2.动态绑定
+//			语法: 对象.事件 = 匿名函数(匿名函数中是要执行的函数)
+			
+//			传统事件绑定注意:
+//			1.事件名称之间一定要加上on
+//			2.兼容主流的浏览器，包括低版本的IE
+
+			function abc(){
+//				Math.random();取0-1之间的随机数
+				document.getElementById("zxw").innerText=Math.random();
+			};
+			
+			
+			window.onload=function(){
+				var zxw=document.getElementById("zxw");
+				zxw.onclick=function(){
+//					abc();
+					document.getElementById("zxw").innerText=Math.random();
+				};
+				
+				
+			};
+
+		</script>
+	</head>
+	<body>
+		<!--<div id="zxw" onclick="abc()"></div>-->
+		<div id="zxw"></div>
+	</body>
+</html>

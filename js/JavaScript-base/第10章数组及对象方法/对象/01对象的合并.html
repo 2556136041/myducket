@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Object.assign()方法用于对象的合并
+			//将源对象的属性，复制到目标对象中
+			//第一个参数是目标对象，后面的参数都是源对象
+			//会修改目标对象,不会修改源对象
+//			var obj1 = {a:1};
+//			var obj2 = {b:2};
+//			var obj = Object.assign(obj1,obj2);
+//			
+//			console.log(obj1);//{ a: 1, b: 2 }
+//			console.log(obj2);//{ b: 2 }
+//			console.log(obj); //{ a: 1, b: 2 }
+			
+			
+			
+			//如果目标对象与源对象有同名属性，或多个源对象有同名属性，则后面的属性会覆盖前面的属性
+//			var obj1 = {a:1,b:1};
+//			var obj2 = {b:2,c:2};
+//			var obj = Object.assign(obj1,obj2);
+//			
+//			console.log(obj1);//{ a: 1, b: 2, c: 2 }
+//			console.log(obj2);//{b:2,c:2}
+//			console.log(obj); //{ a: 1, b: 2, c: 2 }
+			
+			
+			
+			//多个对象合并
+			var obj1 = {a:1,b:1};
+			var obj2 = {b:2,c:2};
+			var obj3 = {c:3,d:3};
+			var obj = Object.assign(obj1,obj2,obj3);
+			
+			console.log(obj1);//{ a: 1, b: 2, c: 3, d: 3 }
+			console.log(obj2);//{b:2,c:2}
+			console.log(obj3);//{c:3,d:3}
+			console.log(obj); //{ a: 1, b: 2, c: 3, d: 3 }				
+			
+			
+			
+		</script>
+	</body>
+</html>

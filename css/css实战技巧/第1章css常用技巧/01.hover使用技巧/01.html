@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#zxw{
+				width: 400px;height: 400px;background: #000;
+			}
+			.zxw2{
+				width: 150px;height: 400px;background: #ff0000;
+			}
+			/*.zxw2:hover{
+				width: 300px;height: 300px;background: #00ff00;
+			}*/
+			/*#zxw:hover .zxw2{
+				width: 300px;height: 300px;background: #00ff00;
+			}*/
+			/*#zxw:hover .zxw2 p{
+				color: blue;font-size: 30px;
+			}*/
+			
+			/*#zxw3:hover{
+				color: #fff;font-size: 20px;
+			}*/
+			/*#zxw3:hover+p{
+				color: #fff;font-size: 20px;
+			}*/
+			#zxw3:hover~p{
+				color: #fff;font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--元素在hover状态时:-->
+			<!--1.可以设置自己或后代元素的属性。-->
+			<!--2.可以设置自己之后兄弟元素的属性。-->
+			<!--3.不能设置祖先元素。-->
+		
+		<div id="zxw">
+			<div class="zxw2">
+				<p>我要自学网</p>
+				<p>我要自学网</p>
+				<p id="zxw3">我要自学网</p>
+				<p>我要自学网</p>
+				<p>我要自学网</p>
+			</div>
+		</div>
+	</body>
+</html>

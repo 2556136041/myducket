@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input,button{
+				width: 200px;height: 50px;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//$(this):表示正在操作的元素
+				//1.focusin事件,获得焦点时触发
+				$("input").focusin(function(){
+					$(this).css("background","#ccc");
+				});
+				
+				//1.focusout事件,失去焦点时触发
+				$("input").focusout(function(){
+					$(this).css("background","#fff");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<form action="#" method="get">
+			姓名：<input type="text" value="张三"/>
+			<br /><br /><br />
+			地址：<input type="text" value="北京"/>
+			<br /><br /><br />
+			<button type="submit">提交</button>
+		</form>
+	</body>
+</html>

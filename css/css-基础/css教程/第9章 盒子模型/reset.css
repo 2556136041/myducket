@@ -1,0 +1,11 @@
+*{margin: 0;padding: 0;
+-moz-box-sizing: border-box;/*火狐浏览器*/
+-webkit-box-sizing: border-box;/*webkit内核浏览器*/
+box-sizing: border-box;
+}
+body{font-size: 16px;font-family: "微软雅黑";color: #222222;}
+b{font-weight: normal;}
+i{font-style: normal;}
+a,a:hover,a:active{text-decoration: none;color: #222222;}
+input,textarea,select{outline:none}
+img{border: none;vertical-align: top;}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//slice():截取指定下标的数组或字符串元素。数组，字符串均有效
+			//不会修改原数组或字符串
+			//语法： slice(开始下标,结束下标);
+			//如果结束下标未被规定，那么会选取从开始下标到数组结尾的所有元素
+			//返回一个包含从开始下标到结束下（不包括结束标下标）的新数组或字符串
+			//可使用负值从数组的尾部选取元素
+			
+			
+			var arr = [0,1,2,3,4,5,6,7,8,9];
+			
+			var str = "www.51zxw.net";
+			
+			//var zxw = arr.slice(2);  //[2,3,4,5,6,7,8,9]
+			//var zxw = arr.slice(3,8);  //[3,4,5,6,7]
+			//var zxw = arr.slice(-6,-1);  //[ 4, 5, 6, 7, 8 ]
+			//var zxw = arr.slice(-6,-9);  //空数组
+			
+			var zxw = str.slice(2);  //w.51zxw.net
+			
+			
+			console.log(zxw);
+			
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

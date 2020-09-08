@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 800px;height: 340px;margin: 100px auto;position: relative;
+				
+			}
+			.zxw{
+				width: 800px;height: 300px;line-height: 300px;text-align: center;
+				font-size: 100px;color: #fff;position: absolute;top: 0;left: 0;
+			}
+			#zxw1{background: red;z-index: 2;}
+			#zxw2{background: green;}
+			
+			#nav{
+				width: 100px;height: 20px;position: absolute;bottom: 0;left: 50%;margin-left: -50px;
+			}
+			#nav p{
+				width: 20px;height: 20px;border-radius:10px ;background: #ccc;
+				margin: 0 10px;float: left;cursor: pointer;
+			}
+			#nav .active{
+				width: 40px;background: blue;
+			}
+			
+			
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//全局变量
+				var c = 0;
+				var zxw = $("#box .zxw");
+				
+				
+				//1.定义自动切换效果
+				function abc(){
+					c++;    //1  2
+					if(c==zxw.length){
+						c=0
+					};
+					//console.log(c);//1  0
+					zxw.eq(c).show().siblings(".zxw").hide();
+					
+					//字符串值无法创建动画（比如 "background-color:red"）
+				$("#nav p").eq(c).animate({width:"40px"},500).css({backgroundColor:"blue"})
+					.siblings("p").css({backgroundColor:"#ccc",width:"20px"});
+					
+				};
+				
+				//2.定义单击小圆点切换效果
+				function bcd(e){
+					c = e.index();
+					zxw.eq(c).show().siblings(".zxw").hide();
+					
+					//字符串值无法创建动画（比如 "background-color:red"）
+				$("#nav p").eq(c).animate({width:"40px"},500).css({backgroundColor:"blue"})
+					.siblings("p").css({backgroundColor:"#ccc",width:"20px"});
+					
+				};				
+				
+				
+				//定时器,每2秒执行一次
+				var time = setInterval(abc,2000);
+				
+				//鼠标移入#box元素中,停止定时器
+				$("#box").mouseenter(function(){
+					clearInterval(time);
+				});
+				
+				//鼠标移出#box元素后,开始定时器
+				$("#box").mouseleave(function(){
+					time = setInterval(abc,2000);
+				});	
+				
+				//定义单击小圆点事件
+				$("#nav p").click(function(){
+					 bcd($(this));
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div class="zxw" id="zxw1">0</div>
+			<div class="zxw" id="zxw2">1</div>
+			
+			<!-------------------------------->
+			<div id="nav">
+				<p class="active"></p>
+				<p></p>
+			</div>
+			
+		</div>
+	</body>
+</html>

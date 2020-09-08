@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>css优先级</title>
+		<style type="text/css">
+			#one{color: brown;}
+			.abc{color: darkviolet;}
+			a{color: blue;}
+			*{color: red;}
+			div{color: red;}
+			
+			
+			
+			
+		</style>
+	</head>
+	<body>
+		<!--优先级-->
+		<!--优先级从低到高-->
+		<!--继承样式   - 浏览器预设的样式   -通用选择器 - 标签选择器  - 类选择器 -id选择器     -->
+		
+		
+		<div>
+			<a href="" class="abc" id="one">听谁的1</a>
+			<br />
+			<span>听谁的</span>
+		</div>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+			.zxw{font-size: 30px;}
+			.zxw1{color: red;}
+			.zxw2{font-weight: 700;}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.删除元素属性
+				//$("button").click(function(){
+					//删除1个属性
+					//$("#box p").removeAttr("id");
+					//删除多个属性,用空格隔开
+					//$("#box p").removeAttr("id title");
+					
+					//不能删除全部，必须要传参数
+					//$("#box p").removeAttr(); //错误
+					
+				//});
+				
+				//2.删除元素类名
+				$("button").click(function(){
+					//删除1个类名
+					//$("#box p").removeClass("zxw");
+					//删除多个类名,用空格隔开
+					//$("#box p").removeClass("zxw zxw1");
+					
+					//删除全部
+					$("#box p").removeClass(); 
+					
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p class="zxw zxw1 zxw2" title="51zxw" id="wyzxw">我要自学网1</p>
+			<span>我要自学网2</span>
+		</div>
+		
+		<button>点击</button>
+	</body>
+</html>

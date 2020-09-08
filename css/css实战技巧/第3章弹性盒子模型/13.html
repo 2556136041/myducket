@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background: bisque;
+				margin: 50px auto;overflow: hidden;
+				/*转成弹性盒子*/
+				display: -webkit-flex;
+				/*display: flex;*/
+				
+				/*转成行内弹性盒子*/
+				display: inline-flex;
+
+				justify-content: space-between;
+				align-items: center;
+				
+			}
+			.zxw{
+				width: 100px;height: 50px;line-height: 50px; 
+				background: red;
+				text-align: center;color: #fff;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<!--弹性盒子中的项目可以是块级元素，行级元素，行内块级元素-->
+		<!--并且行级元素在弹性盒子中可以设置宽高-->
+		<!--注意：ie10以上开始支持，ie6,7,8,9不支持-->
+		
+		<!--<ul class="box">
+			<li class="zxw">zxw1</li>
+			<li class="zxw">zxw2</li>
+			<li class="zxw">zxw3</li>
+		</ul>-->
+		
+		<div class="box">
+			<span class="zxw">我要自学网1</span>
+			<span class="zxw">我要自学网2</span>
+			<span class="zxw">我要自学网3</span>
+			
+			<!--<img src="img/zxw.jpg" class="zxw"/>
+			<img src="img/zxw.jpg" class="zxw"/>
+			<img src="img/zxw.jpg" class="zxw"/>-->
+		</div>
+		<div class="box">
+			<span class="zxw">我要自学网1</span>
+			<span class="zxw">我要自学网2</span>
+			<span class="zxw">我要自学网3</span>
+			
+			<!--<img src="img/zxw.jpg" class="zxw"/>
+			<img src="img/zxw.jpg" class="zxw"/>
+			<img src="img/zxw.jpg" class="zxw"/>-->
+		</div>
+	</body>
+</html>

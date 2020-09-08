@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 400px;height: 400px;background: bisque;
+				margin: 50px auto;overflow: hidden;
+				/*转成弹性盒子*/
+				display: -webkit-flex;
+				display: flex;
+				/*默认值,表示主轴是水平正向*/
+				flex-direction: row;
+				/*表示主轴是水平反向*/
+				/*flex-direction: row-reverse;*/				
+				/*表示主轴是垂直正向*/
+				/*flex-direction: column;*/
+				/*表示主轴是垂直反向*/
+				/*flex-direction: column-reverse;*/
+				
+				/*定义是否换行，及换行方式*/
+				/*默认   不换行*/
+				/*flex-wrap: nowrap;*/
+				/*换行,默认交叉轴正向换行*/
+				flex-wrap: wrap;
+				/*换行,交叉轴反向换行*/
+				/*flex-wrap: wrap-reverse;*/
+				
+				
+				/*子元素在主轴方向上的对齐方式*/
+				/*默认值,开始方向对齐*/
+				/*justify-content: flex-start;*/
+				/*结束方向对齐*/
+				/*justify-content: flex-end;*/
+				/*居中对齐*/
+				/*justify-content: center;*/
+				/*两端对齐，项目之间的间隔都相等*/
+				justify-content: space-between;
+				/*每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍*/
+				/*justify-content: space-around;*/
+				
+				/*子元素在交叉轴方向上的对齐方式*/
+				/*开始方向对齐*/
+				/*align-items: flex-start;*/
+				/*结束方向对齐*/
+				/*align-items: flex-end;*/				
+				/*居中对齐*/
+				/*align-items: center;*/
+				/*项目的第一行文字的基线对齐*/
+				/*align-items: baseline;*/
+				/*（默认值）：如果项目未设置高度或设为auto，将占满整个容器的高度。*/
+				/*align-items: stretch;*/
+				
+				
+				/*多行子元素在交叉轴方向上的对齐方式*/
+				/*开始方向对齐*/
+				/*align-content: flex-start;*/
+				/*结束方向对齐*/
+				/*align-content: flex-end;*/
+				/*居中对齐*/
+				/*align-content: center;*/
+				/*两端对齐，项目之间的间隔都相等*/
+				/*align-content: space-between;*/
+				/*每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍*/
+				/*align-content: space-around;*/
+				/*（默认值）　会拉伸容器内每个项目占用的空间，填充方式为给每个项目下方增加空白,占满整个交叉轴*/
+				align-content: stretch;
+			}
+			.zxw{
+				width: 120px;line-height: 50px; background: red;
+				text-align: center;color: #fff;
+				/*margin-top: 10px;*/
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<ul class="box">
+			<li class="zxw">zxw1</li>
+			<li class="zxw">zxw2</li>
+			<li class="zxw">zxw3</li>
+			<li class="zxw">zxw4</li>
+			<li class="zxw">zxw5</li>
+			<li class="zxw">zxw6</li>
+			<li class="zxw">zxw7</li>
+			<li class="zxw">zxw8</li>
+			<li class="zxw">zxw9</li>
+		</ul>
+		
+		
+	</body>
+</html>

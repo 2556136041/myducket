@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>box-sizing属性</title>
+		<style type="text/css">
+			.div-a{
+				width:240px;height: 150px;background: green;float: left;
+				/*box-sizing: content-box;*/
+				-moz-box-sizing: border-box;/*火狐浏览器*/
+				-webkit-box-sizing: border-box;/*webkit内核浏览器*/
+				box-sizing: border-box;
+				padding: 30px;
+				border: 10px solid red;
+			}
+			.img-a{
+				width: 100%;height: 100%;
+			}
+			.div-b{
+				width: 240px;height: 150px;background: orange;float: left;
+				
+			}
+			.img-b{
+				width: 100%;height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!--正常情况下，内边距和边框是在元素设置的宽度和高度之外进行绘制-->
+		<!--box-sizing: content-box|border-box;-->
+			<!--注意：				
+				ie9以下版本的浏览器不支持
+				
+			-->
+		
+			<!--content-box:内边距和边框是在元素设置的宽度和高度之外进行绘制-->
+			<!--border-box:内边距和边框是在元素设置的宽度和高度之内进行绘制
+				设置的宽度=左边框+右边框+左内边距+右内边距+元素内容的宽度
+				设置的高度=上边框+下边框+上内边距+下内边距+元素内容的高度
+			-->
+		
+		<div class="div-a">
+			<img class="img-a" src="img/zxw.jpg"/>
+		</div>
+		<div class="div-b">
+			<img class="img-b" src="img/zxw.jpg"/>
+		</div>
+	</body>
+</html>

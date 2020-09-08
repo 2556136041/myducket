@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			三元运算符,三目运算符,三元表达式
+//			语法：条件 ? 为真时返回的数据 :为假时返回的数据
+//			var a = 5>3 ? 5 : 3;
+//			var a = 5<3 ? 5 : 3;			
+//			var a = 5<3 ? "真" : "假";
+			
+			var a = prompt("请输入年龄");
+			var b = prompt("请输入年薪，单位万");
+			
+			
+//			var c = a>20 ? "可以娶老婆" : "不准娶老婆";
+//			var c = a>20 && a<60 ? "可以娶老婆" : "不准娶老婆";
+
+//			括号（）:可以改变运算符的优先级
+			var c = a>20 && (a<60 || b>100) ? "可以娶老婆" : "不准娶老婆";
+			
+			document.write(c);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>适用于父元素没有具体尺寸，子元素有具体尺寸</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			html,body{
+				height: 100%;
+			}
+			#box{
+				width: 50%;
+				height: 50%;
+				margin: 0 auto;
+				background: bisque;
+				font-size: 20px;
+				
+				position: relative;
+			}	
+			.zxw{
+				background: red;
+				width: 300px;
+				height: 100px;
+				
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin-left: -150px;
+				margin-top: -50px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--定位加外边距居中法：
+			1.父元素设置相对定位
+				position: relative;
+			2.子元素设置绝对定位
+				position: absolute;
+				top: 50%;
+				left: 50%;				
+			3.子元素设置外边距，自身尺寸的一半
+				margin-left: 自身宽度一半;
+				margin-top: 自身高度一半;-->
+		<div id="box">
+			<div class="zxw"></div>
+		</div>
+	</body>
+</html>

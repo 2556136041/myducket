@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#left{
+				width: 500px;height: 400px;background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="left">
+			
+			
+			
+		</div>
+		
+		
+		<script type="text/javascript">
+			var left = document.getElementById("left");
+			//给left元素绑定鼠标移动事件
+			left.onmousemove = function(event){
+				//获取事件对象
+				//event代表事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等。
+				//event对象只在事件发生的过程中才有效
+//				var ev = window.event;  //IE写法
+//				var ev = event;   //其它浏览器写法
+
+				var ev = window.event || event;
+
+				alert(ev.type);
+				
+				
+			};
+		</script>
+		
+	</body>
+</html>

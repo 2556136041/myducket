@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+
+//			1.把对象转成JSON字符串进行创建本地存储
+//			JSON.stringify()转换为 JSON 字符串,通常为对象或数组
+			localStorage.ren=JSON.stringify({uname:"小明",age:18,sex:"男",ah:"听音乐"});
+			
+//			2.获取到的JSON字符串转成对象
+//			JSON.parse()JSON 字符串转成对象 
+			var xm= JSON.parse(localStorage.ren);
+			console.log(xm);
+			alert(xm.ah);
+		</script>
+		
+		
+		
+	</body>
+</html>

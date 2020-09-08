@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>透明度设置</title>
+		<link rel="stylesheet" type="text/css" href="reset.css"/>
+		<style type="text/css">
+			div{
+				width: 400px;background: red;
+			}
+			img{
+				width: 100%;
+				/*filter: blur(1px);*/
+				/*filter: saturate(0%);*/
+				/*filter: grayscale(50%);*/
+				/*filter: contrast(100%);*/
+				/*老版谷哥和欧朋浏览器需要加前缀*/
+				-webkit-filter: opacity(50%);
+				filter: opacity(50%);
+			}
+		</style>
+	</head>
+	<body>
+		<!--注意：			
+			所有ie浏览器都不支持滤镜属性
+			老版谷哥和欧朋浏览器需要加前缀
+		-->
+		
+		<!--滤镜属性：定义图像的可视效果-->
+			<!--语法：filter: 属性值;-->
+			<!--1.高斯模糊：filter: blur(合法的尺寸单位);-->
+				<!--默认值是0，值越大，图像越模糊-->
+				<!--不能设置成百分比-->
+				
+			<!--2.饱和度设置：filter: saturate(百分比);-->	
+				<!--默认值是100%，图像不变，0%时图像会变成黑白图像-->
+				<!--值可以超过100%，有更高的饱和度-->
+		
+			<!--3.灰度设置：filter: grayscale(百分比);-->
+				<!--值在0%-100%之间。默认是0%-->
+				<!--值为100%，图像会变成黑白图像-->
+		
+			<!--4.对比度设置：filter: contrast(百分比);-->
+				<!--默认值：100%，图像没有变化。值为0%时，图像会变成全黑-->
+				<!--当超过100%时，意味运用更低的对比度-->
+				
+			<!--5.透明度设置:	filter: opacity(百分比);-->
+				<!--默认值：100%，表示完全不透明，0%时，表示完全透明-->
+				<!--值在0%-100%之间。-->
+			
+		<div>
+			<img src="img/mei.jpg"/>
+		</div>	
+		
+		
+	</body>
+</html>

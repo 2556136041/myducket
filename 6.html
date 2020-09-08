@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>6</title>
+   <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+
+	<style>
+
+
+/*   img{
+      filter: grayscale(100%);
+   　　-webkit-filter: grayscale(100%);
+   　　-moz-filter: grayscale(100%);
+   　　-ms-filter: grayscale(100%);
+   　　-o-filter: grayscale(100%);
+   }*/
+
+ /*  a:hover img{
+      filter: grayscale(0%);
+   }
+*/
+         
+	</style>
+   <script>
+
+
+   </script>
+
+</head>
+<body>
+
+<div id="app">
+
+   <img v-on:click="clickimg" src="./images/1122-1.jpg" width="350" alt="">
+
+</div>
+
+<script>
+
+var vue=new Vue({
+    el:"#app",
+    data:{
+      
+    },
+    methods:{
+        clickimg:function(e){
+            e.target.setAttribute("src","./images/1122.jpg");
+
+        }
+
+    }
+
+
+
+})
+
+
+</script>
+
+
+
+
+	
+</body>
+</html>

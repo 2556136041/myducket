@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="img/a.mp4" controls ></video>	
+		</div>
+		<div class="zxw">
+			<button id="btn1">播放</button>
+			<button id="btn2">暂停</button>
+			<button id="btn3">重载</button>
+		</div>
+		
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				//获取视频对象
+				var vid = document.getElementById("vd");   //获取到的是DOM对象
+//				var vid = $("#vd");	 // 获取到的是jQuery对象,对音视频无效			
+				
+//				播放，必须使用DOM对象
+				$("#btn1").click(function(){
+					vid.play();	
+				});
+				
+//				暂停，必须使用DOM对象
+				$("#btn2").click(function(){
+					vid.pause();	
+				});
+				
+//				重载，必须使用DOM对象
+				$("#btn3").click(function(){
+					vid.load();	
+				});				
+			})
+		</script>
+		
+		
+	</body>
+</html>

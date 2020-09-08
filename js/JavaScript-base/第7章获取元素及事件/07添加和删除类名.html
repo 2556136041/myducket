@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.zxw1{color: black;font-size: 16px;}
+			.zxw2{color: red;font-size: 24px;}
+			.zxw3{width: 200px;height: 100px;border: 2px solid black;}
+		</style>
+	</head>
+	<body>
+		<div id="wyzxw" class="zxw1" >
+			我要自学网
+		</div>
+		<script type="text/javascript">
+			var zxw = document.getElementById("wyzxw");
+
+
+//			1.添加类名,已有相同类名，不会添加
+//			zxw.classList.add("zxw2");
+//			zxw.classList.add("zxw2","zxw3");
+			
+//			2.删除类名,如果要删除的类名没有，也不会出错
+//			zxw.classList.remove("zxw3");
+			zxw.classList.remove("zxw3","zxw2");
+			
+			
+			
+		</script>
+	</body>
+</html>

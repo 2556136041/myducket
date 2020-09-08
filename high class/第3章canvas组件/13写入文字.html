@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			
+			
+			//1.设置文本属性
+			//画布.font = "字体样式   字体粗细    字号/行高   字体系列";
+			cv.font = "italic  700   50px/100px  宋体";
+			
+			//2.写入文字
+			//(1).实心文字:
+			//画布.fillText("要写入的文字",X坐标,Y坐标,最大文本宽度(可选));
+//			cv.fillStyle="#ff0000";
+//			cv.fillText("我要自学网",50,100);
+			
+			//(2).空心文字:
+			//画布.strokeText("要写入的文字",X坐标,Y坐标,最大文本宽度(可选));
+			cv.strokeStyle="#00ff00";
+			cv.strokeText("我要自学网",50,100);			
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

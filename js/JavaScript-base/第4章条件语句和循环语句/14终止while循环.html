@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			while循环:一般用在循环次数不确定的情况下
+//			while循环开保险柜：
+			var a=1;
+			var b=Math.floor(Math.random() * (999999 - 1)) + 1;
+//			var b=12;
+//			document.write(b);
+			alert(b);
+//			1.while循环:先判断条件，条件成立才执行
+//			while(a<b){
+//				document.write("密码："+a+"-不对<br>")
+//				a++;
+//			}
+			
+//			2.do-while循环:先执行一次，再判断条件
+//			do{
+//				document.write("密码："+a+"-不对<br>")
+//				a++;
+//			}while(a<b);			
+
+//			3.while循环+判断条件
+//			while(a<=b){
+//				if (a==b) {
+//					document.write("密码："+a+"-正确<br>");
+//				} else{
+//					document.write("密码："+a+"-不对<br>")
+//				};
+//				a++;
+//			};
+
+
+//			4.break:终止全部循环
+//			while(a<1000){
+//				if (a==b) {
+//					document.write("密码："+a+"-正确<br>");
+//					break;
+//				}; 
+//				document.write("密码："+a+"-不对<br>")
+//				a++;
+//			};
+			
+//			5.continue:终止本次循环
+//			while(a<1000){
+//				if (a==b) {
+//					document.write("密码："+a+"-正确<br>");
+//					break;
+//				}; 
+//				if (a==11||a==22||a==33||a==44) {
+//					a++;		//终止本次循环前，让变量自增
+//					continue;   //终止本次循环,开始下次循环,后面的代码不会执行
+//				}; 
+//				document.write("密码："+a+"-不对<br>")
+//				a++;
+//			};	
+			
+//			6.方案优化
+			while(a<1000000){
+				if (a==b) {
+					document.write("密码："+a+"-正确<br>");
+					break;
+				}; 
+				if (a==11||a==22||a==33||a==44) {
+					a++;		//终止本次循环前，让变量自增
+					continue;   //终止本次循环,开始下次循环,后面的代码不会执行
+				}; 
+				
+				a++;
+			};				
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

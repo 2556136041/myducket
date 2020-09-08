@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.获取元素内容,返回内容包含标签
+//				$("button").click(function(){
+//					var zxw = $("#box").html();
+//					console.log(zxw);
+//				});
+				
+				//2.设置元素内容，重写所有元素内容。
+				$("button").click(function(){
+					var zxw = "<i>我要自学网1</i>";
+					$("#box").html(zxw);
+					//$("#box").html("<i>我要自学网1</i>");
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>我要自学网1</p>
+			<span>我要自学网2</span>
+		</div>
+		
+		<button>点击</button>
+	</body>
+</html>

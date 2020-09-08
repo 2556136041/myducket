@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+<script>
+	window.APP={};
+
+	$(function(){
+	    var app=APP.checkdevice;
+	    var isphone=app.browserRedirect();
+	    if(isphone=="phone"){
+	    	document.write("打开设备：phone");
+	    }else if(isphone=="pc"){
+	    	document.write("打开设备：pc");
+	    }
+
+	   if(app.isWeiXin()){
+	   	    document.write("<br>");
+	        document.write("是用微信打开的");
+	   }else{
+	   	    document.write("<br>");
+	        document.write("不是用微信打开的");
+	   }
+	   
+	   var usertypephone=app.useTypePhone();
+	   if(usertypephone==1){
+	   	   document.write("<br>");
+	       document.write("安卓手机");
+	   }else if(usertypephone==2){
+	   	   document.write("<br>");
+	       document.write("IPhone");
+	   }else if(usertypephone==3){
+	       document.write("<br>");
+	       document.write("winphone手机");
+	   }
+
+	})
+
+</script>
+<script src="./js/checkdevice.js"></script>
+</body>
+</html>

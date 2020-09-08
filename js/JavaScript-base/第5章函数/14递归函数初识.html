@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			递归函数:就是函数自己调用自己
+//			注意:递归函数必须有跳出条件，否则就是死循环
+			var i=1;
+			function dg(){				
+				alert("从前有座山，山里有座庙....老和尚给小和尚讲故事，讲的是:");
+				i++;  
+				if(i<5){
+					dg();
+				};				
+			};
+			dg();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

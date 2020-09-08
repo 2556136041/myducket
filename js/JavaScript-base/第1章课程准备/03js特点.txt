@@ -1,0 +1,14 @@
+1).JavaScript是一种脚本(Script)语言
+	JavaScript与其他脚本语言一样,采用小程序段的方式实现编程。
+	
+2).JavaScript是一种解释性语言
+	JavaScript程序代码在运行过程中被逐行解释。
+	
+3).JavaScript是一种基于对象的语言
+	有关 JavaScript的对象特性， 将贯穿整套教程。
+	
+4).JavaScript是一种安全性语言
+	称为具有 Web安全特性，它不允许访问本地的硬盘，也不允许对网络文档进行修改和删除，而只能通过浏览器实现信息浏览或动态交互。
+	
+5).JavaScript跨平台性
+	JavaScript的执行依赖于浏览器本身， 而与操作环境无关。只要是能运行浏览器的计算机，而该浏览器又支持 JavaScript，则脚本就可正确执行。

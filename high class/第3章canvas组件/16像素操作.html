@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				background-color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			
+			//创建图片资源
+			var lamp = new Image();
+			lamp.src = "img/lamp.gif";
+			
+			//createPattern() 在指定的方向内重复指定的元素
+			//语法: 画布.createPattern(image,"repeat|repeat-x|repeat-y|no-repeat");
+			
+			lamp.onload=function(){
+				//创建矩形路径
+				cv.rect(0,0,200,150);			
+				//cv.fillStyle=cv.createPattern(lamp,"repeat");
+				//cv.fillStyle=cv.createPattern(lamp,"repeat-y");
+				cv.fillStyle=cv.createPattern(lamp,"no-repeat");
+				cv.fill();	
+			}
+
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//选择匹配的第一个元素
+				//$("#box div:first").css("color","red");
+				
+				//选择匹配的最后一个元素
+				//$("#box div:last").css("color","red");
+				
+				//选择的是父元素中的前6个div子元素
+				//$("#box div:nth-child(-n+6)").css("color","red");
+				
+				//选择的是父元素中从第4个div子元素开始的所有div子元素
+				//$("#box div:nth-child(n+4)").css("color","red");
+				
+				//选择的是父元素中从第3个开始到8个结束的div子元素
+				//$("#box div:nth-child(n+3):nth-child(-n+8)").css("color","red");
+				
+				//选择的是父元素中奇数(偶数)号div子元素
+				//$("#box div:nth-child(2n+1)").css("color","red");
+				//$("#box div:nth-child(2n)").css("color","red");
+				
+				
+				//$("#box div:nth-child(3n+1)").css("color","red");
+				$("#box div:nth-child(3n+2)").css("color","red");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>我要自学网1</div>
+			<div>我要自学网2</div>
+			<div>我要自学网3</div>
+			<div>我要自学网4</div>
+			<div>我要自学网5</div>
+			<div>我要自学网6</div>
+			<div>我要自学网7</div>
+			<div>我要自学网8</div>
+			<div>我要自学网9</div>
+			<div>我要自学网10</div>
+		</div>
+	</body>
+</html>

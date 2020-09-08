@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>定位偏移量</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style type="text/css">
+			.zxw{width: 500px;height: 500px;margin: 10px auto;border: 1px solid brown;}
+			.box{width: 302px;height: 302px;border: 1px solid black;margin: 50px auto;position: relative;}
+			.pst1,.pst2,.pst3{width: 100px;height: 100px;}
+			.pst1{background: red;}
+			.pst2{
+				background: green;
+				position: absolute;
+				/*left:-100px;*/
+				/*top:-30px*/
+				left: -10%;
+			}
+			.pst3{background: blue;width: 150px;}
+		</style>
+	</head>
+	<body>
+		<!--定位：规定元素的位置-->
+		<!--定位用于没有规律的元素而布局-->
+		<!--定位的三种类型：相对定位，绝对定位，固定定位-->
+		<!--定位使用方法：-->
+			<!--1.规定是哪一个定位方式    position: 定位方式;-->
+			<!--2.指定在方向上的偏移量:top  bottom  left  right-->
+			<!--3.注意：top和bottom只有一个会生效，left和right只有一个会生效。left和top优先-->
+					
+		<!--定位偏移量：-->	
+			<!--1.可以使用合法的尺寸单位,百分比-->
+			<!--2.可以使用负值，当使用负值时，元素的偏移方向与正值相反-->
+			<!--3.元素相对于哪个元素进行定位，使用百分比时，就是哪个元素宽度或高度的百分比-->
+		
+		<div class="zxw">					
+			<div class="box">
+				<div class="pst1"></div>
+				<div class="pst2"></div>
+				<div class="pst3"></div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			var obj = {name:"小明",age:18,sex:"男",height:"1.8米"}; //这是一个对象
+			
+			//1.JS对象转JSON字符串:使用 JSON.stringify()方法
+			//JSON.stringify()可以有3个参数
+			//参数1:要转换对象或数组
+			//参数2(可选):数组或函数
+				//如果参数2 是一个数组，则仅转换数组中指定的属性
+				//如果参数2为函数，则将调用该函数，并传入每个成员的键和值。
+			//参数3(可选):文本缩进、空格和换行符	
+				
+			
+			//var xm_json = JSON.stringify(obj);
+			//var xm_json = JSON.stringify(obj,['name','sex']);//{"name":"小明","sex":"男"}
+			
+			//var xm_json = JSON.stringify(obj,sex);
+			//{"name":"小明","age":18,"sex":"女","height":"1.8米"}
+			
+			
+			function sex(key,value){
+				if (value == "男") {
+					return "女";
+				};
+				return value;
+			}
+			
+			
+			var xm_json = JSON.stringify(obj,null,'\n');
+			
+			
+			
+			console.log(xm_json);
+
+		</script>
+	</body>
+</html>

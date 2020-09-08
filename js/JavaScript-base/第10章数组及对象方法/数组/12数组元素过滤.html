@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//filter():把数组中的某些元素过滤掉，然后返回剩下的元素,接收的是一个回调函数
+			//数组中的每一项运行给定函数，返回满足过滤条件组成的新数组。
+			//不会改变原数组
+			var arr1 = [1,2,3,4,5,6,7,8,9,10];
+			
+			function abc(x){
+				return x>6;
+			};
+			
+			//保留大于6的数组元素
+			var arr2 = arr1.filter(abc);  //[7,8,9,10]
+			
+			function bcd(x){
+				return x%2 == 1;
+			};
+			
+			
+			//保留数组中的奇数元素
+			var arr3 = arr1.filter(bcd);   //[1,3,5,7,9]
+			
+			
+			console.log(arr1);
+			console.log(arr2);
+			console.log(arr3);
+			
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#btn{
+				width: 100px;height: 30px;display: block;margin: 0 auto;
+			}
+			#zxw{
+				width: 200px;height: 200px;margin: 50px auto;background: red;
+			}
+		</style>
+	</head>
+	<body>
+		<button id="btn">点击</button>
+		<div id="zxw" ></div>
+		
+		<script type="text/javascript">
+			var btn=document.getElementById("btn");
+			var zxw=document.getElementById("zxw");
+			
+			btn.onclick = function(){
+//				获取非行内元素尺寸,IE9及以上的标准浏览器生效,只能获取，不能设置
+//				var o_w=getComputedStyle(zxw,null).width;
+//				var o_h=getComputedStyle(zxw,null).height;
+				
+//				获取非行内元素尺寸,IE9以下的浏览器生效，只能获取，不能设置
+//				var o_w=zxw.currentStyle.width;
+//				var o_h=zxw.currentStyle.height;			
+				
+//				document.all:所有元素的一个集合,判断浏览器是否是IE				
+				if (document.all) {
+					var o_w=parseInt(zxw.currentStyle.width);
+					var o_h=parseInt(zxw.currentStyle.height);
+				} else{
+					var o_w=parseInt(getComputedStyle(zxw,null).width);
+					var o_h=parseInt(getComputedStyle(zxw,null).height);
+				}
+
+//				转成数值类型
+//				var o_w=parseInt(zxw.currentStyle.width);
+//				var o_h=parseInt(zxw.currentStyle.height);
+//				alert(typeof o_h);
+				
+//				计算新的尺寸
+				var n_w=o_w+20+"px";
+				var n_h=o_h+20+"px";
+				
+				
+//				元素尺寸重新赋值
+				zxw.style.width=n_w;
+				zxw.style.height=n_h;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			button{width: 200px;height: 40px;}
+			#box{height: 200px;position: relative;}
+			#car{
+				width: 200px;height: 80px;position: absolute;left: 0;top: 120px;
+			}
+			#box p{
+				width: 20px;height: 200px;background: #000;
+				position: absolute;top: 0; left: 800px;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){
+					
+					//delay()延时执行动画
+					
+					//$("#car").delay(3000).animate({left:"600px"},2000);
+					
+					$("#car").animate({left:"600px"},2000)
+					.delay(3000).fadeOut(2000);
+				});	
+				
+				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<br /><br />
+		<div id="box">
+			<img src="img/car.gif" id="car"/>
+			<p></p>
+		</div>
+	</body>
+</html>

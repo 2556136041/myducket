@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="img/a.mp4"  controls></video>	
+		</div>
+		<div class="zxw">
+			<button id="btn1">音量-</button>
+			<button id="btn2">音量+</button>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				//获取视频对象
+				var vid = document.getElementById("vd");
+				
+				//获取按钮
+				var btn1= document.getElementById("btn1");
+				var btn2= document.getElementById("btn2");
+								
+//				1.音量-
+//				volume=必须介于0-1之间，0表示静音，1表示音量最大
+				btn1.onclick=function(){
+					var vol = vid.volume;
+					console.log(vol);   //原来的音量
+					if (vol>0.1) {
+						vid.volume=vol-0.1;
+					} else{
+						vid.volume=0;
+					}
+									
+					console.log(vid.volume);  //当前的音量
+				};
+
+//				1.音量+
+//				volume=必须介于0-1之间，0表示静音，1表示音量最大
+				btn2.onclick=function(){
+					var vol = vid.volume;
+					console.log(vol);   //原来的音量
+					if (vol>0.9) {
+						vid.volume=1;
+					} else{
+						vid.volume=vol+0.1;
+					}
+					
+					console.log(vid.volume);  //当前的音量
+				};
+
+
+			}
+		</script>
+		
+		
+	</body>
+</html>

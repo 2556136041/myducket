@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			回调函数:(callback函数)函数B作为参数传递到另一个函数A中，函数A执行函数B。函数B叫做回调函数
+			
+			function a(x,y){
+				return x+y;
+			};
+			
+			function b(x,y){
+				return x-y;
+			};
+			
+			function c(x,y){
+				return x*y;
+			};
+			
+			function d(x,y){
+				return x/y;
+			};
+			
+			function fn(x,y,m){
+				return m(x,y);
+			};
+			
+			var re=fn(12,4,d);
+			alert(re);
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.zxw1{color: black;font-size: 16px;}
+			.zxw2{color: red;font-size: 24px;}
+			.zxw3{width: 200px;height: 100px;border: 2px solid black;}
+		</style>
+	</head>
+	<body>
+		<div id="wyzxw" class="zxw1 zxw2" >
+			我要自学网
+		</div>
+		<script type="text/javascript">
+			var zxw = document.getElementById("wyzxw");
+
+			
+//			1.toggle在有相同类名时执行删除，没有相同类名时执行添加
+//			zxw.classList.toggle("zxw2");
+			
+//			2.强制执行添加或删除
+//			语法:	toggle("类名",布尔值)
+//				第2个参数为:true  执行添加
+//				第2个参数为:false  执行删除
+//			zxw.classList.toggle("zxw2",true);
+			zxw.classList.toggle("zxw2",false);
+			
+			
+		</script>
+	</body>
+</html>

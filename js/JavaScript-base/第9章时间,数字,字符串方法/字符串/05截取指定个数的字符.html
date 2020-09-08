@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var zxw = "www.51zxw.net";
+			
+			//2.substr()截取从指定下标开始的指定个数的字符
+				//语法: substr(开始下标,截取个数);
+				//substr()可以接受负值
+			
+			//只有一个参数时，从指定位置截取到字符串结尾
+			var a = zxw.substr(4); //51zxw.net
+			
+			//有两个参数时，截取从指定下标开始的指定个数的字符，包头
+			var b = zxw.substr(4,8); //51zxw.ne
+			var c = zxw.substr(4,5); //51zxw
+			
+			
+			//开始下标可以接受负值（-1 指字符串中最后一个字符，-2 指倒数第二个字符）
+			var d = zxw.substr(-4,2); //.n
+			
+			var e = zxw.substr(-4,-2); //错误的
+			alert(e);
+		</script>
+	</body>
+</html>

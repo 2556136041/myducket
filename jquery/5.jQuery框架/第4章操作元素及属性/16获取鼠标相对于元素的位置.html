@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#box{width: 400px;height: 400px;border: 2px solid black;
+				margin: 50px auto;			
+			}
+			#box p{
+				width: 200px;height: 200px;
+				margin: 100px auto;
+				background: red;
+			}
+			
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//获取鼠标位置的两个属性pageX 和 pageY。是属性不是方法
+				//pageX和pageY必须与事件绑定，接收事件对象
+				
+				//获取鼠标相对于当前视口的位置 
+				$("#box").mousemove(function(e){
+					//获取鼠标相对于当前视口的位置
+					var x = e.pageX;   //鼠标相对于当前视口左侧偏移量
+					var y = e.pageY;   //鼠标相对于当前视口上方偏移量
+					
+					//获取元素相对当前视口的偏移量
+					var os = $("#box").offset();
+					var osl = os.left; //元素相对当前视口左侧偏移量
+					var ost = os.top; //元素相对当前视口上方偏移量
+					
+					//计算鼠标相对元素的偏移量
+					var a = x-osl; //鼠标相对元素左侧偏移量
+					var b = y-ost; //鼠标相对元素上方偏移量
+					
+//					-------------------------------
+					
+					$("title").html(a+"||"+b);
+				})
+				
+				
+				
+			
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<!--<p></p>-->
+		</div>
+	</body>
+</html>

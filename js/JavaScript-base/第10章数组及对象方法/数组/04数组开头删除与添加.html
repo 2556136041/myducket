@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var arr = [1,2,3,4,5,6];
+			
+			//1.shift() 删除数组开头第一项，减少数组的 length 值，然后返回移除的元素。
+			//shift()会直接修改原数组，而不是创建一个新的数组
+			//var a = arr.shift();      //a: 1      arr: [ 2, 3, 4, 5, 6 ]
+			
+			
+			//2.unshift() 用于向数组的开头添加一个或多个元素，并返回修改后数组的长度(数值类型)。
+			//unshift()会直接修改原数组，而不是创建一个新的数组
+			//var b = arr.unshift(7);   //b:  7数组的长度
+			var c = arr.unshift("小明","小红");   
+			//c: 8 数组的长度
+			//arr:[ "小明", "小红", 1, 2, 3, 4, 5, 6 ]
+			
+			console.log(arr); 
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

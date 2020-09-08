@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 100px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//1.获取元素宽高
+					//返回数值类型，可以直接计算
+//					var w = $("#box").width();
+//					var h = $("#box").height();
+//					console.log(w+"/"+h);
+					
+					
+					//2.设置元素宽高
+					//$("#box").width(300);//数值类型，默认为像素
+					//$("#box").height("200"); //字符串类型，默认为像素
+					//$("#box").height("200px"); //字符串类型，带单位
+					//$("#box").height("200em"); //其它尺寸单位也生效
+					
+					
+					//3.使用函数设置元素宽高
+					//第一个参数是元素在原先集合中的索引位置，第二个参数为原先的宽高度。
+//					$("#box").width(function(i,w){
+//						return w+10;
+//					}).height(function(i,h){
+//						return h+10;
+//					});
+					
+					
+					//4.查看索引
+					$("div").width(function(i,w){
+						console.log(i);
+					});
+					
+					
+					
+				});
+
+			
+			})
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div id="box"></div>
+		
+		<button>点击</button>
+	</body>
+</html>

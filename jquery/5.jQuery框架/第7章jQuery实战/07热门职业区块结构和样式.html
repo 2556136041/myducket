@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 800px;height: 340px;margin: 100px auto;position: relative;
+				border: 1px solid #000;
+			}
+			.zxw{
+				width: 800px;height: 300px;line-height: 300px;text-align: center;
+				font-size: 100px;color: #fff;position: absolute;top: 0;left: 0;
+			}
+			#zxw1{background: red;}
+			#zxw2{background: green;}
+			
+			#nav{
+				width: 100px;height: 20px;position: absolute;bottom: 0;left: 50%;margin-left: -50px;
+			}
+			#nav p{
+				width: 20px;height: 20px;border-radius:10px ;background: #ccc;
+				margin: 0 10px;float: left;
+			}
+			#nav .active{
+				width: 40px;background: blue;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<div class="zxw" id="zxw1">0</div>
+			<div class="zxw" id="zxw2">1</div>
+			
+			<!-------------------------------->
+			<div id="nav">
+				<p class="active"></p>
+				<p></p>
+			</div>
+			
+		</div>
+	</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">		
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#box{
+				width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;
+			}
+			button{
+				width: 100px;height: 50px;background: #ccc;
+				margin: 0 auto; display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//1.ready事件:页面结构加载完成时触发
+			//$(function(){})是$(document).ready(function(){})简写方式
+//			$(document).ready(function(){
+//				$("button").click(function(){
+//					$("#box").css("background","red");
+//				})
+//			})
+			//2.resize事件:调整浏览器窗口大小的时候触发
+//			$(document).ready(function(){
+//				$(window).resize(function(){
+//					console.log("调整浏览器窗口大小");
+//				});
+//			})
+			
+			//3.scroll()事件：当浏览器窗口滚动时触发
+			$(document).ready(function(){
+				$(window).scroll(function(){
+					console.log("窗口滚动了");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+		<button>点我</button>
+	</body>
+</html>

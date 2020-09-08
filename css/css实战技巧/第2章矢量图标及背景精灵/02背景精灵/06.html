@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 300px;height: 400px;background-color: bisque;
+				margin: 100px auto;border-radius: 16px;
+				background: url(img/pk.jpg) no-repeat 20% 25%/1100% 500%;
+			}
+		</style>
+	</head>
+	<body>
+	
+	<!--百分比背景精灵设置：-->	
+		<!--1.背景图片横向有多少个，背景图片的宽度就设置成元素宽度的多少倍-->
+		<!--2.背景图片纵向有多少个，背景图片的高度就设置成元素高度的多少倍-->
+		<!--3.背景图片横向和纵向的个数最好设置成：100/(个数-1)=整数值。可以方便计算
+		附：常用横向，纵向图片个数：1，2，3，5，6，9，11-->
+		<!--4.每张图片的定位计算公式：(个数-1)*整数值%-->
+		<div class="box"></div>
+	</body>
+</html>

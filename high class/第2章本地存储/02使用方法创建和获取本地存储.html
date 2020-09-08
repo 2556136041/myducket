@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<!--在HTML5中，新加入了一个localStorage特性，这个特性主要是用来作为本地存储来使用的-->
+		<!--web 应用程序能够在用户浏览器中对数据进行本地的存储-->
+		<!--解决了cookie存储空间不足的问题(cookie的存储空间为4k)-->
+		<!--localStorage中一般浏览器支持的是5M大小,相当于一个5M大小的针对于前端页面的数据库-->
+		<!--不同的浏览器中localStorage会有所不同,并且在IE8以上的IE版本才支持localStorage这个属性-->
+		<!--HTML 本地存储优于 cookies-->
+		
+		<!--本地存储提供了两个在客户端存储数据的对象：-->
+			<!--localStorage: 永久存储：存储没有截止日期的数据
+			sessionStorage: 临时存储：当关闭浏览器标签页时数据会丢失-->
+		
+		<script type="text/javascript">
+//			1.使用方法进行创建和获取:
+//			创建语法:   对象.setItem("存储名称","值");
+//			注意:存储名称和值始终是字符串
+			sessionStorage.setItem("uname","小明");
+			
+			
+//			获取语法:   对象.getItem("存储名称")
+			var uname = sessionStorage.getItem("uname");
+			alert(uname);
+			
+		</script>
+		
+		
+		
+	</body>
+</html>

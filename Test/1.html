@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>滚动效果 竖向</title> 
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" type="text/css" href="../font_icon/iconfont.js"/>
+
+<style>
+    *{
+    	padding:0px;
+    	margin: 0px;
+    }
+    div#mes{
+        width:600px;
+        height: 250px;
+        background: rgba(0,0,0,0.5);
+        margin:50px auto;
+        border-radius: 15px;
+    }
+    h2{
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+        color:white;
+    }
+    div#box{
+        width:600px;
+        height: 160px;
+        position: relative;
+        overflow: hidden;
+
+    }
+    ul{
+        width: 600px;
+        position: absolute;
+        left:0px;
+        bottom:-40px; 
+        color:white;       
+        
+    }
+ 
+    ul li{
+        width: 600px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        
+    }
+
+</style>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script>
+    $(function(){
+
+        function roll(){
+            var first=$("#box ul li").first().height(0);
+            $("#box ul").append(first);
+            $("#box ul li").last().animate({height:"40px"},1000);
+
+        }
+
+        var time=setInterval(roll,2000);
+
+        $("#box").mouseenter(function(){
+             clearInterval(time);
+        })
+         $("#box").mouseleave(function(){
+             time=setInterval(roll,2000);
+        })
+    })
+
+</script>
+
+</head>
+
+<body>
+    <div id="mes">
+      <h2>本站公告</h2>
+      <div id="box">
+        <ul>
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+                <li>item4</li>
+                <li>item5</li>
+                <li>item6</li>
+        </ul>
+      </div> 
+    </div>
+</body>
+
+</html>

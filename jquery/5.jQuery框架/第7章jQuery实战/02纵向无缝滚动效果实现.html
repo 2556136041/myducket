@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 150px;height: 40px;margin: 100px auto;border: 1px solid #000;
+				position: relative;
+				overflow: hidden;
+			}
+			#box ul{
+				width: 100px;position: absolute;left: 25px;bottom: -40px;
+			}
+			#box ul li{
+				width: 100px;height: 40px;line-height: 40px;text-align: center;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				function abc(){
+					//第1个元素高度变成0
+					var first=$("#box ul li").first().height(0);
+					
+					//把第1个元素追加到父元素中
+					$("#box ul").append(first);
+					
+					//最后1个元素高度慢慢变成40px
+					$("#box ul li").last().animate({height:"40px"},1000);
+					
+				}
+				
+				//定时器,每2秒执行一次
+				setInterval(abc,2000);
+				
+				
+			})
+		</script>
+		
+		
+	</head>
+	<body>
+		<div id="box">
+			<ul>
+				<li>我要自学网0</li>
+				<li>我要自学网1</li>
+				<li>我要自学网2</li>
+				
+			</ul>
+		</div>
+	</body>
+</html>

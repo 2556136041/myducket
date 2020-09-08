@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>video</title>
+
+  <style> 
+      div#box{
+          width:800px;
+          height:auto;
+          border:1px solid red;
+          margin:50px auto;
+          position:relative;
+      }
+      video{
+          width:800px;
+          height:650px;
+          background: black;
+          display:block;         
+
+      }
+      div#div_controls{
+          width: 800px;
+          height: 80px;
+          text-align: center;
+          background: rgba(220,220,220,0.4);
+      }
+      button{
+          width:80px;
+          height:50px;
+          background: gray;
+          border-radius:15px;
+          font-size: 30px;
+          font-weight: 700;
+          color:blue;
+
+      }   
+
+      button:hover{
+         color:red;
+      }
+
+
+
+         
+  </style>
+
+<body style="">
+  <h1>video</h1>
+  
+  <div id="box">
+      <video id="vd" src="../videos/a.mp4" controls="" ></video>
+      <div id="div_controls">
+          <button id="prev"><<</button>
+          <button id="next">>></button>
+      </div>
+  </div>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <script type="text/javascript">
+      $(function(){
+            //获取视频对象
+            var vid = document.getElementById("vd");
+
+            var next = document.getElementById("next");
+
+            var prev = document.getElementById("prev");
+
+            var vlist=["a.mp4","b.mp4","c.mp4","d.mp4"];
+
+            var i=0;
+            next.onclick=function(){
+                // alert("hello");
+                i++;
+                if(i==vlist.length){
+                    i=0;
+                }
+                vid.src="../videos/"+vlist[i];
+                vid.play();
+            }
+
+            prev.onclick=function(){
+                // alert("hello");
+                i--;
+                if(i<0){
+                    i=vlist.length-1;
+                }
+                vid.src="../videos/"+vlist[i];
+                vid.play();
+            }
+
+            
+           
+            
+      })
+
+
+    </script>
+  
+</body>
+</html>

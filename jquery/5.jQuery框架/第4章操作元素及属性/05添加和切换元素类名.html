@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+			.zxw{font-size: 30px;}
+			.zxw1{color: red;}
+			.zxw2{font-weight: 700;}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.添加元素类名
+				//$("button").click(function(){
+					//添加1个类名
+					//$("#box p").addClass("zxw1");
+					
+					//添加多个类名,多个类名用空格隔开
+					//$("#box p").addClass("zxw1 zxw2");
+				//});
+
+				//1.切换元素类名,有类名时删除，无类名时添加
+				$("button").click(function(){
+					//切换1个类名
+					//$("#box p").toggleClass("zxw");
+					//$("#box p").toggleClass("zxw1");
+					//切换多个类名,多个类名用空格隔开
+					$("#box p").toggleClass("zxw1 zxw2");
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<!--<p class="zxw">我要自学网1</p>-->
+			<p class="zxw zxw1">我要自学网1</p>
+			<span>我要自学网2</span>
+		</div>
+		
+		<button>点击</button>
+	</body>
+</html>

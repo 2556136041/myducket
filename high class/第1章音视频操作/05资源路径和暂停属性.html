@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 500px;margin: 50px auto 0;
+			}
+			#vd{
+				width: 100%;
+			}
+			.zxw{
+				width:500px;height: 30px;margin: 0 auto;
+			}
+			button{
+				width: 100px;height: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="box">
+			<video id="vd" src="img/a.mp4"  controls></video>	
+		</div>
+		<div class="zxw">
+			<button id="btn1">资源路径</button>
+			<button id="btn2">是否暂停</button>
+		</div>
+		
+		<script type="text/javascript">
+			window.onload=function(){
+				//获取视频对象
+				var vid = document.getElementById("vd");
+				
+				//获取按钮
+				var btn1= document.getElementById("btn1");
+				var btn2= document.getElementById("btn2");
+				
+				//1.设置或返回音频/视频元素的当前资源路径
+//				src= url  当前要播放的资源路径				
+				btn1.onclick=function(){
+					var src = vid.src;
+//					alert(src);
+					vid.src="img/b.mp4";
+				};
+				
+				
+//				2.设置或返回音频/视频元素当前是否暂停:
+//				paused=true|false   true:暂停|false:不暂停	
+				btn2.onclick=function(){
+					var psd = vid.paused;
+					alert(psd);
+					if (psd==false) {
+						vid.pause();
+					} else{
+						vid.play();
+					}
+				};
+
+			}
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//选择可见的元素
+				//$("#box div:visible").css("color","red");
+				//$("#box input:visible").css("color","red");
+				
+				//选择不可见的元素
+				//$("#box div:hidden").css("display","block");
+				//$("#box input:hidden").css("display","block");
+				$("#box input:hidden").css("color","red");
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>我要自学网1</div>
+			<div style="display: none;">我要自学网2</div>
+			<input type="text" value="我要自学网3" />
+			<br />
+			<input type="hidden" value="我要自学网4" />
+		</div>
+	</body>
+</html>

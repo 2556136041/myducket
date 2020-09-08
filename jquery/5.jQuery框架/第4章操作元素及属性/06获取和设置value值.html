@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			
+			input,button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.获取元素value值
+//				$("button").click(function(){					
+//					console.log($("#inp1").val());
+//					console.log($("#inp2").val());
+//					console.log($("#inp3").val());
+//					console.log($("#inp4").val());
+//				});
+
+				//1.获取元素value值
+				$("button").click(function(){					
+					$("#inp1").val("wyzxw");
+					$("#inp2").val("hijkl");
+					$("#inp3").val("987654");
+					$("#inp4").val("http://51zxw.net/");
+				});
+				
+				//单选框和复选框,后面再讲
+				
+			})
+		</script>
+	</head>
+	<body>
+		<input type="text"  id="inp1" value="我要自学网" />
+		<br /><br />
+		<input type="password"  id="inp2" value="abcdefg" />
+		<br /><br />
+		<input type="number"  id="inp3" value="123456" />
+		<br /><br />
+		<input type="url"  id="inp4" value="https://www.51zxw.net/" />
+		<br /><br />
+		
+		
+		
+		<button>点击</button>
+	</body>
+</html>

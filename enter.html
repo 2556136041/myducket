@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html>
+
+ 
+
+<head>
+
+<meta charset="utf-8" />
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>动画《淡入淡出》</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+
+<script src="main.js"></script>
+
+<style type="text/css">
+
+.word {
+
+font-size: 20px;
+
+text-align: center;
+
+}
+
+
+ 
+
+@keyframes fadeInOut1 {
+
+0% {
+
+opacity: 1;
+
+}
+
+25% {
+
+opacity: 0;
+
+}
+
+50% {
+
+opacity: 1;
+
+}
+
+75% {
+
+opacity: 0;
+
+}
+
+}
+
+ 
+
+@-moz-keyframes fadeInOut1
+
+/* Firefox */
+
+ 
+
+{
+
+0% {
+
+opacity: 1;
+
+}
+
+25% {
+
+opacity: 0;
+
+}
+
+50% {
+
+opacity: 1;
+
+}
+
+75% {
+
+opacity: 0;
+
+}
+
+}
+
+ 
+
+@-webkit-keyframes fadeInOut1
+
+/* Safari 和 Chrome */
+
+ 
+
+{
+
+0% {
+
+opacity: 1;
+
+}
+
+25% {
+
+opacity: 0;
+
+}
+
+50% {
+
+opacity: 1;
+
+}
+
+75% {
+
+opacity: 0;
+
+}
+
+}
+
+ 
+
+@-o-keyframes fadeInOut1
+
+/* Opera */
+
+ 
+
+{
+
+0% {
+
+opacity: 1;
+
+}
+
+25% {
+
+opacity: 0;
+
+}
+
+50% {
+
+opacity: 1;
+
+}
+
+75% {
+
+opacity: 0;
+
+}
+
+}
+
+ 
+
+@keyframes fadeInOut2 {
+
+0% {
+
+opacity: 0;
+
+}
+
+25% {
+
+opacity: 1;
+
+}
+
+50% {
+
+opacity: 0;
+
+}
+
+75% {
+
+opacity: 1;
+
+}
+
+}
+
+ 
+
+@-moz-keyframes fadeInOut2
+
+/* Firefox */
+
+{
+
+0% {
+
+opacity: 0;
+
+}
+
+25% {
+
+opacity: 1;
+
+}
+
+50% {
+
+opacity: 0;
+
+}
+
+75% {
+
+opacity: 1;
+
+}
+
+}
+
+ 
+
+@-webkit-keyframes fadeInOut2
+
+/* Safari 和 Chrome */
+
+ 
+
+{
+
+0% {
+
+opacity: 0;
+
+}
+
+25% {
+
+opacity: 1;
+
+}
+
+50% {
+
+opacity: 0;
+
+}
+
+75% {
+
+opacity: 1;
+
+}
+
+}
+
+ 
+
+@-o-keyframes fadeInOut2
+
+/* Opera */
+
+ 
+
+{
+
+0% {
+
+opacity: 0;
+
+}
+
+25% {
+
+opacity: 1;
+
+}
+
+50% {
+
+opacity: 0;
+
+}
+
+75% {
+
+opacity: 1;
+
+}
+
+}
+
+ 
+
+.transone {
+
+animation: fadeInOut1 2s ease-in-out infinite reverse;
+
+/* Firefox: */
+
+-moz-animation: fadeInOut1 2s ease-in-out infinite reverse;
+
+/* Safari 和 Chrome: */
+
+-webkit-animation: fadeInOut1 2s ease-in-out infinite reverse;
+
+/* Opera: */
+
+-o-animation: fadeInOut1 2s ease-in-out infinite reverse;
+
+}
+
+ 
+
+.transtwo {
+
+animation: fadeInOut2 2s ease-in-out infinite reverse;
+
+/* Firefox: */
+
+-moz-animation: fadeInOut2 2s ease-in-out infinite reverse;
+
+/* Safari 和 Chrome: */
+
+-webkit-animation: fadeInOut2 2s ease-in-out infinite reverse;
+
+/* Opera: */
+
+-o-animation: fadeInOut2 2s ease-in-out infinite reverse;
+
+}
+
+</style>
+
+</head>
+
+ 
+
+<body>
+
+<div class="word">进入
+
+<em class="transone">></em>
+
+<em class="transtwo">></em>
+
+</div>
+
+</body>
+
+ 
+
+</html>

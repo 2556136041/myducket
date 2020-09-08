@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			li{list-style: none;}
+			#box{
+				width: 600px;height: 400px;margin: 0 auto;
+				border: 1px solid black;
+			}
+			#tab{
+				width: 600px;height: 50px;line-height: 50px;text-align: center;
+			}
+			#tab li{
+				width: 200px;height: 50px;font-size: 30px;float: left;
+			}
+			#cont{
+				width: 600px;height: 340px;line-height: 350px;
+				text-align: center;position: relative;margin-top: 10px;
+			}
+			#cont li{
+				width: 600px;height: 340px;font-size: 30px;
+				position: absolute;top: 0;left: 0;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<ul id="tab">
+				<li style="background: red;">选项卡1</li>
+				<li style="background: blue;">选项卡2</li>
+				<li style="background: green;">选项卡3</li>
+			</ul>
+			<ul id="cont">
+				<li style="background: red;display: block;">内容1</li>
+				<li style="background: blue;">内容2</li>
+				<li style="background: green;">内容3</li>
+			</ul>
+		</div>
+		
+		<script type="text/javascript">
+			var t_lis=document.getElementById("tab").getElementsByTagName("li");
+			var c_lis=document.getElementById("cont").getElementsByTagName("li");
+			for (var i=0;i<t_lis.length;i++) {
+				//给i号元素加记号
+				t_lis[i].xb=i;
+				t_lis[i].onclick = function(){
+					//先让cont中所有的li隐藏
+					for (var p=0;p<c_lis.length;p++) {
+						c_lis[p].style.display = "none";
+					};
+					c_lis[this.xb].style.display = "block";
+					
+				};
+				
+				
+				
+				
+			}
+		</script>
+		
+	</body>
+</html>

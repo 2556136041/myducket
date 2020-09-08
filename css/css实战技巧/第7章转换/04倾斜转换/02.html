@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 300px;height: 300px;background: #000;
+				margin: 100px auto;
+				/*视距属于transform的前置属性,写在父级中*/
+				perspective: 500px;
+			}
+			#zxw{
+				width: 300px;height: 300px;background: red;
+				transition:transform 1s;
+			}
+			#zxw:hover{
+				/*转换简写*/
+				/*把需要转换属性值依次写上就行*/
+				/*transform: translate(100px,50px) scale(0.5,0.8) rotateZ(-45deg) skewX(30deg);*/
+				/*属性值书写有顺序,顺序不一样，效果不一样*/
+				transform: translate(100px,50px) rotateZ(-45deg);
+				/*transform: rotateZ(-45deg) translate(100px,50px);*/
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="zxw">
+				我要自学网
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

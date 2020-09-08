@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>灰度和对比度</title>
+		<style type="text/css">
+			img{
+				/*filter: blur(1px);*/
+				/*filter: saturate(0%);*/
+				/*filter: grayscale(50%);*/
+				filter: contrast(100%);
+			}
+		</style>
+	</head>
+	<body>
+		<!--滤镜属性：定义图像的可视效果-->
+			<!--语法：filter: 属性值;-->
+			<!--1.高斯模糊：filter: blur(合法的尺寸单位);-->
+				<!--默认值是0，值越大，图像越模糊-->
+				<!--不能设置成百分比-->
+				
+			<!--2.饱和度设置：filter: saturate(百分比);-->	
+				<!--默认值是100%，图像不变，0%时图像会变成黑白图像-->
+				<!--值可以超过100%，有更高的饱和度-->
+		
+			<!--3.灰度设置：filter: grayscale(百分比);-->
+				<!--值在0%-100%之间。默认是0%-->
+				<!--值为100%，图像会变成黑白图像-->
+		
+			<!--4.对比度设置：filter: contrast(百分比);-->
+				<!--默认值：100%，图像没有变化。值为0%时，图像会变成全黑-->
+				<!--当超过100%时，意味运用更低的对比度-->
+			
+		<img src="img/mei.jpg" width="400"/>
+		
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>4</title>
+		<style type="text/css">
+			div{
+				margin-top: 50px;text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="user"></div>
+		<div>我是4号商品</div>
+		<div>
+			<button id="cart">加入购物车</button>
+		</div>
+		
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			//获取当前时间
+			var nTime = parseInt(new Date().getTime()/1000);
+			var t = nTime-localStorage.userTime;
+			
+			
+			
+			if (t<60 && localStorage.user) {
+				//获取用户信息
+				var user = JSON.parse(localStorage.user);
+				//把用户信息写入页面中
+				$("#user").text("欢迎："+user.un+",您的id:"+user.id);
+			}else{
+				localStorage.user=null;
+			};
+
+			
+			
+			$("#cart").click(function(){
+				if (user) {
+					alert("执行加入购物车代码");
+				} else{
+					//保存当前网址
+					sessionStorage.prev=window.location.href;
+					window.location.href="05.html";					
+				}
+				
+
+			})
+		</script>
+		
+	</body>
+</html>

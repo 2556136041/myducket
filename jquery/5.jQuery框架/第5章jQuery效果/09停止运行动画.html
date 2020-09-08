@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			button{width: 200px;height: 40px;}
+			#box{height: 200px;position: relative;}
+			#car{
+				width: 200px;height: 80px;position: absolute;left: 0;top: 120px;
+			}
+			#box p{
+				width: 20px;height: 200px;background: #000;
+				position: absolute;top: 0; left: 800px;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#btn").click(function(){				
+					$("#car").animate({left:"600px"},2000).fadeOut(2000);
+				});	
+				
+				//1.stop()停止当前正在运行的动画,动画会在当前位置停下来
+				//如果有等待执行的动画，他们将被马上执行
+//				$("#stop").click(function(){
+//					$("#car").stop();	
+//				});
+				
+				
+				//2.finish()停止当前正在运行的动画和所有排队的动画
+				//所有排队的动画的CSS属性跳转到他们的最终值
+				$("#stop").click(function(){
+					$("#car").finish();	
+				});
+				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<br /><br />
+		<button id="stop">停止</button>
+		<br /><br />
+		<div id="box">
+			<img src="img/car.gif" id="car"/>
+			<p></p>
+		</div>
+	</body>
+</html>

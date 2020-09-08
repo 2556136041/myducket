@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			
+//			变量不是易变的:
+//			var a = "我要自学网";
+//			var b = a;
+//			b = 123;
+//			alert(a);
+//			document.write(b);
+
+
+//			对象的易变性:
+			var c = {name:"小明",sex:"男",age:12,height:1.8};
+			// 这不会创建 c 的副本,c 和 d 是同一个对象.对 d 的任何改变都将改变 c
+			var d = c;
+			
+			d.name="小红";
+			
+			
+			console.log(c);
+			console.log(d);
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

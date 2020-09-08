@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			cv.strokeStyle="#00ff00";
+			cv.lineWidth=10;
+			
+			//方法1:先创建矩形路径,再绘制当前路径
+			//创建矩形路径:画布.rect(左上角X坐标,左上角Y坐标,矩形宽度,矩形高度)
+			//cv.rect(50,50,150,100);
+			//绘制当前路径,默认为黑色
+			//cv.stroke();
+			
+			
+			
+			//方法1:创建并绘制矩形路径
+			//创建矩形路径:画布.strokeRect(左上角X坐标,左上角Y坐标,矩形宽度,矩形高度)
+			cv.strokeRect(150,100,150,100);
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

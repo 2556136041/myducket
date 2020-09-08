@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<!--模板存放区域，修改type类型，以免被解析成js-->
+			<!--4.条件判断法{{?}}{{??}}，相当于原生的if else if-->
+			<script type="text/x-dot-temolate" id="zxw">
+				{{~it:value:index}}   <!--相当于for(){-->
+					{{? !value.age}}
+						<div>姓名：{{=value.name}}  年龄：年龄不祥  爱好：{{=value.ah}}</div>
+					{{?? !value.ah}}
+						<div>姓名：{{=value.name}}  年龄：{{=value.age}}  爱好：爱好没写</div>
+					{{??}}
+						<div>姓名：{{=value.name}}  年龄：{{=value.age}}  爱好：{{=value.ah}}</div>
+					{{?}}
+				{{~}}	  <!--相当于   }  -->
+			</script>
+
+		</div>
+		
+
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="doT.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//从服务器返回的数据,一般是用ajax从服务器获取
+				var data=[
+				{name:'小明',age:"18岁",ah:"打篮球"},
+				{name:'小红',age:"16岁"},
+				{name:'小张',ah:"看电视"},
+				]
+				
+				//生成模板方法
+				var tpt = doT.template($("#zxw").html());
+				
+				//把数据渲染到指定元素中			
+				$("#box").html(tpt(data));
+			})
+		</script>
+
+		
+	</body>
+</html>

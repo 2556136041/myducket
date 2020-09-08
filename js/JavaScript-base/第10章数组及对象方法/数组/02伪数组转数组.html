@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			
+			//Array.from()将伪数组转成数组,只要有length属性的就可以转成数组。ES6语法
+			//主要用来把字符串,set数据类型转成数组
+			
+			
+			var zxw = "51zxw";
+			
+			var arr = [1,2,3,4,5,6];
+			
+			var obj = {name:"小明", age:18};
+			
+			console.log(zxw.length);
+			console.log(arr.length);
+			console.log(obj.length);//对象没有长度
+			
+			var a = Array.from(zxw);
+			
+			var b = Array.from(arr);
+			
+			var c = Array.from(obj);//返回空数组
+			
+			
+			console.log(a);
+			console.log(b);
+			console.log(c);
+			
+			
+			
+			
+			
+		</script>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

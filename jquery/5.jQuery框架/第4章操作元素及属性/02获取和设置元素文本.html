@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//1.获取元素文本内容,返回不包含标签的文本
+				//$("button").click(function(){
+					//var zxw = $("#box p").text();
+					//var zxw = $("#box span").text();
+					//var zxw = $("#box").text();
+					//console.log(zxw);
+				//});
+				
+				//2.设置元素文本内容，重写所有元素的文本内容。
+					//标签也会当成文本处理
+				$("button").click(function(){
+					//var zxw = "51zxw.net";
+					//$("#box p").text(zxw);
+					//$("#box span").text("www.51zxw.net");
+					//$("#box").text("www.51zxw.net");
+					$("#box").text("<i>www.51zxw.net</i>");
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<p>我要自学网1</p>
+			<span>我要自学网2</span>
+		</div>
+		
+		<button>点击</button>
+	</body>
+</html>

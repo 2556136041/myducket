@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 300px;height: 300px;background: #000;
+				margin: 100px auto;
+				/*视距属于transform的前置属性,写在父级中*/
+				perspective: 500px;
+			}
+			#zxw{
+				width: 100px;height: 100px;background: red;
+			}
+			#zxw:hover{
+				/*缩放转换:元素放大缩小*/
+				/*值:比例,参考自身尺寸*/
+				/*默认的基点在元素中心点*/
+				/*默认值为1，当值小于1时,表示缩小,大于1表示放大*/
+				/*transform: scaleX(2);*/
+				/*transform: scaleX(0.5);*/
+				
+				/*当值为负时,元素会翻转*/
+				/*transform: scaleX(-2);*/
+				
+				/*transform: scaleY(3);*/
+				/*transform: scaleY(0.5);*/
+				/*transform: scaleY(-2);*/
+				
+				/*transform:rotateY(45deg);*/
+				/*transform: scaleZ(3) rotateY(45deg);*/
+				
+				/*X,Y轴同时缩放，值1是X轴,值2是Y轴*/
+				/*transform: scale(2,3);*/
+				/*X,Y轴同时缩放相同比例*/
+				/*transform: scale(2);*/
+				
+				/*X,Y,Z轴同时缩放值1是X轴,值2是Y轴,值3是Z轴*/
+				/*transform: scale3d(2,3,4);*/
+				/*这样写是错误的*/
+				/*transform: scale3d(2);*/
+				
+				
+				
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="zxw">
+				我要自学网
+			</div>
+		</div>
+		
+		
+	</body>
+</html>

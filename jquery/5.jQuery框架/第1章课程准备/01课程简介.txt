@@ -1,0 +1,21 @@
+本套教程是网站开发系列教程的第5套：jQuery框架
+
+网站开发系列教程已发布至第四套:
+第1套：HTML基础视频教程
+第2套：CSS层叠样式表基础教程
+第3套：CSS实战与技巧视频教程
+第4套：JavaScript基础教程
+链接：https://www.51zxw.net/ExpertInfo.aspx?id=6545
+
+课程目录
+第1章  课程准备	
+第2章  选择器和筛选
+第3章  常用事件
+第4章  元素和属性操作
+第5章  jQuery效果 
+第6章  jQuery Ajax
+第7章  jQuery实战 
+
+开发工具:http://www.mywangku.com/
+HBuilder    phpStudy
+2345浏览器     谷歌浏览器    火狐浏览器

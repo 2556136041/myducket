@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			数组遍历
+			var arr=["小张","小王","小李","小明"];
+//			要求:在数组的每个数据后加上"写作业去"，并输出；
+//			document.write(arr[0]+"写作业去"+"<br>");
+//			document.write(arr[1]+"写作业去"+"<br>");
+//			document.write(arr[2]+"写作业去"+"<br>");
+//			document.write(arr[3]+"写作业去"+"<br>");
+			
+//			第一种：普通for循环
+//			for (var i=0;i<4;i++) {
+//				document.write(arr[i]+"写作业去"+"<br>");
+//			};
+			
+//			第二种：使用数组长度的for循环
+//			for (var i=0;i<arr.length;i++) {
+//				document.write(arr[i]+"写作业去"+"<br>");
+//			};			
+			
+//			第三种：优化版for循环
+//			使用变量将数组长度存起来，避免重复获取数组长度
+//			var len=arr.length;
+//			for (var i=0;i<len;i++) {
+//				document.write(arr[i]+"写作业去"+"<br>");
+//			};			
+			
+//			第四种：for-in遍历,使用下标
+//				使用的人很多，在所有遍历方式中效率最低
+//			for (i in arr) {
+//				document.write(arr[i]+"写作业去"+"<br>");
+//			};				
+
+//			第五种：for-of遍历(ES6)，使用数据
+//				for-of遍历比for-in遍历效率高，但是比普通for循环效率要低	
+			for (value of arr) {
+				document.write(value+"写作业去"+"<br>");
+			};	
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

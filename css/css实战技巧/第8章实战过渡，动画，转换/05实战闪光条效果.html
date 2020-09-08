@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 300px;height: 260px;margin: 100px auto;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0 0 3px 3px #ccc;
+				position: relative;
+			}
+			.box img{
+				width: 300px;height: 230px;
+			}
+			.box span{
+				display: inline-block; line-height: 30px;padding-left: 10px;
+				transition: transform 300ms;
+			}
+			.box .sgt{
+				width: 30px;height: 260px;background: #fdc52b;
+				position: absolute;top: 0;left: -110px;opacity: 0.3;
+				transform: skewX(-30deg);
+				/*transition: left 500ms;*/
+			}
+			.box:hover .sgt{
+				/*left: 380px;*/
+				animation: sgt 500ms;
+			}
+			.box:hover span{
+				transform: translateX(30px);
+				color: #0000FF;
+			}
+			
+			@keyframes sgt{
+				0%{left: -110px;}
+				100%{left: 380px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/786.jpg"/>
+			<span>CSS层叠样式表基础教程</span>
+			<div class="sgt"></div>
+		</div>
+	</body>
+</html>

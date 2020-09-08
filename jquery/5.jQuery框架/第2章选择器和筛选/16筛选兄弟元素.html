@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//siblings()筛选出匹配表达式的所有兄弟元素
+				//$("#zxw").siblings().css("color","red");
+				//$("#zxw").siblings("p").css("color","red");
+				//$("#zxw").siblings(".wyzxw").css("color","red");
+				
+				//筛选出前面所有匹配表达式的兄弟元素
+				//$("#zxw").prevAll().css("color","red");
+				//$("#zxw").prevAll("i").css("color","red");
+				
+				//筛选出紧邻的前一个匹配表达式的兄弟元素
+				//$("#zxw").prev().css("color","red");
+				//$("#zxw").prev("div").css("color","red");
+				
+				//筛选出后面所有匹配表达式的兄弟元素
+				//$("#zxw").nextAll().css("color","red");
+				//$("#zxw").nextAll("strong").css("color","red");
+				
+				//筛选出紧邻的后一个匹配表达式的兄弟元素
+				//$("#zxw").next().css("color","red");
+				$("#zxw").next("p").css("color","red");				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div>我要自学网0</div>
+			<span>我要自学网1</span>
+			<div>我要自学网2</div>
+			<i>我要自学网3</i>
+			<div>我要自学网4</div>
+			<div id="zxw">我要自学网5</div>
+			<p class="wyzxw">我要自学网6</p>
+			<p>我要自学网7</p>
+			<div>我要自学网8</div>
+			<strong>我要自学网9</strong>
+			<div>我要自学网10</div>
+		</div>
+	</body>
+</html>

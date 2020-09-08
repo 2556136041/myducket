@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<!--模板存放区域，修改type类型，以免被解析成js-->
+			<!--1.直接赋值法{{=}},如传入一个HTML片段或js片段，会直接解析-->
+			<script type="text/x-dot-temolate" id="zxw">
+				姓名：{{=it.name}}<br />
+				年龄：{{=it.age}}<br />
+				爱好：<span style="color: red;font-size: 30px;">{{=it.ah}}</span>				
+			</script>
+			
+			
+		</div>
+		
+		<button id="btn">点击</button>
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="doT.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//从服务器返回的数据,一般是用ajax从服务器获取
+				var data={name:'<span id="name">张三</span>',
+				age:"18岁",
+				ah:"打篮球"};
+				
+				//生成模板方法
+				var tpt = doT.template($("#zxw").html());
+				
+				//把数据渲染到指定元素中			
+				$("#box").html(tpt(data));
+			})
+		</script>
+		<script type="text/javascript">
+			document.getElementById("btn").onclick=function(){
+				document.getElementById("name").style.color="#0000ff";
+			}
+		</script>
+		
+	</body>
+</html>

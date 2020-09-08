@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+						
+			//1.indexOf() 查找指定元素的下标,从前往后查找
+			//若有重复的，则返回第一个查到的下标
+			//若不存在，则返回 -1
+			//var arr1 = ["赵","钱","孙","李","周","吴","郑","王"];
+			//var arr1 = ["赵","钱","孙","李","周","吴","郑","王","李"];
+			//var a = arr1.indexOf("李");  //3
+			//var b = arr1.indexOf("冯");  //-1
+			//console.log(b);
+			
+			
+			//2.lastIndexOf() 查找指定元素的下标,从后往前查找
+			//若有重复的，则返回第一个查到的下标
+			//若不存在，则返回 -1
+			var arr2 = ["赵","钱","孙","李","周","吴","郑","王"];
+			var arr3 = ["赵","钱","孙","李","周","吴","郑","王","李"];
+			var a = arr2.lastIndexOf("李");  //3
+			var b = arr3.lastIndexOf("李");  //8
+			var c = arr3.indexOf("冯");  //-1
+			console.log(c);			
+			
+			
+		</script>
+	</body>
+</html>

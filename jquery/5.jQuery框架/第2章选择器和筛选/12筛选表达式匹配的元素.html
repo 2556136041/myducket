@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//filter()方法筛选出与指定表达式匹配的元素集合
+				//$("#box div.wyzxw1").css("color","red");
+				//$("#box div").filter(".wyzxw1").css("color","red");
+				//$("#box div").filter("#zxw2").css("color","red");
+				
+				//$("#box div").filter("[id]").css("color","red");
+				//$("#box div").filter("[class]").css("color","red");
+				//$("#box div").filter("[title]").css("color","red");
+				
+				//$("#box div").filter("[id='zxw1']").css("color","red");
+				//$("#box div").filter("[class='wyzxw1']").css("color","red");
+				//$("#box div").filter("[title='51zxw1']").css("color","red");
+				
+				
+				$("#box div").filter("[class='wyzxw1'],[title='51zxw2']").css("color","red");
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="zxw1">我要自学网1</div>
+			<div class="wyzxw1">我要自学网2</div>
+			<div title="51zxw1">我要自学网3</div>
+			<div>我要自学网4</div>
+			<div id="zxw2">我要自学网5</div>
+			<div class="wyzxw2">我要自学网6</div>
+			<div title="51zxw2">我要自学网7</div>
+			<div>我要自学网8</div>
+		</div>
+	</body>
+</html>

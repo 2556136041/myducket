@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//过滤选择器:选择去除指定选择器的所有元素
+				
+				//去除有指定属性的元素
+				//$("#box div:not([id])").css("color","red");
+				//$("#box div:not([class])").css("color","red");
+				//$("#box div:not([title])").css("color","red");
+				
+				//去除指定属性是某个特定值的元素
+				//$("#box div:not([id='zxw1'])").css("color","red");
+				//$("#box div:not([class='wyzxw2'])").css("color","red");
+				//$("#box div:not([title='51zxw2'])").css("color","red");
+				
+				//去除指定选择器的元素
+				$("#box .abc:not(p[title='51zxw2'])").css("color","red");
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<div id="zxw1">我要自学网1</div>
+			<div class="wyzxw1">我要自学网2</div>
+			<div title="51zxw1">我要自学网3</div>
+			<div>我要自学网4</div>
+			<div id="zxw2">我要自学网5</div>
+			<div class="wyzxw2">我要自学网6</div>
+			<div title="51zxw2">我要自学网7</div>
+			<div>我要自学网8</div>
+			
+			<div class="abc">我要自学网9</div>
+			<p class="abc"  title="51zxw2">我要自学网10</p>
+			<div class="abc">我要自学网11</div>
+			<p class="abc">我要自学网12</p>
+		</div>
+	</body>
+</html>

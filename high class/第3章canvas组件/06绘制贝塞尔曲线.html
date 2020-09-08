@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		<!--什么是canvas:
+			1.canvas:标签是用来绘制图像
+			2.canvas:本身没有绘画的能力，仅仅是图形的容器，相当于一块画板
+			3.必须要使用脚本完成绘制，JS-->
+		
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			
+			//3.开启一条路径(或重置当前路径),表示我要开始画了
+			cv.beginPath();
+			
+			//4.指定路径起点:画布.moveTo(X坐标,Y坐标);
+			cv.moveTo(10,100);
+			
+			//5.二次贝塞尔曲线: 画布.quadraticCurveTo(cpx,cpy,x,y);
+			//cpx,cpy:控制点X,Y坐标
+			//x,y:到达点X,Y坐标
+			//只有一个控制点
+			//cv.quadraticCurveTo(200,300,300,100);
+			
+			//5.三次贝塞尔曲线: 画布.bezierCurveTo(cp1x,cp1y,cp2x,cp2y,x,y);
+			//cp1x,cp1y:第1个控制点X,Y坐标
+			//cp2x,cp2y:第2个控制点X,Y坐标
+			//x,y:到达点X,Y坐标
+			//有两个控制点
+			cv.bezierCurveTo(150,200,280,50,390,100);
+			
+			
+			//6.绘制当前路径,默认为黑色
+			cv.stroke();
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

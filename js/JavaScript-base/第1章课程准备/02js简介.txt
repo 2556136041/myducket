@@ -1,0 +1,16 @@
+1.什么是JavaScript
+	JavaScript 是一种功能强大的编程语言，简称JS。
+	用于开发交互式的Web页面和给页面添加动态效果。
+	JavaScript不仅可以运行在客户端，还可以运行在服务器端,比如：node.js。
+	
+2.Java与 JavaScript的关系
+	比较经典的回答有：Java 和 Javascript 的关系就像雷锋和雷峰塔，老婆和老婆饼，精卫和汪精卫的关系
+	
+	Java与 JavaScript是完全不同的两种语言
+	相同之处：
+		JavaScript的语法借鉴了Java的语法
+		Java与 JavaScript都是面向对象的（虽然实现的方式略有不同）
+	
+	Netscape之所以命名为 JavaScript：
+		1.JavaScript的语法借鉴了Java的语法，表示对Java的尊敬
+		2.是因为 Java是当时最流行的编程语言，带有 "Java" 的名字有助于这门新生语言的传播。

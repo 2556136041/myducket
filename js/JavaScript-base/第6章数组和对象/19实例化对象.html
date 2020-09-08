@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			构造函数：主要功能初始化对象.可以想像成一套模板或一套方案
+//			构造函数：通过new 函数名来实例化对象的函数叫构造函数。
+//			new就是在创建对象，从无到有，构造函数就是在为初始化的对象添加属性和方法。
+			function Ren(){
+				this.name="";   //this:表示现在还不知道，没有具体的名称
+				this.sex="男";
+				this.age="20";
+			};
+			
+			
+//			通过new方法来创具体的叫"xiaoMing"的人			
+			var xiaoMing = new Ren(); 
+//          通过new的方法创建具体的对象时，this才有具体的名称,现在this就表示xiaoMing
+			
+			xiaoMing.name="小明";
+			xiaoMing["age"]=21;
+			
+//			alert(xiaoMing.sex); 
+			
+			xiaoMing.zzmm="共产党";
+			
+			delete xiaoMing.sex;
+			
+			console.log(xiaoMing);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

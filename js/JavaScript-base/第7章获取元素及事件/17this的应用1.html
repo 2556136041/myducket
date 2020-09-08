@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.zxw{
+				width: 200px;height: 200px;background: red;float: left;
+				color: white; margin-left:10px ;
+			}
+		</style>
+		<script type="text/javascript">
+
+//			function abc(){
+////				Math.random();取0-1之间的随机数
+//				document.getElementById("zxw").innerText=Math.random();
+//			};
+
+			
+			window.onload=function(){
+				var zxw= document.getElementsByClassName("zxw");
+				
+				for (var i=0;i<zxw.length;i++) {
+					zxw[i].onclick=function(){
+//						在事件中this指向了:当前正在操作的元素
+						this.innerText=Math.random();
+						this.style.background="blue";
+						this.style.height="300px";
+					};
+				};
+//				zxw[0].onclick=function(){
+////					在事件中this指向了:当前正在操作的元素
+//					this.innerText=Math.random();
+//				};
+//				
+//				zxw[1].onclick=function(){
+//					zxw[1].innerText=Math.random();
+//				};
+			};
+
+		</script>
+	</head>
+	<body>
+		<div class="zxw"></div>
+		<div class="zxw"></div>
+		<div class="zxw"></div>
+		<div class="zxw"></div>
+	</body>
+</html>

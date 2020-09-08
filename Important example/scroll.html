@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+          body{
+          	   padding:0px;
+          	   margin:0px;
+          	   height:5000px;
+
+          }
+          .box{
+          	height: 1000px;
+          	background: gray;
+          	margin-bottom:20px;
+          }
+
+	</style>
+</head>
+<body>
+
+<script>
+window.onload = function() {
+
+	window.onscroll=function(){
+		  // 滚动条距离文档上面的高度
+		  var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+		  // 整个文档的高度
+		  var scrollHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+		  //窗口的高度和宽度
+		  var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		  var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+
+		  var offsetWidth=document.body.offsetWidth;
+		  var offsetHeight=document.body.offsetHeight;
+
+		  var sw=screen.availWidth;
+          var sh=screen.availHeight;
+
+          if(scrollTop>h){
+          	  alert(scrollTop);
+          	  document.getElementsByTagName('div')[0].style.backgroundColor="blue";
+          }
+
+          
+		  
+		  
+	}
+	 
+}
+
+</script>
+<div class="box">1000</div>
+<div class="box">2000</div>
+<div class="box">3000</div>
+<div class="box">4000</div>
+	
+</body>
+</html>

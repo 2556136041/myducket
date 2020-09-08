@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//1.concat() 方法用于连接两个或多个数组
+			//该方法会先创建当前数组一个副本,不会改变原有的数组，会返回一个新数组。
+//			var arr1 = [1,2,3];
+//			var arr2 = [4,5,6];
+//			var arr3 = [7,8,9];
+			//var arr = arr1.concat(arr2);   //[1,2,3,4,5,6]
+			//var arr = arr1.concat(arr2,arr3);  //[1,2,3,4,5,6,7,8,9]
+			
+//			var arr = arr2.concat(arr1);  //[4,5,6,1,2,3]
+//			
+//			console.log(arr);
+//			console.log(arr1);
+//			console.log(arr2);
+//			console.log(arr3);
+
+
+			//2.reverse()：反转数组中元素的顺序
+			//该方法会改变原来的数组，而不会创建新的数组
+			//返回值并不是排序后的数组，而是数组的引用
+			var arr4 = [1,2,3,4,5,6];
+			
+			//arr4.reverse(); //[ 6, 5, 4, 3, 2, 1 ]
+			
+			var arr5 = arr4.reverse();  //[ 6, 5, 4, 3, 2, 1 ]		
+			console.log(arr4);
+			console.log(arr5);
+		</script>
+	</body>
+</html>

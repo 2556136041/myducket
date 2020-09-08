@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj = {a:1,b:2,c:3,d:4};
+			
+			//可枚举就是可遍历的意思，也就是说对象的属性是否能够通过遍历得到
+			//1.Object.keys():用于返回对象可枚举的属性名或方法名
+			//返回的结果是一个数组
+			var a = Object.keys(obj);
+			
+			console.log(a);     //[ "a", "b", "c", "d" ]
+			
+			
+			
+			//2.Object.values():用于返回对象可枚举的属性值
+			//返回的结果是一个数组
+			var b = Object.values(obj);
+			
+			console.log(b);     //[ 1, 2, 3, 4 ]
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

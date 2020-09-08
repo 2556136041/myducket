@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>5</title>
+		<style type="text/css">
+			div{
+				margin-top: 50px;text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div>我是登陆页面</div>
+		<div>
+			用户名:<input type="text"  id="uname" value="请输入用户名" /><br /><br />
+			密码:<input type="password"  id="pwd"  /><br /><br />
+			<input type="submit"  id="sbt"  value="提交"/>
+		</div>
+		
+		<script src="../../js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$("#sbt").click(function(){
+//				1.获取用户名和密码
+				var uname = $("#uname").val();
+				var pwd = $("#pwd").val();
+				
+//				2.服务器验证
+				if (uname=="小明"&&pwd=="123456") {
+					//验证通过,把用户信息保存
+					localStorage.user=JSON.stringify({un:"小明",id:1});
+					//获取登陆时间,并保存
+					localStorage.userTime = parseInt(new Date().getTime()/1000);
+					
+					//跳转回原来的网址
+					window.location.href=sessionStorage.prev;
+				} else{
+					alert("用户名或密码不对");
+				};	
+			})
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

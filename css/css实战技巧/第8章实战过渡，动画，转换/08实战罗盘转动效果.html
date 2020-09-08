@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#lp{
+				width: 600px;height: 600px;border-radius: 50%;
+				margin: 50px auto;position: relative;overflow: hidden;
+			}
+			#lp img{
+				width: 600px;height: 600px;
+				position: absolute;top: 0;left: 0;
+			}
+			#lp01{
+				animation: lpzd1 30s linear infinite;
+			}
+			#lp02{
+				animation: lpzd2 60s linear infinite;
+			}
+			#lp03{
+				animation: lpzd1 120s linear infinite;
+			}
+			#lp04{
+				animation: lpzd2 180s linear infinite;
+			}
+			@keyframes lpzd1{
+				0%{transform: rotateZ(0deg);}
+				100%{transform: rotateZ(360deg);}
+			}
+			@keyframes lpzd2{
+				0%{transform: rotateZ(0deg);}
+				100%{transform: rotateZ(-360deg);}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="lp">
+			<img id="lp01" src="img/lp/lp01.png"/>
+			<img id="lp02" src="img/lp/lp02.png"/>
+			<img id="lp03" src="img/lp/lp03.png"/>
+			<img id="lp04" src="img/lp/lp04.png"/>
+		</div>
+		
+	</body>
+</html>

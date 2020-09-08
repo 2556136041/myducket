@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#box{
+				width: 600px;height: 500px;border: 1px solid #000000;margin: 0 auto;
+			}
+		</style>
+	</head>
+	<body>
+		<!--官网地址：https://www.echartsjs.com/zh/index.html-->
+		<!--ECharts，一个使用 JavaScript 实现的开源可视化图表库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器（IE8/9/10/11，Chrome，Firefox，Safari等）-->
+		<!--ECharts 提供了常规的折线图、柱状图、饼状图、雷达图、K线图、散点图....-->
+		
+		<!--给图表准备一个容器-->
+		<div id="box" ></div>
+		
+		<script src="echarts.min.js" ></script>
+		<script type="text/javascript">
+			//给容器初始化图表实例
+			var myChart=echarts.init(document.getElementById("box"));
+			
+			//指定图表配置项和数据
+			var option={
+				title:{
+					text:'XX公司3月第1周',  //主标题
+				},
+				legend:{//显示图例说明,把数据对应的name值显示出来
+//					right:20,
+//					//bottom:10,
+//					top:10,
+//					textStyle:{
+//						color:'#ff0000',
+//						fontSize:40
+//					},
+					
+				},
+				//color:['#ff0000','#00ff00','#0000ff'],//调色盘颜色列表
+				
+				tooltip:{},//显示数据信息				
+				xAxis:{//X轴
+					name:'日期',   //坐标轴名称
+					nameTextStyle:{  //坐标轴名称样式
+//						color:'#0000ff',
+//						fontSize:20,
+					},
+					axisLine:{  //坐标轴线设置
+						lineStyle:{
+							color:'#0000ff',
+							//width:3
+						}
+					},
+					//data:["周一","周二","周三","周四","周五","周六","周日",]  //在X轴上与数据对应的名称
+					data:[
+						{
+							value:'周一',
+							textStyle:{
+								color:'#000000',
+								fontSize:20
+							}
+						},
+						{
+							value:'周二',
+							textStyle:{
+								color:'#ff0000',
+								fontSize:24
+							}							
+						},
+						{
+							value:'周三',
+							textStyle:{
+								color:'#00ff00',
+								fontSize:28
+							}							
+						},
+					
+					
+					]
+					
+					
+				},
+				yAxis:{//Y轴
+					name:'单位：辆',
+					//data:["周一","周二","周三","周四","周五","周六","周日",]  //在Y轴上与数据对应的名称
+				},
+				series:[{
+					name:'汽车销量',
+					type:'bar',//表示图表类型为柱状图					
+					data:[10,15,12,14,18,20,25]   //数据
+				}]
+			};
+			
+			//把配置项和数据显示出来
+			myChart.setOption(option);
+		</script>
+		
+		
+	</body>
+</html>

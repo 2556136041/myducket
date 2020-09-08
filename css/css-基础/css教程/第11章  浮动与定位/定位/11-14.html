@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>层级</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style type="text/css">
+
+			.box{width: 502px;height: 502px;border: 1px solid black;margin: 50px auto;position: relative;}
+			.pst1,.pst2,.pst3{width: 150px;height: 150px;}
+			.pst1{
+				background: red;
+				position: absolute;
+				left: 0;
+				top:0;
+				z-index: 1;
+			}
+			.pst2{
+				background: green;
+				position: absolute;
+				left: 50px;
+				top:50px;
+				z-index: 1;
+			}
+			.pst3{
+				background: blue;width: 150px;
+				position: absolute;
+				left: 100px;
+				top:100px;
+				z-index: 1;
+			}
+		</style>
+	</head>
+	<body>
+		<!--定位：规定元素的位置-->
+		<!--定位用于没有规律的元素而布局-->
+		<!--定位的三种类型：相对定位，绝对定位，固定定位-->
+		<!--层级-->
+		<!--语法z-index: 值;-->
+			<!--1.每一个定位元素会独占一层-->
+			<!--2.改变层级来改变定位元素堆叠顺序-->
+			<!--3.数字越大，层级越高。层级默认值是0-->
+			<!--4.当层级一样，后写元素会盖住先写元素。后来居上-->
+		
+							
+			<div class="box">
+				<div class="pst1"></div>
+				<div class="pst2"></div>
+				<div class="pst3"></div>
+			</div>
+		
+	</body>
+</html>

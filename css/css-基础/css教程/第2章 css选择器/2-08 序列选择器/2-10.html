@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>nth-child选择器</title>
+		<style type="text/css">
+			/*选择的是li的父元素中的前6个li子元素*/
+			/*li:nth-child(-n+6){color: red;}*/
+			
+			/*选择的是li的父元素中的从第4个li子元素开始的所有li子元素*/
+			/*li:nth-child(n+4){color: red;}*/
+			
+			/*选择的是li的父元素中的,从第3个开始，第10个结束的li子元素*/
+			/*li:nth-child(n+3):nth-child(-n+10){color: red;}*/
+			
+			/*选择的是li的父元素中的,从1,4,7....li子元素*/
+			li:nth-child(3n+1){color: red;}
+		</style>
+	</head>
+	<body>
+		
+		
+		<ul>
+			<li>我要自学网1</li>
+			<li>我要自学网2</li>
+			<li>我要自学网3</li>
+			<li>我要自学网4</li>
+			<li>我要自学网5</li>
+			<li>我要自学网6</li>
+			<li>我要自学网7</li>
+			<li>我要自学网8</li>
+			<li>我要自学网9</li>
+			<li>我要自学网10</li>
+			
+		</ul>
+		
+		
+	</body>
+</html>

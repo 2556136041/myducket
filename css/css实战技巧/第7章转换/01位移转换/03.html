@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 300px;height: 300px;background: #000;
+				margin: 100px auto;
+				/*视距属于transform的前置属性,写在父级中*/
+				/*视距值越大,变化越小,反之,视距值越小,变化越大*/
+				/*视距的默认值是:无穷大*/
+				perspective: 500px;
+			}
+			#zxw{
+				width: 300px;height: 300px;background: red;
+			}
+			#zxw:hover{
+				/*Z轴:正往前,负往后*/
+				transform: translateZ(100px);
+				/*2D位移简写,值1是X轴，值2是Y轴*/
+				/*transform: translate(50px,-50px);*/
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="zxw"></div>
+		</div>
+		
+		
+	</body>
+</html>

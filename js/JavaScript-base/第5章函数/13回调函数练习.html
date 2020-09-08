@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">			
+//			要求:计算(2+3)*4的结果
+//			1.函数A执行函数B,函数B是回调函数
+//			function a(x,y,z,m){
+//				var re= x+y;
+//				return m(re,z);
+//			};
+//			
+//			function b(x,y){
+//				return x*y;
+//			};
+//			var c = a(2,3,4,b);
+
+//			2.函数B执行函数A,函数A是回调函数
+			
+			function a(x,y){
+				return x+y;	
+			};
+			
+			function b(x,y,z,m){
+				var re=m(x,y);
+				return re*z;
+			};
+
+
+
+
+			var c = b(2,3,4,a);
+			alert(c);
+			
+			
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//遍历数组法去重复:
+			//建立一个新数组，然后循环遍历要去重的数组，每次判断新数组不包含旧数组的值时（新数组用indexOf方法检索旧数组的值返回结果等于-1）将该值加入新数组。
+			var arr1 = [1,1,2,2,3,3];  //[1,2,3]
+			
+			function qcf(arr){
+				var abc=[];
+				for(var i=0; i<arr.length;i++){
+					if(abc.indexOf(arr[i]) == -1){
+						abc.push(arr[i]);
+					};	
+				};
+				return abc;
+			};
+			
+			var arr2 = qcf(arr1);
+			
+			console.log(arr2);  //[1,2,3]
+		</script>
+	</body>
+</html>

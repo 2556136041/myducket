@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			cv.moveTo(0,150);
+			cv.lineTo(400,150);
+			cv.stroke();
+			
+			cv.beginPath();
+			cv.moveTo(200,0);
+			cv.lineTo(200,300);
+			cv.stroke();
+			
+			
+//			指定填充颜色
+			cv.fillStyle="#00ff00";
+			cv.strokeStyle="#ff0000";
+
+
+
+			//绘制闭合弧形
+//			cv.beginPath();
+//			cv.arc(200,150,100,0,90*Math.PI/180);  //0弧度--90弧度的圆弧
+//			cv.closePath();			
+//			//cv.fill();
+//			cv.stroke();
+			
+			//绘制扇形
+			cv.beginPath();
+			cv.moveTo(200,150);    //创建开始点
+			cv.arc(200,150,100,0,90*Math.PI/180,true);  //0弧度--90弧度的圆弧
+			cv.closePath();			
+			cv.fill();
+			cv.stroke();
+			
+		</script>
+		
+		
+	</body>
+</html>

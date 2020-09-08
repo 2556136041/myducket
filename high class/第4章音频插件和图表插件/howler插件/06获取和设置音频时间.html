@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button id="btn1">播放</button>
+		<button id="btn2">暂停</button>
+		<button id="btn3">停止</button>
+		<button id="btn4">播放状态</button>
+		<button id="btn5">静音</button>
+		<button id="btn6">音量</button>
+		<button id="btn7">不循环</button>
+		<button id="btn8">总时间</button>
+		<button id="btn9">当前时间</button>
+		
+		
+		<script src="howler.min.js" ></script>
+		<script type="text/javascript">
+			//实例化音频
+			var sound = new Howl({
+				//初始化配置
+				src:"qb.mp3",  //资源路径
+
+				
+				//事件:
+				onload:function(){
+					console.log("音频就绪");
+				},
+				
+				onplay:function(){
+					console.log("开始播放");
+				},
+				
+				onend:function(){
+					console.log("播放结束");
+				},
+				
+				onpause:function(){
+					console.log("暂停播放");
+				},
+				
+				onstop:function(){
+					console.log("停止播放");
+				},					
+	
+			});
+			
+			//让音乐播放
+			document.getElementById("btn1").onclick=function(){				
+				sound.play();
+			};
+			
+			//让音乐暂停
+			document.getElementById("btn2").onclick=function(){				
+				sound.pause();
+			};
+			
+			//让音乐停止
+			document.getElementById("btn3").onclick=function(){				
+				sound.stop();
+			};				
+			
+			//获取播放状态
+			document.getElementById("btn4").onclick=function(){				
+				var playing = sound.playing();
+				//false是停止或暂停,    true是播放状态				
+				console.log(playing);
+			};	
+			
+			//获取和设置音频静音
+			document.getElementById("btn5").onclick=function(){	
+				//获取是否静音
+				//false音量正常,    true静音		
+				var mute = sound.mute();//muted没有d.						
+				console.log(mute);
+				//设置静音
+				if (mute==false) {
+					sound.mute(true);
+				} else{
+					sound.mute(false);
+				}				
+			};					
+			
+			//获取和设置声音音量
+			document.getElementById("btn6").onclick=function(){	
+				//获取音量	
+				var vol = sound.volume();//当前音量0-1之间						
+				console.log(vol);
+				//设置静音
+				sound.volume(0.5);			
+			};	
+
+			//获取和设置是否循环播放声音
+			document.getElementById("btn7").onclick=function(){	
+				//获取是否循环
+				//false不循环,    true循环		
+				var loop = sound.loop();						
+				console.log(loop);
+				//设置循环
+				if (loop==false) {
+					sound.loop(true);
+					this.innerText="循环";
+				} else{
+					sound.loop(false);
+					this.innerText="不循环";
+				}				
+			};	
+
+			
+			//获取音频总时间,单位：秒
+			document.getElementById("btn8").onclick=function(){
+				var  dur= sound.duration();
+				console.log(dur);
+			};
+			
+			//获取/设置音频当前播放时间,单位：秒
+			document.getElementById("btn9").onclick=function(){
+				var  seek= sound.seek();
+				console.log(seek);
+				//--------------------------
+				sound.seek(10);
+				seek= sound.seek();
+				console.log(seek);
+			}
+		</script>
+		
+		
+		
+	</body>
+</html>

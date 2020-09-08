@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="swiper.min.css"/>
+		<style type="text/css">
+			#box1{
+				width: 600px;height: 300px;margin: 50px auto;
+			}
+			#box1 .sd1,#box1 .sd2,#box1 .sd3{
+				line-height: 300px;text-align: center;font-size: 50px;color: #fff;
+			}
+			#box1 .sd1{background-color: red;}
+			#box1 .sd2{background-color: green;}
+			#box1 .sd3{background-color: blue;}
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<!--swiper页面结构-->
+		<div class="swiper-container" id="box1">
+		    <div class="swiper-wrapper">
+		    	
+		        <div class="swiper-slide sd1">Slide 1</div>
+		        <div class="swiper-slide sd2">Slide 2</div>
+		        <div class="swiper-slide sd3">Slide 3</div>
+		       
+		    </div>
+		
+		</div>
+		
+		
+		<script src="swiper.min.js"></script>
+		<script> 
+			
+			//初始化一个Swiper实例    new Swiper(swiper容器, 个性化配置)
+		  var mySwiper = new Swiper ('.swiper-container', {
+				loop:true,  //开启环路，会在项目前后复制各一个,让Swiper看起来是循环的,默认为false
+				autoplay:true,  //开启自动切换，默认为false
+		  })        
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			span{display: block;}
+			p{width: 200px;height: 30px;margin: 20px auto;background: green;}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//1.把每一个匹配的元素用指定的标签包裹     wrap()
+					//$("#box span").wrap("<p></p>");
+					//$("#box .zxw1").wrap("<p></p>");
+					
+					//2.取消每一个匹配的元素的标签包裹   unwrap()
+//					setTimeout(function(){
+//						$("#box span").unwrap();
+//					},2000);
+					
+					//3.把所有匹配的元素用指定的一个标签包裹     wrapAll()
+					//$("#box span").wrapAll("<p></p>");
+					
+					//4.把每一个匹配的元素的子内容用一个标签包裹   wrapInner()
+					$("#box span").wrapInner("<i></i>");
+					
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>我要自学网0</span>
+			<span class="zxw1">我要自学网1</span>
+			<span>我要自学网2</span>
+			<span>我要自学网3</span>
+		</div>
+		<p id="zxw">我是追加的元素</p>
+		<button>点击</button>
+	</body>
+</html>

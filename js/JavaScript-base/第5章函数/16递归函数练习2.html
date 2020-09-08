@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			递归函数计算从任意数到任意数的连加
+			function lj(m,n){
+				if (n==m) {
+					return m;
+				} else{
+					return n + lj(m,--n);
+				}
+				
+			};
+			var a=prompt("输入最小的数")*1;
+			var b=prompt("输入最大的数")*1;
+			
+			var re= lj(a,b);
+			
+			alert(re);
+			
+			
+//			作业:递归函数计算5*4*3*2*1
+			
+			
+			
+			
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

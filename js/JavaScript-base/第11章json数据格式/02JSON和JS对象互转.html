@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+
+			var obj = {name:"小明",age:18}; //这是一个对象
+			
+			var xm = '{"name":"小明","age":18}'; //这是一个json字符串
+			
+			//1.JS对象转JSON字符串:使用 JSON.stringify()方法
+			var xm_json = JSON.stringify(obj);
+						
+			//console.log(xm_json);
+			//console.log(typeof xm_json);
+			
+			//2.JSON字符串转JS对象:使用 JSON.parse()方法
+			var xm_obj = JSON.parse(xm);
+						
+			console.log(xm_obj);
+					
+			alert(xm_obj.name);
+			alert(xm_obj.age);
+		</script>
+	</body>
+</html>

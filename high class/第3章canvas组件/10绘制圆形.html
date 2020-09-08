@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			
+//			指定填充颜色
+			cv.fillStyle="#00ff00";
+			cv.strokeStyle="#ff0000";
+			
+			//创建圆形路径,再填充或绘制当前路径
+			//创建圆形路径:画布.arc(圆心X坐标,圆心Y坐标,半径,起始弧度,结束弧度,绘制方向(可选));
+			//角度和弧度换算:
+//				圆周弧度=2π, 360度=2π弧度, 1度=2π/360=π/180弧度
+//				π在js中用Math.PI表示
+//				1角度=Math.PI/180弧度
+			cv.arc(200,150,100,0,2*Math.PI);	
+			cv.fill();
+			cv.stroke();
+			
+			
+			cv.beginPath();//重新开启一条路径，就相当于抬笔
+			cv.arc(100,100,50,0,2*Math.PI);	
+			cv.stroke();
+		
+			
+		</script>
+		
+		
+	</body>
+</html>

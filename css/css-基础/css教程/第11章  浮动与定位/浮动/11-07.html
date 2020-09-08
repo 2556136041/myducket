@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style type="text/css">
+			ul{border: 1px solid red;width: 302px;margin: 50px auto;height: 152px;}
+			ul li{
+				width: 100px;height: 100px;float: left;
+			}
+			.a{background: green;}
+			.b{background: blue;}
+			.c{background: orange;}
+		</style>
+	</head>
+	<body>
+		<!--高度塌陷：由于父元素中的子元素设置了浮动属性，会造成父元素高度塌陷-->
+		<!--防止高度塌陷：-->
+			<!--1.直接给父元素设置高度-->
+		
+		
+		<ul>
+			<li class="a"></li>
+			<li class="b"></li>
+			<li class="c"></li>
+		</ul>
+		
+	</body>
+</html>

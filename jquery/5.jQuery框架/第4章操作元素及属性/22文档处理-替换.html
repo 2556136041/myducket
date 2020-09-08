@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<style type="text/css">
+			#box{width: 200px;height: 200px;border: 2px solid black;
+				margin: 50px auto;text-align: center;
+			}
+			span{display: block;}
+			p{width: 200px;height: 30px;margin: 20px auto;background: green;}
+			button{
+				width: 200px;height: 50px;margin:0 auto;display: block;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//内部插入
+				$("button").click(function(){
+					//1.将每一个匹配的元素替换成指定的内容 replaceWith()
+					//$("#box span").replaceWith("<span style='color:red'>我要自学网</span>");
+					//替换和被替换元素会消失
+					//$("#box span").replaceWith($(".zxw"));  
+					//$("#box span.zxw1").replaceWith($(".zxw"));
+			
+					//2.用指定的内容替换每一个匹配的元素   replaceAll()
+					//$("<span style='color:red'>我要自学网</span>").replaceAll($("#box"));
+					
+					//$(".zxw").replaceAll($("#box span"));
+					
+					$(".zxw").replaceAll($("#box .zxw1"));
+				});
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box">
+			<span>我要自学网0</span>
+			<span class="zxw1">我要自学网1</span>
+			<span>我要自学网2</span>
+			<span>我要自学网3</span>
+		</div>
+		<p class="zxw">我是追加的元素</p>
+		<button>点击</button>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+本套教程是网站开发系列教程的第6套：前端开发技巧
+
+网站开发系列教程已发布至第五套:
+第1套：HTML基础视频教程
+第2套：CSS层叠样式表基础教程
+第3套：CSS实战与技巧视频教程
+第4套：JavaScript基础教程
+第5套：jQuery框架
+链接：https://www.51zxw.net/ExpertInfo.aspx?id=6545
+
+
+课程目录
+第1章  音视频操作
+第2章  本地存储
+第3章  canvas组件
+第4章  音频插件和图表插件
+第5章  doT模板引擎 
+第6章  Swiper试例
+第7章  实战微场景
+
+下载地址:https://www.51zxw.net/Software.aspx?zid=420&id=92617

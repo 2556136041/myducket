@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.zxw{
+				width: 200px;height: 200px;background: red;float: left;
+				color: white; margin-left:10px ;
+			}
+		</style>
+		<script type="text/javascript">
+
+//			function abc(){
+//				this.innerText=Math.random();
+//				this.style.background="blue";
+//				this.style.height="300px";
+//			};
+			
+			
+			function abc(a){
+				a.innerText=Math.random();
+				a.style.background="blue";
+				a.style.height="300px";
+			};
+			
+			window.onload=function(){
+				var zxw= document.getElementsByClassName("zxw");
+				
+//				for (var i=0;i<zxw.length;i++) {
+//					zxw[i].onclick=function(){
+////						在事件中this指向了:当前正在操作的元素
+//						abc(this);
+//					};
+//				};
+
+
+//				for (var i=0;i<zxw.length;i++) {
+////					事件监听会自动传入正在操作的元素对象
+//					zxw[i].addEventListener("click",abc);
+//				};
+
+			};
+
+		</script>
+	</head>
+	<body>
+		<div class="zxw" onclick="abc(this)"></div>
+		<div class="zxw" onclick="abc(this)"></div>
+		<div class="zxw" onclick="abc(this)"></div>
+		<div class="zxw" onclick="abc(this)"></div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			input,button{
+				width: 200px;height: 50px;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				//1.change事件,文本发生改变时触发，仅适用于文本域
+//				$("input").change(function(){
+//					$(this).css("background","#ccc");
+//				});
+				
+				
+				//2.submit事件,提交表单时触发
+				$("form").submit(function(){
+					//1.获取输入的年龄
+					var age = $("#age").val();
+					//alert(age);
+					
+					//2.判断年龄是否满足条件
+					if (age<60) {
+						alert("年龄不到60岁，不能领取退休金，表单不提交");
+					};					
+				});
+				
+			})
+		</script>
+	</head>
+	<body>
+		<form action="#" method="get">
+			姓名：<input type="text" value="张三"/>
+			<br /><br /><br />
+			地址：<input type="text" value="北京"/>
+			<br /><br /><br />
+			年龄：<input type="text" id="age" value=""/>
+			<br /><br /><br />
+			<button type="submit">提交</button>
+		</form>
+	</body>
+</html>

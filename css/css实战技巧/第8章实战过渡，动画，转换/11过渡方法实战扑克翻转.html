@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 800px;height: 300px;margin: 100px auto;
+				background: #ccc;display: flex;justify-content: space-between;
+			}
+			.pk{
+				width: 200px;height: 300px;position: relative;
+			}
+			.pkbm,.pkzm{
+				width: 200px;height: 300px;position: absolute;top: 0;left: 0;
+				transition: transform 1s;
+			}
+			.pkbm{
+				background: url(img/pk.jpg) no-repeat 100% 100%/1100% 500%;
+			}
+			.pkzm{
+				background: url(img/pk.jpg) no-repeat 0 0/1100% 500%;
+				
+				/*当元素没有面向屏幕时隐藏*/
+				backface-visibility: hidden;
+			}
+			.pk:hover .pkzm,.pk:hover .pkbm{
+				transform: rotateY(180deg);
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<div id="box">
+			<div class="pk">
+				<div class="pkbm"></div>
+				<div class="pkzm"></div>
+			</div>
+			<div class="pk">
+				<div class="pkbm"></div>
+				<div class="pkzm"></div>
+			</div>
+			<div class="pk">
+				<div class="pkbm"></div>
+				<div class="pkzm"></div>
+			</div>
+		</div>
+		
+	</body>
+</html>

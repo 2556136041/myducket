@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>透明度渐变</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			.box{
+				width: 500px;height: 500px;border: 1px solid #000;
+				margin: 100px auto;
+			    
+			   /*从完全不透明红色开始到完全透明红色结束*/
+			    background: linear-gradient(90deg,rgba(255,0,0,1),rgba(255,0,0,0));	
+			    
+			    background: linear-gradient(90deg,rgba(255,0,0,1),rgba(255,0,0,0),rgba(0,0,255,0),rgba(0,0,255,1));
+			    
+				background: radial-gradient(circle,rgba(255,0,0,1),rgba(255,0,0,0));		
+			}
+		</style>
+	</head>
+	<body>
+		<!--径向渐变,线性渐变：都可以使用多个颜色结点。-->
+		
+		
+		<div class="box"></div>
+	</body>
+</html>

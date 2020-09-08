@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{font-size: 30px;}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">			
+			$(function(){
+				//jQuery代码
+				//$("#box").css("color","red");
+				
+				//原生js代码
+				//document.getElementById("zxw").style.color="blue";
+				
+				
+				var a = $("#box").text();
+				var b = document.getElementById("zxw").innerText;
+				
+				if (a==b) {
+					alert("文本内容一样");
+				} else{
+					alert("文本内容不一样");
+				}
+
+
+				//---------------------------------------------
+				//$("#box").style.color="blue";  //错误
+				//document.getElementById("zxw").css("color","red");//错误
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<!--div#box>span{我要自学网$}*6-->
+		<div id="box">我要自学网1</div>
+		<br /><br />
+		<div id="zxw">我要自学网1</div>
+	</body>
+</html>

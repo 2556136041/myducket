@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>过渡简写方式一</title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 100px;height: 100px;background: red;
+				margin: 100px auto;
+				/*1.所有要控制的样式使用相同的过渡方式:*/
+					/*属性值依次:all,完成过渡的时间,速度曲线,延迟开始时间*/
+					/*如果使用变速,速度曲线也可以不写*/
+					/*如果延迟开始时间没有,也可以不写*/
+				/*transition:all 2s linear 3s;*/
+				/*transition: 2s linear 3s;*/
+				/*transition: 2s 1s;*/
+				transition: 2s;
+			}
+			#box:hover{
+				background: blue;
+				width: 500px;
+				height: 300px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--过渡四大要素：-->
+		<!--1.要控制的css属性名,默认值:all,不是必需-->
+		<!--2.完成过渡需要的时间,s,ms.   1000ms=1s  必须要有-->
+		<!--3.过渡的速度曲线，不是必需,ease默认值-->
+			<!--ease	变速，规定慢速开始，然后变快，然后慢速结束的过渡效果-->
+			<!--linear	匀速，规定以相同速度开始至结束的过渡效果。-->
+			<!--ease-in	规定以慢速开始的过渡效果-->
+			<!--ease-out	规定以慢速结束的过渡效果-->
+			<!--ease-in-out	规定以慢速开始和结束的过渡效果-->
+			<!--cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。-->
+		<!--4.过渡延迟时间,s,ms-->	
+			
+		<div id="box"></div>
+	</body>
+</html>

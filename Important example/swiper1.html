@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>swiper-分数式</title>
+		<link rel="stylesheet" type="text/css" href="../css/swiper.min.css"/>
+		<style type="text/css">
+		    *{
+		    	margin:0px;
+		    	padding:0px;
+		    }
+			#box1{
+				width: 800px;
+				height: 500px;
+				margin: 50px auto 0px;
+			}
+			#box1 .sd1,#box1 .sd2,#box1 .sd3{
+				line-height: 500px;
+				text-align: center;
+				font-size: 26px;
+				color: #fff;
+			}
+			#box1 .sd1{background-color: red;}
+			#box1 .sd2{background-color: green;}
+			#box1 .sd3{background-color: blue;}		
+
+			#page{				
+
+				width:800px;
+				height:60px;
+				line-height:60px;
+				position: relative;
+				color:white;
+				/*z-index: 99;
+				background:gray;*/
+			}
+
+			#page .swiper-pagination{	
+				width: 100px;
+				height: 60px;
+				line-height: 60px;
+				background: rgba(0,0,0,0.6);
+				position: absolute;	
+				bottom:60px;
+				left:700px;	
+				font-size:26px;
+			
+			}
+
+            #page .swiper-pagination .swiper-pagination-current{
+                color:blue;
+            }
+
+            #page .swiper-pagination .swiper-pagination-total{
+            	color:red;
+            }
+
+            #box1 .swiper-wrapper .p_tit{
+                 background: rgba(0,0,0,0.6);
+                 font-size: 26px;
+                 width: 700px;
+                 height: 60px;
+                 line-height: 60px;
+                 position: absolute;
+                 top:440px;
+                 left:0px;
+                /* z-index: 8;*/
+                 text-align: left;
+                 text-overflow: ellipsis;
+                 overflow: hidden;
+                 white-space: nowrap;
+
+            }
+
+            #box1 .swiper-wrapper .p_tit:before{
+                 content: "";
+                 padding-left:10px;
+
+            }
+
+            #box1 .swiper-wrapper .p_tit:after{
+                 content: "";
+                 padding-left:10px;
+
+            }
+     
+     
+            
+			/*.swiper-container{ /* 分页放在容器里面 */
+			    /*--swiper-theme-color: black;
+			    /*--swiper-pagination-color:white;*/
+			    
+			/*  }
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		<!--swiper页面结构-->
+		<div class="swiper-container" id="box1">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide sd1"><p class="p_tit">“直辖市交警支队支队长副厅,副支队长正处。副省级市交警支队支队长副局(介2113于正处与副厅之间),副支队长正处级。地级市交警支队支队长副处,副支队长正科。直辖市公安局是厅级5261,局长高配副省级,政委正厅级,副局长是副厅级,下面总队是正处级。支队科级。扩展资料:人民警察警衔设五等</p></div>
+		        <div class="swiper-slide sd2"><p class="p_tit">公安局是厅级5261,局长高配副省级,政委正厅级,副局长是副厅级,下面总队是正处级。支队科级。扩展资料:人民警察警衔设五等</p></div>
+		        <div class="swiper-slide sd3"><p class="p_tit">下面总队是正处级。支队科级。扩展资料:人民警察警衔设五等</p></div>
+		    </div>
+		    <div id="page">
+               <div class="swiper-pagination"></div>
+		    </div>	
+		    
+		
+		</div>
+		
+		
+		<script src="../js/swiper.min.js"></script>
+		<script> 
+			
+			//初始化一个Swiper实例    new Swiper(swiper容器, 个性化配置)
+		  var mySwiper = new Swiper ('.swiper-container', {
+		  	   loop:true,
+		  	   autoplay:{
+		  	   	   delay:1000,
+		  	   	   reverseDirection:false
+		  	   },
+		  	   speed:2000,
+		  	   initialSlide:1,
+		  	   direction:"horizontal",  //horizontal(横) vertical(竖)
+		  	   grabCursor:true,
+		  	   effect:"fade",  //slide 默认位移 ,fade 淡入谈出  cube 立方体 coverflow 3D流形式 flip 3D翻牌形式
+		  	   pagination:{
+		  	   	   el:".swiper-pagination",  //css选择器
+		  	   	   type:"fraction"    //分布器类型 默认bullets(小圆点) fraction(分数式) progressbar(进度条)
+		  	   }
+		  })        
+		</script>
+	</body>
+</html>

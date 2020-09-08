@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="box">
+			<!--模板存放区域，修改type类型，以免被解析成js-->
+			<!--3.循环数组法{{~it:value:index}};-->
+			<script type="text/x-dot-temolate" id="zxw">
+				{{~it:value:index}}   <!--相当于for(){-->
+					<div>姓名：{{=value.name}}  年龄：{{=value.age}}  爱好：{{=value.ah}}	</div>
+				{{~}}	  <!--相当于   }  -->
+			</script>
+			<!--<div>
+				姓名：小明  年龄：18岁  爱好：打篮球	
+			</div>
+			
+			<div>
+				姓名：小红  年龄：16岁  爱好：听音乐	
+			</div>
+			
+			<div>
+				姓名：小张  年龄：14岁  爱好：看电视	
+			</div>-->
+		</div>
+		
+
+		
+		<script src="../js/jquery-3.4.1.min.js"></script>
+		<script src="doT.min.js" ></script>
+		<script type="text/javascript">
+			$(function(){
+				//从服务器返回的数据,一般是用ajax从服务器获取
+				var data=[
+				{name:'小明',age:"18岁",ah:"打篮球"},
+				{name:'小红',age:"16岁",ah:"听音乐"},
+				{name:'小张',age:"14岁",ah:"看电视"},
+				]
+				
+				//生成模板方法
+				var tpt = doT.template($("#zxw").html());
+				
+				//把数据渲染到指定元素中			
+				$("#box").html(tpt(data));
+			})
+		</script>
+
+		
+	</body>
+</html>

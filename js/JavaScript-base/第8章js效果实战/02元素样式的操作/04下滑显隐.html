@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#zxw_c{
+				width: 800px;margin: 0 auto;
+			}
+			#zxw_l{
+				position:fixed ;top: 150px;left: 10px;display: none;
+			}
+			#zxw_r{
+				position:fixed ;top: 150px;right: 10px;display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="zxw_c">
+			<img src="img/zxw_c.png" width="100%"/>
+		</div>
+		<img id="zxw_l" src="img/zxw_l.png" width="60px"/>
+		<img id="zxw_r" src="img/zxw_r.png" width="50px"/>
+		
+		<script type="text/javascript">
+			//给body添加滚动事件
+			document.body.onscroll= function(){
+				//滚动条距离顶部的距离
+				var s_top = document.documentElement.scrollTop;
+//				alert(typeof s_top);
+				if(s_top>300){
+					document.getElementById("zxw_l").style.display="block";
+					document.getElementById("zxw_r").style.display="block";
+				}else{
+					document.getElementById("zxw_l").style.display="none";
+					document.getElementById("zxw_r").style.display="none";
+				};
+			};
+		</script>
+	</body>
+</html>

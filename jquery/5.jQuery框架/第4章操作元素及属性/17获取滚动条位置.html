@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			#box{width: 2000px;height: 2000px;background: #ccc;}
+			
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//获取滚动条的位置 
+				$(window).scroll(function(){
+					//获取滚动条到顶部的距离 scrollTop()
+					var st = $(document).scrollTop();
+					
+					//获取滚动条到左侧的距离 scrollLeft()
+					var sl = $(document).scrollLeft();
+					
+					
+					$("title").html(st+"||"+sl);
+				})
+				
+				
+				
+			
+			})
+		</script>
+	</head>
+	<body>
+		<div id="box"></div>
+	</body>
+</html>

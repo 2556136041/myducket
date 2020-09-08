@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>伪元素</title>
+		<style type="text/css">
+			/*div::before{
+				content: "www.51zxw.net";
+			}*/
+			
+			div::after{
+				content: "www.51zxw.net";
+				color: red;
+				font-size: 12px;
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<!--伪元素：文档结构中没有出现的元素-->
+		<!--::before  在元素内容之前添加新内容。必须配合content使用-->
+		<!--::after   在元素内容之后添加新内容。必须配合content使用-->
+		<!--可以把伪元素当成元素来使用-->
+		
+		<div>
+			我要自学网
+		</div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//创建当前的时间对象
+			//var myDate = new Date();
+			
+			//时间戳:从格林威治时间1970年01月01日00时00分00秒(北京时间1970年01月01日08时00分00秒)起至现在的总毫秒数，13位数字
+			
+			//精确到毫秒
+			//var t = new Date().getTime();
+			
+			//精确到秒
+//			var t = parseInt(new Date().getTime()/1000);
+//			alert(t);
+			
+			var o_t = parseInt(new Date("2018/10/1 9:0:5").getTime()/1000);
+			var n_t = parseInt(new Date().getTime()/1000);
+			
+			if (n_t-o_t<31536000) {
+				alert("会员有效");
+			} else{
+				alert("会员无效");
+			}
+			
+		</script>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#zxw{
+				width: 100px;height: 30px;line-height: 30px;text-align: center;
+				background: burlywood;margin: 0 auto;
+			}
+		</style>
+		<script type="text/javascript">
+//			事件:发生了事情.事件可以是浏览器行为，也可以是用户行为
+			window.onload=function(){
+				var zxw = document.getElementById("zxw");
+//				zxw.onclick=function(){//鼠标单击事件
+//					alert("我的事件被触发了");
+//				};
+				
+//				zxw.onmousedown=function(){//鼠标按下时事件
+//					alert("我的事件被触发了");
+//				};
+				
+//				zxw.onmouseover=function(){//鼠标移入时事件
+//					alert("我的事件被触发了");
+//				};
+				
+				zxw.ontouchstart=function(){//触摸开始时事件
+					alert("我的事件被触发了");
+				};
+			};
+			
+		</script>
+	</head>
+	<body>
+		<div id="zxw">我要自学网</div>
+	</body>
+</html>

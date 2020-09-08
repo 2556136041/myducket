@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#btn{width: 200px;height: 40px;}
+			img{
+				display: none;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				//元素显隐效果有3个可选参数:
+					//1.速度 :  慢速"slow",  正常"normal", 快速"fast",毫秒数
+					//2.切换效果:意义不大  默认  摆动"swing"，直线"linear"
+					//3.动画完成时执行的函数
+					
+					
+				$("#btn").click(function(){
+					//1.show()让元素显示
+					//$("#sun").css("display","block");
+					//$("#sun").show();
+					//$("#sun").show(2000);
+					$("#sun").show(2000,function(){
+						alert("我显示了");
+					});
+					
+					
+				});				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<br /><br />
+		<img src="img/sun.jpg" width="500" id="sun"/>
+	</body>
+</html>

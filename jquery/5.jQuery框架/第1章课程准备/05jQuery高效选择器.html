@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{display: block;}
+		</style>
+		<!--<script type="text/javascript">
+			window.onload=function(){
+				var a = document.getElementsByTagName("span");
+				for (var i=0;i<a.length;i++) {
+					a[i].style.color = "red";
+				};
+			}
+		</script>-->
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//$(function(){})相当于window.onload=function(){}
+			//$(function(){}):是DOM结构加载完成就执行。
+			//window.onload=function(){}:必须等到页面全部内容（如图片或其他外部文件等）加载完成才能执行
+			
+			
+			$(function(){
+				$("span").css("color","red");	
+			})
+		</script>
+	</head>
+	<body>
+		<!--div#box>span{我要自学网$}*6-->
+		<div id="box">
+			<span>我要自学网1</span>
+			<span>我要自学网2</span>
+			<span>我要自学网3</span>
+			<span>我要自学网4</span>
+			<span>我要自学网5</span>
+			<span>我要自学网6</span>
+		</div>
+	</body>
+</html>

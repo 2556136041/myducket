@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+//			获取数组中最大，最小值
+			var zxw=[[21,35,93,86,72,64],[38,74,65,82,13,44],[81,49,36,54,10,27]];
+			
+//			把数组0号元素中的0号数据关到小黑屋中
+			var xhw=zxw[0][0];
+
+//			做循环,让数组里的值依次和小黑屋中的值做比较
+//			for (var i=0;i<zxw.length;i++) {
+//				for (var b=0;b<zxw[i].length;b++) {
+////					判断：如果小黑屋中的值小于数组中i号中b号的的值
+//					if(xhw<zxw[i][b]){
+////						将数组中i号的值赋值给小黑屋
+//						xhw=zxw[i][b];
+//					};											
+//				};				
+//			};	
+
+			
+			function bdx(arr){
+				for (var i=0;i<arr.length;i++) {
+					for (var b=0;b<arr[i].length;b++) {
+	//					判断：如果小黑屋中的值小于数组中i号中b号的的值
+						if(xhw>arr[i][b]){
+	//						将数组中i号的值赋值给小黑屋
+							xhw=arr[i][b];
+						};											
+					};				
+				};		
+				return xhw;				
+			};
+//			
+//			
+			alert(bdx(zxw));
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

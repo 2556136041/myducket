@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>绝对定位</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style type="text/css">
+			.zxw{
+				width: 500px;height: 500px;margin: 10px auto;border: 1px solid brown;position: relative;
+			}
+			.box{
+				width: 302px;height: 302px;border: 1px solid black;margin: 50px auto;
+			}
+			.pst1,.pst2,.pst3{
+				width: 100px;height: 100px;
+			}
+			.pst1{background: red;}
+			.pst2{
+				background: green;
+				position: absolute;
+				left:50px;
+				top:30px
+			}
+			.pst3{background: blue;width: 150px;}
+		</style>
+	</head>
+	<body>
+		<!--定位：规定元素的位置-->
+		<!--定位用于没有规律的元素而布局-->
+		<!--定位的三种类型：相对定位，绝对定位，固定定位-->
+		<!--定位使用方法：-->
+			<!--1.规定是哪一个定位方式    position: 定位方式;-->
+			<!--2.指定在方向上的偏移量:top  bottom  left  right-->
+			<!--3.注意：top和bottom只有一个会生效，left和right只有一个会生效。left和top优先-->
+		
+		<!--绝对定位    position: absolute;-->
+			<!--1.指定了绝对定位后，元素就是一个定位元素，完全脱离文档流-->
+			<!--2.原来的位置不会保留-->
+			<!--3.绝对定位是相对于最近有定位属性的父元素进行定位.如果往上没找到有定位元素的父元素，才会相对于body元素进行定位-->
+		
+		<div class="zxw">					
+			<div class="box">
+				<div class="pst1"></div>
+				<div class="pst2"></div>
+				<div class="pst3"></div>
+			</div>
+		</div>
+	</body>
+</html>

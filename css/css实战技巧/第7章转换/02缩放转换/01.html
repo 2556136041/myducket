@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../../css/reset.css"/>
+		<style type="text/css">
+			#box{
+				width: 300px;height: 300px;background: #000;
+				margin: 100px auto;
+				/*视距属于transform的前置属性,写在父级中*/
+				perspective: 500px;
+			}
+			#zxw{
+				width: 100px;height: 100px;background: red;
+			}
+			#zxw:hover{
+				/*缩放转换:元素放大缩小*/
+				/*值:比例,参考自身尺寸*/
+				/*默认的基点在元素中心点*/
+				/*默认值为1，当值小于1时,表示缩小,大于1表示放大*/
+				transform: scaleX(2);
+				transform: scaleX(0.5);
+				
+				transform: scaleY(3);
+				transform: scaleY(0.5);
+				
+				/*transform:rotateY(45deg);*/
+				transform: scaleZ(3) rotateY(45deg);
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		
+		<div id="box">
+			<div id="zxw"></div>
+		</div>
+		
+		
+	</body>
+</html>

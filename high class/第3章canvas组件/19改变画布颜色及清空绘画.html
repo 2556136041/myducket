@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<style type="text/css">
+			#box{width: 800px;height: 440px;margin: 50px auto;}
+			#canvas{background-color: #999999;}
+			.zxw{height: 40px;}
+			.zxw li{
+				height: 40px;float: left;margin-left: 30px;
+			}
+			.zxw li span{
+				line-height: 40px;float: left;display: block;
+			}
+			.zxw li input{
+				width: 80px;height: 40px;float: left;display: block;
+			}
+			.zxw li button{
+				width: 80px;height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box">
+			<canvas id="canvas" width="800" height="400"></canvas>
+			<ul class="zxw">
+				<li>
+					<span>画笔颜色</span>
+					<input type="color" id="cvColor" value="#ff0000" />
+				</li>
+				<li>
+					<span>画笔粗细</span>
+					<input type="number" id="num" value="6" min="1" max="30"/>
+				</li>
+				<li>
+					<span>画布颜色</span>
+					<input type="color" id="bgColor" value="#999999" />
+				</li>
+				<li><button id="clear">清空绘画</button></li>
+			</ul>
+			
+			
+			
+		</div>
+		<script type="text/javascript">
+			//获取画板,铺上画纸或画布,获取绘画环境
+			var canvas = document.getElementById("canvas");
+			var cv = canvas.getContext("2d");
+			cv.strokeStyle="#ff0000";
+			cv.lineWidth=6;
+			
+			//画板加鼠标按下事件
+			canvas.onmousedown=function(e){
+				//获取鼠标位置
+				var ev = window.event || e;
+				var s_left = ev.layerX || ev.offsetX;
+				var s_top = ev.layerY || ev.offsetY;
+				//document.title = s_left +"||"+s_top;
+				//开启路径
+				cv.beginPath();
+				//定义画笔开始位置
+				cv.moveTo(s_left,s_top);
+				//------------------------------------
+				//画板加鼠标移动事件
+				canvas.onmousemove=function(e){
+					//获取鼠标位置
+					var ev = window.event || e;
+					var n_left = ev.layerX || ev.offsetX;
+					var n_top = ev.layerY || ev.offsetY;
+					//document.title = n_left +"||"+n_top;
+					//把路径画到当前位置
+					cv.lineTo(n_left,n_top);
+					//开始绘画
+					cv.stroke();					
+				};				
+			};
+			//鼠标松开事件,取消canvas上的鼠标移动事件
+			canvas.onmouseup=function(){
+				canvas.onmousemove= null;				
+			};
+			
+			//改变画笔颜色
+			document.getElementById("cvColor").onchange=function(){
+				cv.strokeStyle = this.value;//把画笔颜色改成当前value值
+			};
+			
+			//改变画笔粗细
+			document.getElementById("num").onchange=function(){
+				cv.lineWidth = this.value;//把画笔粗细改成当前value值
+			};	
+			
+			//改变画布颜色
+			document.getElementById("bgColor").onchange=function(){
+				canvas.style.backgroundColor = this.value;//把画布背景颜色改成当前value值
+			};			
+			
+			//清空绘画
+			document.getElementById("clear").onclick=function(){
+				//清空给定矩形内的指定像素
+				//画布.clearRect(左上角X坐标,左上角Y坐标,矩形宽度,矩形高度)
+				cv.clearRect(0,0,canvas.width,canvas.height);
+			};
+		</script>
+		
+		
+	</body>
+</html>

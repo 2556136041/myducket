@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--应尽早申明，放在字符编码之后-->
+		<!--只对移动端有效，pc端无效-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<style type="text/css">
+			div{
+				width: 375px;height: 375px;background: red;
+				margin: 0 auto;color: #fff;font-size: 20px;
+				text-align: center;line-height: 375px;
+			}
+			@media only screen and (max-width:600px ) {
+				div{
+					background: green;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!--视口viewport:在CSS标准文档中称为初始包含块-->
+		<!--1.布局视口:-->
+			<!--桌面上，视口与浏览器窗口的宽度一致，但在手机上，视口与移动端浏览器屏幕宽度是不关联的-->
+			<!--通常移动端的布局视口默认被设置成了980px-->
+			<!--如果网站没有为移动端做优化，那么浏览器会尽可能的缩小网页让用户能看到网页的全貌。-->
+		
+		
+		<!--2.视觉视口:-->
+			<!--用户正在看到的网页的区域，注意是网页的区域。-->
+			<!--如果用户缩小网页，我们看到的网页区域将变大，此时视觉视口也变大了，-->
+			<!--同理，用户放大网页，我们能看到的网页区域将缩小，此时视觉视口也变小了-->
+			<!--不管用户如何缩放，都不会影响到布局视口的宽度。-->
+			
+		<!--3.理想视口-->
+			<!--理想视口指的是设备中浏览器的显示区域-->
+			<!--移动端布局视口的宽度应该与理想视口宽度一致-->
+			
+		
+		<div>我要自学网</div>
+	</body>
+</html>

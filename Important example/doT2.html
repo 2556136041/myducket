@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				font-weight: 700;
+			}
+		</style>
+	</head>
+	<body>
+	    <script type="text/x-dot-temolate" id="tem">
+
+	       {{##def.tp1:
+                <p>姓名：{{=value.name}} 年龄：不详 爱好：{{=value.ah}}	</p>
+	       #}}
+
+           {{##def.tp2:
+                <p>姓名：{{=value.name}} 年龄：{{=value.age}} 爱好：未填</p>
+	       #}}
+
+	       {{##def.tp3:
+                <p>姓名：{{=value.name}} 年龄：{{=value.age}} 爱好：{{=value.ah}}	</p>
+	       #}}
+
+	       {{~it:value:index}}
+	             
+
+	          {{? !value.age}}
+	               {{#def.tp1}}                 
+	          {{?? !value.ah}}
+                   {{#def.tp2}}
+	          {{??}}
+                   {{#def.tp3}}
+	          {{?}} 
+
+	       {{~}}		
+		</script>
+		<div id="box">
+			<!--模板存放区域，修改type类型，以免被解析成js-->
+			<!--1.直接赋值法{{=}},如传入一个HTML片段或js片段，会直接解析-->
+			
+		</div>
+		<!-- <button id="btn">click me</button> -->
+		
+		<script src="../js/jquery-min.js"></script>
+		<script src="../js/doT.min.js" ></script>
+		<script type="text/javascript">
+			//从服务器返回的数据,一般是用ajax从服务器获取
+			var data=[
+			   {name:'<span style="color:blue">张三</span>',age:'18岁',ah:"打篮球"},
+               {name:'<span style="color:blue">李四</span>',age:'18岁',ah:"打篮球"},
+               {name:'<span style="color:blue">王麻子</span>',age:'18岁'},
+               {name:'<span style="color:blue">赵五</span>',ah:"打篮球"},
+               {name:'<span style="color:blue">丁丁</span>',ah:"打篮球"},
+               {name:'<span style="color:blue">多多</span>',age:'18岁',ah:"打篮球"}
+			   ];
+			
+			// var tem=doT.template(document.getElementById('tem').innerHTML);
+			var tem=doT.template($("#tem").html());
+
+			// document.getElementById('box').innerHTML=tem(data);
+			$("#box").html(tem(data));
+			$("#btn").click(function(){
+				 $("#name").css({color:"blue"});
+			});
+		</script>
+	</body>
+</html>

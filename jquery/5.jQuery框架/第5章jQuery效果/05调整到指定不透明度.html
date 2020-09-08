@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#btn{width: 200px;height: 40px;}
+			img{
+				/*display: none;*/
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				
+				
+				$("#btn").click(function(){
+					//1.fadeTo()调整到指定不透明度
+						//1.速度 : 毫秒数    (必须有)
+						//2.透明度:(必须有) 0至1之间表示透明度的数字,默认为0,全透明
+						//3.切换效果:意义不大  默认  摆动"swing"，直线"linear"
+						//4.动画完成时执行的函数
+					
+					
+					$("#sun").fadeTo(2000,0.5);
+					
+
+					
+					
+				});				
+			})
+		</script>
+		
+	</head>
+	<body>
+		<button id="btn">按钮</button>
+		<br /><br />
+		<img src="img/sun.jpg" width="500" id="sun"/>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			
+			//创建图像资源
+			var fj = new Image();
+			fj.src = "img/fj.jpg";
+			
+			
+			//1.在画布上绘制和定位图像    画布.drawImage(图像对象，X坐标，Y坐标);
+			
+			//为了保险,通常应让图像加载完成后,现执行写入画布
+			fj.onload=function(){
+				cv.drawImage(fj,100,50);
+			};
+			
+			
+		</script>
+		
+		
+	</body>
+</html>

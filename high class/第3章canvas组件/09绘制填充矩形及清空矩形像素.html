@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#canvas{
+				border: 1px solid red;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<canvas id="canvas" width="400" height="300"></canvas>
+		
+		<script type="text/javascript">
+			//1.获取画板
+			var canvas = document.getElementById("canvas");
+			
+			//2.铺上画纸或画布,获取绘画环境
+			var cv = canvas.getContext("2d");
+			//-----------------------------------------------------
+			
+//			指定填充颜色
+			cv.fillStyle="#00ff00";
+			
+			
+			//方法1:先创建矩形路径,再填充当前路径
+			//创建矩形路径:画布.rect(左上角X坐标,左上角Y坐标,矩形宽度,矩形高度)
+			//cv.rect(50,50,150,100);
+			//填充当前路径,默认为黑色
+			//cv.fill();
+			
+			
+			
+			//方法2:创建并填充矩形路径
+			//创建矩形路径:画布.fillRect(左上角X坐标,左上角Y坐标,矩形宽度,矩形高度)
+			cv.fillRect(150,100,150,100);
+			
+			
+			//清空给定矩形内的指定像素
+			//画布.clearRect(左上角X坐标,左上角Y坐标,矩形宽度,矩形高度)
+			cv.clearRect(200,150,50,30);
+			
+		</script>
+		
+		
+	</body>
+</html>

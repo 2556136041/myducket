@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				display: block;width: 200px;line-height: 30px;text-align: center;
+				margin-top:20px ;background: #ccc;
+			}
+			button{
+				width: 200px;height: 50px;margin-top:50px ;
+			}
+		</style>
+		<script src="../js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					
+					//1.选择单选框元素         :radio 选择所有单选框元素
+					//[type='radio']等同于:radio
+					//var sex = $("input[type='radio']");
+					//var sex = $("input:radio");
+					//console.log(sex);
+					
+					
+					//2.选择复选框元素         :checkbox 选择所有单选框元素
+					//[type='checkbox']等同于:checkbox
+//					var sg = $("input:checkbox");
+//					console.log(sg);
+					
+					
+					//3.选择已被选中的单选框或复选框元素    :checked选择器
+					var sex = $("input:radio:checked");
+					var sg = $("input:checkbox:checked");
+					console.log(sex);
+					console.log(sg);
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<!--单选框开始-->
+		<input type="radio" name="sex"  value="1" checked="checked"/>男
+		<input type="radio" name="sex"  value="0" />女
+		<input type="radio" name="sex"  value="10" />人妖
+		<!--单选框结束-->
+		<br /><br />
+		<!--复选框开始-->
+		<input type="checkbox" name="sg[]"  value="pg" />苹果
+		<input type="checkbox" name="sg[]"  value="xj" checked="checked"/>香蕉
+		<input type="checkbox" name="sg[]"  value="pt" />葡萄
+		<!--复选框结束-->
+		
+		<br /><br />
+		<button>按钮</button>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>浮动元素浮特点</title>
+		<link rel="stylesheet" type="text/css" href="../reset.css"/>
+		<style type="text/css">
+			ul{width: 300px;margin: 50px auto;background: #ccc;}
+			li{width: 100px;height: 100px;}
+			.a{background: red; height: 80px;
+				float: left;
+			}
+			.b{background: green;
+				float: left;
+			}
+			.c{background: blue;}
+		</style>
+	</head>
+	<body>
+		<!--浮动：让块级元素能在一行-->
+		<!--语法：float: 方向;-->
+		
+		
+		<!--浮动特点：-->
+			<!--1.浮动元素就像浮云一样浮起来了。浮动元素后面的正常元素会自动补位-->
+			<!--2.浮动元素会脱离正常的文档流，并没有完全脱离文档流-->
+			<!--3.浮动元素会被父元素宽度所约束，所以浮动元素并没有完全脱离文档流-->
+			<!--4.浮动元素会对它下面正常元素中的文字产生影响-->
+		
+		<ul>
+			<li class="a"></li>
+			<li class="b"></li>
+			<li class="c"></li>
+		</ul>
+	</body>
+</html>
